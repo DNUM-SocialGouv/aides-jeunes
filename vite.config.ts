@@ -38,7 +38,7 @@ function createSentryPlugin({ authToken, url, org }, project) {
     org: org || "betagouv",
     project,
     authToken,
-    url: url || "https://sentry.incubateur.net/",
+    url: url || "https://sentry2.fabrique.social.gouv.fr/",
     sourcemaps: {
       assets: `./dist/assets/${buildId}/js/*.{js,map}`,
     },
