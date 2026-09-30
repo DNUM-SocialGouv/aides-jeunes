@@ -14,10 +14,9 @@ conditions:
   - "Contacter le conseiller de la Mission Locale ou du service de lʼAction Sociale
     afin dʼeffectuer la demande auprés de lʼEspace Insertion."
 link: https://mesdemarches.eurelien.fr/insertion-professionnelle/jai-moins-de-26-ans/je-souhaite-beneficier-du-faj/
-instructions: https://betagouv.github.io/aides-jeunes-files/public/aide28/faj.pdf
+instructions: https://mesdemarches.eurelien.fr/insertion-professionnelle/jai-moins-de-26-ans/je-souhaite-beneficier-du-faj/
 prefix: le
 type: bool
 entity: individus
 openfiscaPeriod: thisMonth
 periodicite: autre
-private: true
