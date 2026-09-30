@@ -1,14 +1,17 @@
 label: Fonds d'Aide aux Jeunes (FAJ)
 institution: departement_eure_et_loir
 description: >
-  Les Fonds dʼAide aux Jeunes sont destinés à favoriser lʼinsertion sociale et profesionnelle des jeunes qui sont en grande précarité de ressources. Ces aides nʼont pas vocation à être régulières car elles doivent répondre à un besoin ponctuel et précis (logement, travail, transport).
+  Les Fonds dʼAide aux Jeunes sont destinés à favoriser lʼinsertion sociale et profesionnelle
+  des jeunes qui sont en grande précarité de ressources. Ces aides nʼont pas vocation
+  à être régulières car elles doivent répondre à un besoin ponctuel et précis (logement,
+  travail, transport).
 conditions:
   - "Détenir un compte bancaire."
-  - "Être engagé dans une démarche dʼinsertion et donc de fait être dans un Parcours Contractualisé dʼAccompagnement vers lʼEmploi et lʼAutonomie (PACEA) ou un Projet Personnalisé dʼAccès à lʼEmploi (PPAE)."
   - "Être suivi par la Mission Locale ou le Service d’Action Sociale du Conseil Départemental."
-  - "Contacter le conseiller de la Mission Locale ou du service de lʼAction Sociale afin dʼeffectuer la demande auprés de lʼEspace Insertion."
+  - "Contacter le conseiller de la Mission Locale ou du service de lʼAction Sociale
+    afin dʼeffectuer la demande auprés de lʼEspace Insertion."
 link: https://mesdemarches.eurelien.fr/insertion-professionnelle/jai-moins-de-26-ans/je-souhaite-beneficier-du-faj/
-instructions: https://betagouv.github.io/aides-jeunes-files/public/aide28/faj.pdf
+instructions: https://mesdemarches.eurelien.fr/insertion-professionnelle/jai-moins-de-26-ans/je-souhaite-beneficier-du-faj/
 prefix: le
 type: bool
 entity: individus
