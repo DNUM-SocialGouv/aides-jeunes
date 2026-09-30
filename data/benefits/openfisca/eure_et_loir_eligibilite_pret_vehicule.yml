@@ -17,4 +17,3 @@ type: bool
 entity: individus
 openfiscaPeriod: thisMonth
 periodicite: autre
-private: true
