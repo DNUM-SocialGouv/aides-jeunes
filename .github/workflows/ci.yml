@@ -19,7 +19,7 @@ concurrency:
 jobs:
   health-check:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.head.repo.full_name == github.repository && github.repository == 'betagouv/aides-jeunes'
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.repository == 'DNUM-SocialGouv/aides-jeunes'
     steps:
       - name: Check Sentry Status
         id: sentry-check
@@ -27,7 +27,7 @@ jobs:
           SENTRY_STATUS=$(curl -s -o /dev/null -w "%{http_code}" ${{ secrets.SENTRY_URL }})
           echo "status=$SENTRY_STATUS" >> $GITHUB_OUTPUT
           if [ "$SENTRY_STATUS" != "200" ]; then
-            curl -i -X POST -H 'Content-Type: application/json' -d '{"text": ":icon-warning: [équipe-tech] Sentry semble ne plus fonctionner ([lien](https://github.com/betagouv/aides-jeunes/actions/workflows/ci.yml?query=branch%3Amain+is%3Afailure))"}' ${{ secrets.MATTERMOST_ALERTING_URL }}
+            curl -i -X POST -H 'Content-Type: application/json' -d '{"text": ":icon-warning: [équipe-tech] Sentry semble ne plus fonctionner ([lien](https://github.com/DNUM-SocialGouv/aides-jeunes/actions/workflows/ci.yml?query=branch%3Amain+is%3Afailure))"}' ${{ secrets.MATTERMOST_ALERTING_URL }}
             exit 1
           fi
   install:
@@ -452,7 +452,7 @@ jobs:
   check_benefit_link_improvements:
     name: Check benefit link improvements and update link table if necessary
     needs: [test_benefit_file_changes]
-    if: needs.test_benefit_file_changes.outputs.status == 'success' && github.event.pull_request.head.repo.full_name == github.repository && github.repository == 'betagouv/aides-jeunes'
+    if: needs.test_benefit_file_changes.outputs.status == 'success' && github.event.pull_request.head.repo.full_name == github.repository && github.repository == 'DNUM-SocialGouv/aides-jeunes'
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
@@ -494,4 +494,4 @@ jobs:
       - name: Send CI failed message
         shell: bash
         run: |
-          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": ":icon-danger: [équipe-tech] La CI a rencontré un problème sur la branche main ([lien](https://github.com/betagouv/aides-jeunes/actions/workflows/ci.yml?query=branch%3Amain+is%3Afailure))"}' ${{ secrets.MATTERMOST_ALERTING_URL }}
+          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": ":icon-danger: [équipe-tech] La CI a rencontré un problème sur la branche main ([lien](https://github.com/DNUM-SocialGouv/aides-jeunes/actions/workflows/ci.yml?query=branch%3Amain+is%3Afailure))"}' ${{ secrets.MATTERMOST_ALERTING_URL }}

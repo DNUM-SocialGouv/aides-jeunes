@@ -5,7 +5,7 @@ description: >
 conditions:
   - Faire évaluer votre situation personnelle par la Maison Départementale des Solidarités (MDA).
 link: https://eurelien.fr/wp-content/uploads/2024/04/Reglement-departemental-du-transport-des-eleves-et-etudiants-en-situation-de-handicap-1.pdf
-instructions: https://betagouv.github.io/aides-jeunes-files/public/aide28/transport-eleves-handicap.pdf
+instructions: https://dnum-socialgouv.github.io/aides-jeunes-files/public/aide28/transport-eleves-handicap.pdf
 prefix: l’
 type: bool
 entity: individus

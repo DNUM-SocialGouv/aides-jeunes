@@ -1,4 +1,4 @@
-<!-- Documentation: https://github.com/betagouv/aides-jeunes/wiki/Composant-back%E2%80%90button.vue -->
+<!-- Documentation: https://github.com/DNUM-SocialGouv/aides-jeunes/wiki/Composant-back%E2%80%90button.vue -->
 <template>
   <component
     :is="asLink ? 'router-link' : 'button'"

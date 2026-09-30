@@ -101,7 +101,7 @@ function Home() {
 
           <video controls preload="auto">
             <source
-              src="https://betagouv.github.io/aides-jeunes-files/public/demo-outil-contribution.mp4"
+              src="https://dnum-socialgouv.github.io/aides-jeunes-files/public/demo-outil-contribution.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -326,7 +326,7 @@ function Home() {
                 Référez‑vous à{" "}
                 <Link
                   href={
-                    "https://github.com/betagouv/aides-jeunes/wiki/Integrer-une-nouvelle-aide-dans-mes-aides"
+                    "https://github.com/DNUM-SocialGouv/aides-jeunes/wiki/Integrer-une-nouvelle-aide-dans-mes-aides"
                   }
                 >
                   cette page qui répertorie les critères à prendre en compte

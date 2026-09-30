@@ -7,7 +7,7 @@ conditions:
   - Ne pas avoir bénéficié de cette aide au cours des 12 derniers mois.
   - Faire la demande avec le référent RSA <a href="https://mesdemarches.eurelien.fr/media/uploads/2023/01/05/formulaire-demande-adefip-pdf.pdf" rel="noopener" target="_blank" title="Site Mes démarches euréliens - Nouvelle fenêtre">par écrit</a> ou <a href="https://formulaires.mesdemarches.eurelien.fr/vous-etes-un-partenaire-referent-d-un-beneficiaire-rsa-1/" rel="noopener" target="_blank" title="Teleservice demande - Nouvelle fenêtre">en ligne</a>.
 link: https://mesdemarches.eurelien.fr/insertion-professionnelle/je-suis-beneficiaire-du-rsa/jai-besoin-dune-aide-financiere-dans-le/
-instructions: https://betagouv.github.io/aides-jeunes-files/public/aide28/adefip.pdf
+instructions: https://dnum-socialgouv.github.io/aides-jeunes-files/public/aide28/adefip.pdf
 prefix: l’
 type: bool
 entity: individus

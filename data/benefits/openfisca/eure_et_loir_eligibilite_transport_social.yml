@@ -4,7 +4,7 @@ description: >
   Cette aide vise à favoriser la mobilité des bénéficiaires du RSA et du Fonds dʼAide aux Jeunes (FAJ) dans le cadre de la réalisation de leur parcours dʼinsertion.
 conditions:
   - Faire la demande avec votre référent RSA ou FAJ.
-link: https://betagouv.github.io/aides-jeunes-files/public/aide28/transport-social.pdf
+link: https://dnum-socialgouv.github.io/aides-jeunes-files/public/aide28/transport-social.pdf
 instructions: https://mesdemarches.eurelien.fr/insertion-professionnelle/je-suis-beneficiaire-du-rsa/je-souhaite-connaitre-mon-referent-rsa/
 prefix: l’
 type: bool

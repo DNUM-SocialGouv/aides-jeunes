@@ -81,7 +81,7 @@ const config: Configuration = {
     },
   },
   github: {
-    repository_url: "https://github.com/betagouv/aides-jeunes",
+    repository_url: "https://github.com/DNUM-SocialGouv/aides-jeunes",
   },
   matomo: {
     id: Number(process.env.MATOMO_ID) || 66,
