@@ -6,7 +6,7 @@ const artifactName = "cypress-json-base"
 
 async function getArtifactMetadata() {
   const artifactListResponse = await axios.get(
-    "https://api.github.com/repos/betagouv/aides-jeunes/actions/artifacts",
+    "https://api.github.com/repos/DNUM-SocialGouv/aides-jeunes/actions/artifacts",
   )
   const artifactListPayload = artifactListResponse.data
   const releventArtifacts = artifactListPayload.artifacts.filter((artifact) => {
@@ -28,7 +28,7 @@ async function fetchArtifactZip() {
   }
 
   // CORS + anonymous access issues on GitHub API directly
-  const url = `https://nightly.link/betagouv/aides-jeunes/actions/runs/${metadata.workflow_run.id}/${artifactName}.zip`
+  const url = `https://nightly.link/DNUM-SocialGouv/aides-jeunes/actions/runs/${metadata.workflow_run.id}/${artifactName}.zip`
   const artifact = await axios.get(url, {
     responseType: "arraybuffer",
   })

@@ -32,7 +32,7 @@
         target="_blank"
         title="Statistiques d'impact du simulateur d'aides 1jeune1solution - Nouvelle fenêtre"
         rel="noopener"
-        href="https://betagouv.github.io/mes-aides-analytics/"
+        href="https://dnum-socialgouv.github.io/mes-aides-analytics/"
       >
         site dédié
       </a>
@@ -43,7 +43,7 @@
       id="iframe"
       title="Statistiques d'impact du simulateur d'aides 1jeune1solution"
       class="fr-col-12"
-      src="https://betagouv.github.io/mes-aides-analytics/iframe"
+      src="https://dnum-socialgouv.github.io/mes-aides-analytics/iframe"
       scrolling="no"
       @load="iframeLoaded"
     />
