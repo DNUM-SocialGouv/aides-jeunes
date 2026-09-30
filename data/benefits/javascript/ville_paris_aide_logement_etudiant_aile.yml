@@ -1,11 +1,11 @@
 label: Aide à l’installation dans un logement pour les étudiants (AILE)
 institution: paris
-description:
-  La Ville de Paris a mis en place l’AILE afin de soutenir les étudiants
-  en situation de précarité qui doivent trouver un appartement dans le parc privé. Cette aide
-  comprise entre 500 et 1000 euros est gérée par le CROUS de Paris. Elle est ouverte
-  aux étudiants boursiers et aux étudiants bénéficiaires du repas à 1 € inscrits dans
-  les académies de Paris, Créteil et Versailles et vivant à Paris.
+description: La Ville de Paris a mis en place l’AILE afin de soutenir les
+  étudiants en situation de précarité qui doivent trouver un appartement dans le
+  parc privé. Cette aide comprise entre 500 et 1000 euros est gérée par le CROUS
+  de Paris. Elle est ouverte aux étudiants boursiers et aux étudiants
+  bénéficiaires du repas à 1 € inscrits dans les académies de Paris, Créteil et
+  Versailles et vivant à Paris.
 prefix: l’
 conditions_generales:
   - type: attached_to_institution
@@ -13,15 +13,17 @@ profils:
   - type: enseignement_superieur
     conditions: []
 conditions:
-  - Être inscrit dans un établissement d’enseignement supérieur relevant des académies de Paris,
-    Créteil ou Versailles.
-  - Être boursier sur critères sociaux ou bénéficiaire de l’aide spécifique allocation annuelle (ASAA),
-    ou de l’aide spécifique allocation ponctuelle (ASAP) ou être bénéficiaire du repas à 1 Euro
-    des CROUS de Paris, Créteil ou Versailles pour l’année universitaire en cours.
-  - Être titulaire d’un contrat de location pour un logement situé à Paris,
-    signé entre le mois de mars précédant l’année universitaire et le mois d’avril
-    de l’année universitaire en cours, d’une durée minimale de neuf mois.
-    Les logements situés en résidences universitaires conventionnées ne sont pas éligibles.
+  - Être inscrit dans un établissement d’enseignement supérieur relevant des
+    académies de Paris, Créteil ou Versailles.
+  - Être boursier sur critères sociaux ou bénéficiaire de l’aide spécifique
+    allocation annuelle (ASAA), ou de l’aide spécifique allocation ponctuelle
+    (ASAP) ou être bénéficiaire du repas à 1 Euro des CROUS de Paris, Créteil ou
+    Versailles pour l’année universitaire en cours.
+  - Être titulaire d’un contrat de location pour un logement situé à Paris, signé
+    entre le mois de mars précédant l’année universitaire et le mois d’avril de
+    l’année universitaire en cours, d’une durée minimale de neuf mois. Les
+    logements situés en résidences universitaires conventionnées ne sont pas
+    éligibles.
 type: float
 unit: €
 periodicite: ponctuelle
@@ -30,3 +32,4 @@ montant: 1000
 link: https://www.paris.fr/pages/l-aide-a-l-installation-dans-un-logement-pour-les-etudiants-a-i-l-e-2257
 instructions: https://mie.paris.fr/aile/
 form: https://betagouv.github.io/aides-jeunes-files/public/dossier-inscription-aile-2025-2026.pdf
+private: true
