@@ -1,11 +1,16 @@
 label: Prêt de véhicule
 institution: departement_eure_et_loir
 description: >
-  Le prêt de véhicule est destiné aux bénéficiaires du RSA rencontrant des freins à la reprise dʼemploi ou à lʼentrée en formation qualifiante du fait de lʼabsence de moyen de transport (transport en commun et/ou véhicule personnel). Le véhicule est prêté gracieusement par le Conseil Départemental aux détenteurs dʼun permis B pour une période minimum de 5 jours.
+  Le prêt de véhicule est destiné aux bénéficiaires du RSA rencontrant des freins
+  à la reprise dʼemploi ou à lʼentrée en formation qualifiante du fait de lʼabsence
+  de moyen de transport (transport en commun et/ou véhicule personnel). Le véhicule
+  est prêté gracieusement par le Conseil Départemental aux détenteurs dʼun permis
+  B pour une période minimum de 5 jours.
 conditions:
-  - "Démarrer un emploi, une formation qualifiante ou être en immersion au sein d'une entreprise."
+  - "Démarrer un emploi, une formation qualifiante ou être en immersion au sein d'une
+    entreprise."
   - "Contacter le référent RSA pour connaître l'égibilité à ce dispositif."
-link: https://betagouv.github.io/aides-jeunes-files/public/aide28/pret-vehicule.pdf
+link: https://mesdemarches.eurelien.fr/insertion-professionnelle/je-suis-beneficiaire-du-rsa/jai-besoin-dun-pret-de-vehicule/
 instructions: https://mesdemarches.eurelien.fr/insertion-professionnelle/je-suis-beneficiaire-du-rsa/jai-besoin-dun-pret-de-vehicule/
 prefix: le
 type: bool
