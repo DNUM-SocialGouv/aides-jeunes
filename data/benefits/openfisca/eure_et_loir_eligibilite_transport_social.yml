@@ -1,7 +1,8 @@
 label: Aide au transport social
 institution: departement_eure_et_loir
 description: >
-  Cette aide vise à favoriser la mobilité des bénéficiaires du RSA et du Fonds dʼAide aux Jeunes (FAJ) dans le cadre de la réalisation de leur parcours dʼinsertion.
+  Cette aide vise à favoriser la mobilité des bénéficiaires du RSA et du Fonds dʼAide
+  aux Jeunes (FAJ) dans le cadre de la réalisation de leur parcours dʼinsertion.
 conditions:
   - Faire la demande avec votre référent RSA ou FAJ.
 link: https://betagouv.github.io/aides-jeunes-files/public/aide28/transport-social.pdf
@@ -11,3 +12,4 @@ type: bool
 entity: individus
 openfiscaPeriod: thisMonth
 periodicite: autre
+private: true
