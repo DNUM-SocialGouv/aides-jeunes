@@ -17,10 +17,9 @@ conditions:
     rel="noopener" target="_blank" title="Teleservice demande - Nouvelle
     fenêtre">en ligne</a>.
 link: https://mesdemarches.eurelien.fr/insertion-professionnelle/je-suis-beneficiaire-du-rsa/jai-besoin-dune-aide-financiere-dans-le/
-instructions: https://betagouv.github.io/aides-jeunes-files/public/aide28/adefip.pdf
+instructions: https://mesdemarches.eurelien.fr/insertion-professionnelle/je-suis-beneficiaire-du-rsa/jai-besoin-dune-aide-financiere-dans-le/
 prefix: l’
 type: bool
 entity: individus
 openfiscaPeriod: thisMonth
 periodicite: autre
-private: true
