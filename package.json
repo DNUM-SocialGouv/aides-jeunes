@@ -55,7 +55,7 @@
     "tools:add-milestone": "node --loader ts-node/esm ./tools/add-milestone-to-merged-prs.ts"
   },
   "dependencies": {
-    "@betagouv/aides-velo": "^3.7.0",
+    "@betagouv/aides-velo": "^4.0.0",
     "@betagouv/jamstack-loader": "^1.0.0",
     "@etalab/decoupage-administratif": "^6.0.0",
     "@gouvfr/dsfr": "^1.14.4",
