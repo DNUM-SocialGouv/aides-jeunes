@@ -18,13 +18,19 @@ export default function (api: Express) {
           .json({ error: "Service unavailable - missing configuration" })
       }
 
-      const url = `${config.dataInclusion.url}/structures?sources=ma-boussole-aidants&reseaux_porteurs=ccas-cias&code_commune=${codeCommune}`
-
-      const response = await axios.get(url, {
-        headers: {
-          Authorization: `Bearer ${config.dataInclusion.token}`,
+      const response = await axios.get(
+        `${config.dataInclusion.url}/structures`,
+        {
+          params: {
+            sources: "ma-boussole-aidants",
+            reseaux_porteurs: "ccas-cias",
+            code_commune: codeCommune,
+          },
+          headers: {
+            Authorization: `Bearer ${config.dataInclusion.token}`,
+          },
         },
-      })
+      )
 
       res.json(response.data)
     } catch (error) {
