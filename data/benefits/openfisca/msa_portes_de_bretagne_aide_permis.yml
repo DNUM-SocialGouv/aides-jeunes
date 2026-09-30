@@ -1,12 +1,25 @@
 label: aide au financement du permis
 institution: msa_portes_de_bretagne
-description:
-  Coup de pouce de la Mutualité Sociale Agricole (MSA) Portes de Bretagne pour favoriser l’autonomie et l’insertion des jeunes de moins de 25 ans en finançant
-  <a target="_blank" rel="noopener" title="le permis voiture (B) - Nouvelle fenêtre" href="https://www.service-public.fr/particuliers/vosdroits/F2828">le permis voiture (B)</a> ou <a target="_blank" rel="noopener" title="le permis moto (A) - Nouvelle fenêtre" href="https://www.service-public.fr/particuliers/vosdroits/F2830">le permis moto (A)</a>.
+description: Coup de pouce de la Mutualité Sociale Agricole (MSA) Portes de
+  Bretagne pour favoriser l’autonomie et l’insertion des jeunes de moins de 25
+  ans en finançant <a target="_blank" rel="noopener" title="le permis voiture
+  (B) - Nouvelle fenêtre"
+  href="https://www.service-public.fr/particuliers/vosdroits/F2828">le permis
+  voiture (B)</a> ou <a target="_blank" rel="noopener" title="le permis moto (A)
+  - Nouvelle fenêtre"
+  href="https://www.service-public.fr/particuliers/vosdroits/F2830">le permis
+  moto (A)</a>.
 conditions:
   - Avoir obtenu le code de la route.
-  - Ne pas avoir obtenu <a href="https://portesdebretagne.msa.fr/lfy/aide-mobilite-emploi" target="_blank" title="Aide à la mobilité - Nouvelle fenêtre" rel="noopener">l’aide à la mobilité</a>.
-  - Ne pas avoir de capitaux supérieurs à 78 000 € pour une personne seule et 117 000 € pour un couple.
+  - Ne pas avoir obtenu <a
+    href="https://portesdebretagne.msa.fr/lfy/aide-mobilite-emploi"
+    target="_blank" title="Aide à la mobilité - Nouvelle fenêtre"
+    rel="noopener">l’aide à la mobilité</a>.
+  - Ne pas avoir de capitaux supérieurs à 78 000 € pour une personne seule et 117
+    000 € pour un couple.
+  -  Si la demande est portée par le jeune : ses ressources  doivent être inférieures à 55 % du SMIC brut. Ces conditions de ressources concernent notamment les jeunes en alternance ou en contrat de professionnalisation.
+  - Si la demande est portée par la famille, le dernier quotient familial connu de la famille au moment de la demande doit être inférieur ou égal à 1 190 €.
+  - La demande doit être déposée dans un délai de 12 mois maximum suivant l'obtention du code de la route.
 link: https://portesdebretagne.msa.fr/lfy/aide-au-permis-de-conduire
 form: https://portesdebretagne.msa.fr/lfp/documents/98950/94128666/Formulaire+Aide+passage+code+de+la+route.pdf
 prefix: l’
