@@ -1,9 +1,13 @@
 label: Aide au transport des élèves et étudiants en situation de handicap
 institution: departement_eure_et_loir
 description: >
-  Le Conseil Départemental de l'Eure-et-Loir prend en charge les frais de déplacement exposés par les élèves et étudiants en situation de handicap qui ne peuvent utiliser les moyens de transport en commun en raison de la gravité de leur handicap, médicalement établie.
+  Le Conseil Départemental de l'Eure-et-Loir prend en charge les frais de déplacement
+  exposés par les élèves et étudiants en situation de handicap qui ne peuvent utiliser
+  les moyens de transport en commun en raison de la gravité de leur handicap, médicalement
+  établie.
 conditions:
-  - Faire évaluer votre situation personnelle par la Maison Départementale des Solidarités (MDA).
+  - Faire évaluer votre situation personnelle par la Maison Départementale des
+    Solidarités (MDA).
 link: https://eurelien.fr/wp-content/uploads/2024/04/Reglement-departemental-du-transport-des-eleves-et-etudiants-en-situation-de-handicap-1.pdf
 instructions: https://betagouv.github.io/aides-jeunes-files/public/aide28/transport-eleves-handicap.pdf
 prefix: l’
@@ -11,3 +15,4 @@ type: bool
 entity: individus
 openfiscaPeriod: thisMonth
 periodicite: autre
+private: true
