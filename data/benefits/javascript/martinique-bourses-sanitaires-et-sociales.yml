@@ -1,11 +1,12 @@
 label: bourses sanitaires et sociales
 institution: martinique
 description:
-  "La Collectivité Territoriale verse des bourses aux étudiants et étudiantes inscrits
-  dans une formation sanitaire ou sociale dispensée par un établissement agréé et
-  préparant à un diplôme d'Etat : travail social, paramédical ou maïeutique. La
-  bourse est attribuée selon la situation matérielle de la personne qui fait la demande
-  si celle-ci est indépendante financièrement, ou de sa famille dans le cas contraire."
+  "La Collectivité Territoriale verse des bourses aux étudiants et étudiantes
+  inscrits dans une formation sanitaire ou sociale dispensée par un établissement
+  agréé et préparant à un diplôme d'Etat : travail social, paramédical ou maïeutique.
+  La bourse est attribuée selon la situation matérielle de la personne qui fait la
+  demande si celle-ci est indépendante financièrement, ou de sa famille dans le cas
+  contraire."
 prefix: les
 conditions_generales:
   - type: regions
@@ -18,3 +19,4 @@ teleservice: https://ct-martinique-production.mgcloud.fr/account-management/ctma
 type: bool
 periodicite: annuelle
 interestFlag: _interetAidesSanitaireSocial
+private: true
