@@ -13,7 +13,12 @@ import Request from "../types/express.d.js"
 import config from "../config/index.js"
 import { sendSimulationResultsEmail } from "../lib/messaging/email/email-service.js"
 import { sendSimulationResultsSms } from "../lib/messaging/sms/sms-service.js"
-import { ErrorType, ErrorStatus, ErrorName } from "../../lib/enums/error.js"
+import {
+  ErrorType,
+  ErrorStatus,
+  isRejectedDestination,
+  isUserInputError,
+} from "../../lib/enums/error.js"
 
 export async function followup(
   req: Request,
@@ -45,6 +50,18 @@ async function createSimulationRecapUrl(req: Request, res: Response) {
   return res.send({ simulationRecapUrl })
 }
 
+// Le message d'un `SmsProviderError` porte la réponse entière du fournisseur :
+// un contenu décidé par un tiers, de longueur non bornée, versé dans nos
+// journaux. `responseCode` en donne l'essentiel ; le reste est écourté.
+const LOGGED_MESSAGE_MAX = 300
+
+function forLog(message: unknown): unknown {
+  if (typeof message !== "string" || message.length <= LOGGED_MESSAGE_MAX) {
+    return message
+  }
+  return `${message.slice(0, LOGGED_MESSAGE_MAX)}… (${message.length} caractères)`
+}
+
 export async function persist(req: Request, res: Response) {
   const { surveyOptin, email, phone } = req.body
   const simulation = req.simulation
@@ -62,22 +79,43 @@ export async function persist(req: Request, res: Response) {
       return res.send({ result: "OK" })
     }
 
-    return createSimulationRecapUrl(req, res)
+    // `return await` et non `return` : dans une fonction asynchrone, la promesse
+    // renvoyée est résolue hors du `try`, et son rejet échapperait au `catch`.
+    return await createSimulationRecapUrl(req, res)
   } catch (error: any) {
-    Sentry.captureException(error)
+    const userInputError = isUserInputError(error)
+    const status: number = userInputError
+      ? ErrorStatus.UnprocessableEntity
+      : ErrorStatus.InternalServerError
 
-    let status: number = ErrorStatus.InternalServerError
+    // Sans cette trace, la seule empreinte d'un échec ici est la ligne d'accès
+    // du serveur : le statut, jamais la cause.
+    console.error(
+      `POST /api/simulation/${simulation?._id}/followup → ${status}`,
+      JSON.stringify({
+        name: error?.name,
+        message: forLog(error?.message),
+        code: error?.code,
+        // Rend observables les codes de refus du fournisseur de SMS : sans
+        // table de correspondance, seuls ceux constatés ici pourront un jour
+        // être classés autrement que par le libellé.
+        responseCode: error?.responseCode,
+        upstreamStatus: error?.response?.status ?? error?.httpStatus,
+        channels: { email: Boolean(email), phone: Boolean(phone) },
+      }),
+      error?.stack,
+    )
 
-    if (
-      error.name === ErrorName.ValidationError ||
-      error.message === ErrorType.UnsupportedPhoneNumberFormat
-    ) {
-      status = ErrorStatus.UnprocessableEntity
+    // `sms-service` exclut délibérément ce refus de Sentry ; le signaler ici
+    // annulerait cette exclusion. Les autres 422 — validation du modèle — y
+    // restent : ils peuvent trahir un défaut de code, pas seulement une saisie.
+    if (!isRejectedDestination(error)) {
+      Sentry.captureException(error)
     }
 
     return res
       .status(status)
-      .send(error.message || ErrorType.PersistingFollowup)
+      .send(error?.message || ErrorType.PersistingFollowup)
   }
 }
 
@@ -118,7 +156,11 @@ export function showFollowup(req: Request, res: Response) {
     })
 }
 
-export function showSurveyResults(req: Request, res: Response) {
+export function showSurveyResults(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
   Followups.find({
     surveyOptin: true,
     surveys: {
@@ -134,6 +176,7 @@ export function showSurveyResults(req: Request, res: Response) {
     .then((followup: Followup[]) => {
       res.send(followup)
     })
+    .catch(next)
 }
 
 export function showSurveyResultByEmail(req: Request, res: Response) {
@@ -155,19 +198,32 @@ export async function followupByAccessToken(
   next: NextFunction,
   accessToken: any,
 ) {
-  const followup: Followup | null = await Followups.findOne({
-    accessToken,
-  }).populate("simulation")
-  if (!followup) return res.sendStatus(ErrorStatus.NotFound)
-  req.followup = followup
-  next()
+  try {
+    const followup: Followup | null = await Followups.findOne({
+      accessToken,
+    }).populate("simulation")
+    if (!followup) return res.sendStatus(ErrorStatus.NotFound)
+    req.followup = followup
+    next()
+  } catch (error) {
+    next(error)
+  }
 }
 
-export function postSurvey(req: Request, res: Response) {
-  req.followup.updateSurvey(SurveyType.BenefitAction, req.body).then(() => {
-    res.sendStatus(201)
+export function postSurvey(req: Request, res: Response, next: NextFunction) {
+  req.followup
+    .updateSurvey(SurveyType.BenefitAction, req.body)
+    .then(() => {
+      res.sendStatus(201)
+    })
+    .catch(next)
+  // La notification Mattermost est accessoire : la réponse de l'usager est déjà
+  // enregistrée et le 201 déjà émis. Elle ne doit ni faire échouer la requête,
+  // ni disparaître si Mattermost est injoignable.
+  pollResult.postPollResult(req.followup, req.body).catch((error) => {
+    console.error("Échec de la notification Mattermost du sondage", error)
+    Sentry.captureException(error)
   })
-  pollResult.postPollResult(req.followup, req.body)
 }
 
 export async function updateWasUseful(req: Request) {

@@ -5,6 +5,7 @@ import Mattermost from "../lib/mattermost-bot/mattermost.js"
 import { Request, Response, NextFunction } from "express"
 import { RequestBody, Data } from "../types/rdv-aide-numerique.js"
 import * as Sentry from "@sentry/node"
+import { ErrorName } from "../../lib/enums/error.js"
 
 export const verifyAuthentication = (
   req: Request,
@@ -83,13 +84,26 @@ export const validateRequestPayload = (
 export async function postOnMattermost(
   req: Request,
   res: Response,
-): Promise<Response> {
+  next: NextFunction,
+): Promise<Response | void> {
   const { id: rdvId, organisation } = req.body.data || {}
   const { id: organisationId } = organisation || {}
 
   const message = `Une personne vient de prendre RDV.
 Plus d'informations ${config.rdvAideNumerique.baseUrl}/admin/organisations/${organisationId}/rdvs/${rdvId}`
 
-  await Mattermost.post(message)
+  try {
+    await Mattermost.post(message)
+  } catch (error: any) {
+    // Le tiers ne peut rien pour une configuration manquante de notre côté :
+    // lui répondre en erreur ne ferait que déclencher des rappels stériles.
+    // L'échec reste explicite, par le journal et par Sentry.
+    if (error?.name === ErrorName.MattermostNotConfiguredError) {
+      console.error("Notification RDV non envoyée", error.message)
+      Sentry.captureException(error)
+      return res.status(200).json({ message: "OK" })
+    }
+    return next(error)
+  }
   return res.status(200).json({ message: "OK" })
 }

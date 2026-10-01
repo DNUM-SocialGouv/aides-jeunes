@@ -91,7 +91,9 @@ const access = async (req, res, next) => {
       }
     }
 
-    return login(req, res)
+    // `return await` et non `return` : dans une fonction asynchrone, la promesse
+    // renvoyée est résolue hors du `try`, et son rejet échapperait au `catch`.
+    return await login(req, res)
   } catch (error) {
     Sentry.captureException(error)
     clearCookie(res)
