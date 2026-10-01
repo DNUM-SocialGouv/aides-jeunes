@@ -1,0 +1,10 @@
+label: accompagnement personnalisé par une assistante sociale
+institution: universite-paris-cite
+description: Vous avez besoin d’aide pour comprendre votre résultat de simulation et demander vos aides ? Envoyez un email à l'équipe d'assistantes sociales de l'Université Paris Cité afin d'être recontacté et accompagné dans vos démarches.
+prefix: l’
+type: bool
+periodicite: autre
+teleservice: https://u-paris.fr/
+link: https://u-paris.fr/
+top: -1
+interestFlag: _interetUnivParisCite
