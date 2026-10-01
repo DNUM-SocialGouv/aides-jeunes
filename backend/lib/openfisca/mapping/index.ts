@@ -7,6 +7,7 @@ import { buildOpenFiscaMenage } from "./menage/index.js"
 import propertyMove from "./property-move.js"
 import last3MonthsDuplication from "./last3-months-duplication.js"
 import { filterByInterestFlag } from "../../../../lib/benefits/filter-interest-flag.js"
+import { isOutOfTerritory } from "../../../../lib/benefits/territory.js"
 
 import SituationMethods from "../../../../lib/situation.js"
 import { Situation } from "../../../../lib/types/situations.js"
@@ -261,10 +262,16 @@ export function buildOpenFiscaRequest(sourceSituation) {
   )
   last3MonthsDuplication(testCase, situation.dateDeValeur)
 
+  // Une aide portée par une collectivité dont l'usager ne relève pas ne peut
+  // pas lui être due : la demander à OpenFisca fait calculer son arbre de
+  // dépendances pour un résultat nul.
   const prestationsWithInterest: Record<string, any> = pickBy(
     requestedVariables,
     function (definition) {
-      return filterByInterestFlag(definition, situation.demandeur)
+      return (
+        filterByInterestFlag(definition, situation.demandeur) &&
+        !isOutOfTerritory(definition, situation.menage)
+      )
     },
   )
 
