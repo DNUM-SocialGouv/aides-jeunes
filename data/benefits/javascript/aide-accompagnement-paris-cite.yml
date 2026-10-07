@@ -1,10 +1,10 @@
-label: accompagnement personnalisé par une assistante sociale
+label: rendez-vous d’accompagnement personnalisé
 institution: universite-paris-cite
-description: Vous avez besoin d’aide pour comprendre votre résultat de simulation et demander vos aides ? Envoyez un email à l'équipe d'assistantes sociales de l'Université Paris Cité afin d'être recontacté et accompagné dans vos démarches.
-prefix: l’
+description: Vous avez besoin d’aide pour comprendre les aides ci-dessous et effectuer vos démarches, ou vous êtes en situation d’urgence ? Prenez rendez-vous pour être accompagné(e) par une chargée d’intervention sociale de l’université en toute confidentialité.
+prefix: le
 type: bool
 periodicite: autre
-teleservice: https://u-paris.fr/
-link: https://u-paris.fr/
+teleservice: https://www.smartagenda.fr/pro/uparis/rendez-vous/?affrdv=true&groupement=5
+link: https://www.smartagenda.fr/pro/uparis/rendez-vous/?affrdv=true&groupement=5
 top: -1
 interestFlag: _interetUnivParisCite
