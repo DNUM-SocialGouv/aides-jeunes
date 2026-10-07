@@ -1,12 +1,15 @@
 label: Aide départementale au permis de conduire
 institution: departement_haute_vienne
-description: Le Département aide les jeunes haut-viennois de 15 à 24 ans disposant de ressources modestes à financer leur apprentissage soit en conduite accompagnée soit par la méthode traditionnelle.
+description: Le Département aide les jeunes haut-viennois de 15 à 24 ans
+  disposant de ressources modestes à financer leur apprentissage soit en
+  conduite accompagnée soit par la méthode traditionnelle.
 conditions:
-  - Ne pas être bénéficiaire d’une aide au permis de conduire de la Région Nouvelle-Aquitaine.
+  - Ne pas être bénéficiaire d’une aide au permis de conduire de la Région
+    Nouvelle-Aquitaine.
   - Être inscrite ou inscrit dans une auto-école haut-viennoise.
 periodicite: ponctuelle
-link: https://www.haute-vienne.fr/nos-actions/jeunesse/besoin-dun-coup-de-pouce/aide-au-permis-de-conduire
-instructions: https://www.haute-vienne.fr/nos-actions/jeunesse/besoin-dun-coup-de-pouce/aide-au-permis-de-conduire/bourse-daide-au-permis-de-conduire
+link: https://www.haute-vienne.fr/mes-demarches/jeunesse/demander-une-bourse-daide-au-permis-de-conduire-/-au-code-de-la-route
+instructions: https://www.haute-vienne.fr/mes-demarches/jeunesse/demander-une-bourse-daide-au-permis-de-conduire-/-au-code-de-la-route
 prefix: l’
 type: float
 unit: "€"
