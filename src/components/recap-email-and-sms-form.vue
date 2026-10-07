@@ -111,7 +111,7 @@ const postFollowup = async (surveyOptin, email?, phone?) => {
     email,
     contactRequired: true,
   }
-  return await axios.post(uri, payload)
+  return await axios.post(uri, payload, { headers: store.authHeaders })
 }
 
 const sendRecapByEmailAndSms = async (surveyOptin) => {

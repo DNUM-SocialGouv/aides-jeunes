@@ -1,12 +1,17 @@
 label: Colocations solidaires pour les étudiants
 institution: etat
 description: >
-  Les colocations solidaires offrent un logement à loyer modéré en échange d'un engagement au service de la collectivité, que ce soit dans une résidence, un quartier ou auprès de personnes âgées.
+  Les colocations solidaires offrent un logement à loyer modéré en échange d'un engagement
+  au service de la collectivité, que ce soit dans une résidence, un quartier ou auprès
+  de personnes âgées.
   <br><br>
   Au service d'une cause&nbsp;:&nbsp;
-  <a target="_blank" title="Kolocation solidaire avec l'AFEV - Nouvelle fenêtre" rel="noopener" href="https://rejoins.afev.org/kaps/">AFEV</a>,&nbsp;
-  <a target="_blank" title="CoopColoc avec l’ACLEF - Nouvelle fenêtre" rel="noopener" href="https://www.coopcoloc.fr/">CoopColoc</a>&nbsp;
-  <a target="_blank" title="Résidences MaisonArticle1 - Nouvelle fenêtre" rel="noopener" href="https://maisonarticle-1.eu/">MaisonArticle1</a>.
+  <a target="_blank" title="Kolocation solidaire avec l'AFEV - Nouvelle fenêtre" rel="noopener"
+  href="https://afev.org/engagement/trouver-colocation-solidaire">AFEV</a>,&nbsp;
+  <a target="_blank" title="CoopColoc avec l’ACLEF - Nouvelle fenêtre" rel="noopener"
+  href="https://www.coopcoloc.fr/">CoopColoc</a>&nbsp;
+  <a target="_blank" title="Résidences MaisonArticle1 - Nouvelle fenêtre" rel="noopener"
+  href="https://maisonarticle-1.eu/">MaisonArticle1</a>.
   <br><br>
   Cohabitation intergénérationnelle&nbsp;:&nbsp;
   <a target="_blank" title="Cohabilis - Nouvelle fenêtre" rel="noopener" href="https://www.cohabilis.org/cohabitation-intergenerationnelle-jeunes-2023/">Cohabilis</a>.<br><br>
@@ -20,8 +25,10 @@ conditions_generales:
   - type: difficultes_acces_ou_frais_logement
     value: true
 conditions:
-  - Vouloir s'engager au service des autres pendant quelques heures chaque semaine.
-  - Se renseigner sur les critères d’admission des résidences, dont certaines sont réservées aux étudiants boursiers.
+  - Vouloir s'engager au service des autres pendant quelques heures chaque
+    semaine.
+  - Se renseigner sur les critères d’admission des résidences, dont certaines sont
+    réservées aux étudiants boursiers.
 prefix: l’
 profils:
   - type: enseignement_superieur
@@ -29,4 +36,3 @@ profils:
 link: https://www.etudiant.gouv.fr/fr/les-colocations-solidaires-358
 periodicite: ponctuelle
 type: bool
-private: true

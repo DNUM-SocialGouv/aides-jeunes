@@ -17,10 +17,10 @@ conditions_generales:
 profils: []
 conditions:
   - Passer votre permis de conduire pour la première fois (la candidature doit
-    être acceptée avant la présentation aux épreuves de conduite) ou avoir
-    obtenu votre permis de manière anticipée, grâce au dispositif de conduite
-    accompagnée, durant la période maximale de 12 mois antérieure à l’obtention
-    de votre majorité légale.
+    être acceptée avant la présentation aux épreuves de conduite) ou avoir obtenu
+    votre permis de manière anticipée, grâce au dispositif de conduite
+    accompagnée, durant la période maximale de 12 mois antérieure à l’obtention de
+    votre majorité légale.
 voluntary_conditions:
   - Être engagé dans une mission bénévole de 70 heures minimum dans une
     collectivité ou une association de l’Oise.
@@ -30,4 +30,5 @@ unit: €
 periodicite: autre
 montant: 600
 link: https://www.oise.fr/les-pass-citoyens-du-conseil-departemental-de-loise/le-passpermis-citoyen
-form: https://www.oise.fr/fileadmin/user_upload/docs/pass-citoyens/pass-permis-citoyen/Dossier-de-candidature-Pass-Permis-Citoyen-oise.fr.pdf
+teleservice: https://www.aidesetsubventions.oise.fr/aides/#/cd60/
+is_teleservice_need_register: true

@@ -2,8 +2,7 @@ label: aide au BAFA pour une session de formation générale
 institution: caf_pyrenees_orientales
 description: L'aide à la formation du BAFA est une aide locale mise à
   disposition par la CAF des Pyrénées-Orientales pour vous aider à financer
-  votre session en complément de l'aide
-  nationale apportée par la CAF.
+  votre session en complément de l'aide nationale apportée par la CAF.
 conditions:
   - Effectuer votre stage dans son intégralité.
   - Déposer votre demande dans les 6 mois suivant la fin du stage.
@@ -29,3 +28,4 @@ unit: €
 periodicite: ponctuelle
 montant: 200
 interestFlag: _interetBafa
+private: true

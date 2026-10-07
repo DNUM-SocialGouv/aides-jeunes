@@ -1,8 +1,9 @@
 label: stage Régional - Jeunes en Entreprise
 institution: guadeloupe
 description: La Région vous permet d'effectuer une première expérience au sein
-  d’une entreprise locale et de percevoir une gratification. Les candidatures sont ouvertes
-  chaque année au cours du mois de mai et les stages, d'une durée d'un mois, débutent soit le 1er juillet, soit le 1er août.
+  d’une entreprise locale et de percevoir une gratification. Les candidatures
+  sont ouvertes chaque année au cours du mois de mai et les stages, d'une durée
+  d'un mois, débutent soit le 1er juillet, soit le 1er août.
 prefix: le
 conditions_generales:
   - type: regions
@@ -23,6 +24,7 @@ type: float
 unit: €
 periodicite: ponctuelle
 montant: 500
-link: https://www.regionguadeloupe.fr/les-aides-les-services/guide-des-aides/detail/actualites/stage-regional-jeunes-en-entreprise/categorie/economie-emploi-entreprises/#_
-teleservice: https://aides.regionguadeloupe.fr/gesaides_web/jsp/nouveauContexte.action?codeAction=M42-ACCUEIL
-instructions: https://www.regionguadeloupe.fr/les-aides-les-services/guide-des-aides/detail/actualites/stage-regional-jeunes-en-entreprise/categorie/economie-emploi-entreprises/#_
+link: https://aides.regionguadeloupe.fr/srje
+teleservice: https://mesaides.regionguadeloupe.fr/aides/#/crgua/connecte/F_srje_jeune/depot/simple
+instructions: https://aides.regionguadeloupe.fr/srje
+private: true

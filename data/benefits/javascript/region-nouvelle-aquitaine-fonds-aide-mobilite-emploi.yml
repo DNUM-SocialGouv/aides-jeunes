@@ -19,3 +19,4 @@ legend: maximum
 montant: 2000
 link: https://les-aides.nouvelle-aquitaine.fr/amenagement-du-territoire/fonds-daide-la-mobilite-vers-lemploi
 teleservice: https://mes-demarches.nouvelle-aquitaine.fr/craPortailFO/externe/creationDossier.do?codeDispositif=FPC11-20
+private: true

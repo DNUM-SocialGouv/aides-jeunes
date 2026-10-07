@@ -1,15 +1,19 @@
 label: bourse sociale
 institution: guadeloupe
 description: La bourse sociale attribuée par la Région Guadeloupe contribue à
-  soutenir financièrement les stagiaires, élèves, étudiants et étudiantes poursuivant des
-  formations sociales dans les établissements de formation agréés par la
-  collectivité régionale. Les demandes de bourses se font chaque année de mi-août à mi-octobre puis de début janvier à début mars.
+  soutenir financièrement les stagiaires, élèves, étudiants et étudiantes
+  poursuivant des formations sociales dans les établissements de formation
+  agréés par la collectivité régionale. Les demandes de bourses se font chaque
+  année de mi-août à mi-octobre puis de début janvier à début mars.
 conditions:
   - Poursuivre une formation sociale dans un des établissements de formation
-    listés <a target="_blank" rel="noopener" title ="Voir les établissements de formation - Nouvelle fenêtre"
-    href="https://www.regionguadeloupe.fr/les-aides-les-services/guide-des-aides/detail/actualites/bourse-sociale/categorie/formation-enseignement-jeunesse/#_">sur cette page</a>.
-  - Être de nationalité française ou d'un pays de l'Union européenne ou étrangère en situation régulière en France depuis le 1er janvier de
-    l’année de début du cycle de formation.
+    listés <a target="_blank" rel="noopener" title ="Voir les établissements de
+    formation - Nouvelle fenêtre"
+    href="https://www.regionguadeloupe.fr/les-aides-les-services/guide-des-aides/detail/actualites/bourse-sociale/categorie/formation-enseignement-jeunesse/#_">sur
+    cette page</a>.
+  - Être de nationalité française ou d'un pays de l'Union européenne ou étrangère
+    en situation régulière en France depuis le 1er janvier de l’année de début du
+    cycle de formation.
   - Justifier d’un niveau de ressources permettant de situer la demande dans le
     barème qui permet de déterminer le taux de bourse appliqué.
 conditions_generales:
@@ -32,3 +36,4 @@ legend: maximum
 montant: 5736
 interestFlag: _interetAidesSanitaireSocial
 is_teleservice_need_register: true
+private: true

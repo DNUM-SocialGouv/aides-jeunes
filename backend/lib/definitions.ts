@@ -20,6 +20,7 @@ const individuBase = [
   "id",
   "_bourseCriteresSociauxCommuneDomicileFamilial",
   "_hasRessources",
+  "_interetUnivParisCite",
   "_role",
 ]
 

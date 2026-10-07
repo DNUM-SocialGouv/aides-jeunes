@@ -1,11 +1,11 @@
 label: aide au BAFA pour une session de formation générale
 institution: caf_loiret
-description:
-  La CAF du Loiret vous aide à financer votre session de formation générale
-  (première étape du diplôme du BAFA) en complément de l'aide nationale apportée par la CNAF.
-  Le dossier de demande doit être complété, signé et adressé à la CAF du Loiret à l’issue
-  de la formation générale, dans un délai maximum de 3 mois. L’aide est versée en une seule fois
-  au jeune ou à sa famille.
+description: La CAF du Loiret vous aide à financer votre session de formation
+  générale (première étape du diplôme du BAFA) en complément de l'aide nationale
+  apportée par la CNAF. Le dossier de demande doit être complété, signé et
+  adressé à la CAF du Loiret à l’issue de la formation générale, dans un délai
+  maximum de 3 mois. L’aide est versée en une seule fois au jeune ou à sa
+  famille.
 prefix: l’
 conditions_generales:
   - type: age
@@ -20,7 +20,8 @@ conditions_generales:
 profils: []
 conditions:
   - Etre allocataire ou rattaché au dossier allocataire de vos parents.
-  - Adresser votre demande à la CAF du Loiret, dans un délai maximum de trois mois à l'issue de la formation générale.
+  - Adresser votre demande à la CAF du Loiret, dans un délai maximum de trois mois
+    à l'issue de la formation générale.
 interestFlag: _interetBafa
 type: float
 unit: €
@@ -28,5 +29,5 @@ periodicite: ponctuelle
 legend: maximum
 montant: 300
 link: https://caf.fr/allocataires/caf-du-loiret/offre-de-service/vie-professionnelle/vous-souhaitez-devenir-animateur-grace-au-bafa-bafd
-instructions: https://caf.fr/sites/default/files/medias/451/Vie-professionnelle/Bafa_2025.pdf
-form: https://caf.fr/sites/default/files/medias/451/Vie-professionnelle/2025-Formulaire-Bafa-Caf45.pdf
+instructions: https://caf.fr/sites/default/files/medias/451/Vie-professionnelle/Bafa_2026.pdf
+form: https://caf.fr/sites/default/files/medias/451/Vie-professionnelle/2026-Formulaire-Bafa-Caf45.pdf

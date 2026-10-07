@@ -1,10 +1,15 @@
 import Promise from "bluebird"
 
+import config from "../../config/index.js"
 import openfiscaImport from "../openfisca/index.js"
 
 const openfisca = Promise.promisifyAll(openfiscaImport)
+// La requête empile une situation par point du tracé : son coût est celui d'un
+// calcul ordinaire multiplié par leur nombre, d'où un budget distinct.
 const request = Promise.promisify(
-  openfisca.sendToOpenfisca("calculate", (s) => s),
+  openfisca.sendToOpenfisca("calculate", (s) => s, {
+    timeout: config.openfiscaBulkTimeout,
+  }),
 )
 
 import bulk from "../openfisca/bulk/index.js"

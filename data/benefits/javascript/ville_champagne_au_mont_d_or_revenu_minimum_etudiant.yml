@@ -1,6 +1,12 @@
 label: revenu minimum étudiant de la ville de Champagne au Mont dʼOr
 institution: ville_champagne_au_mont_d_or
-description: 'La ville de Champagne au Mont dʼOr soutient les étudiants en leur octroyant une aide financière complémentaire et indépendante des autres bourses dʼétudes. Le dépôt des dossiers de demande sʼeffectue au début de lʼannée scolaire (date limite le 15 octobre). Pour tous renseignements vous pouvez contacter le service par mail à <a href="mailto:e.souy@mairiedechampagne.fr">e.souy@mairiedechampagne.fr</a> ou par téléphone au <a href="tel:+33472520620">04 72 52 06 20</a>.<br/>'
+description:
+  'La ville de Champagne au Mont dʼOr soutient les étudiants en leur octroyant
+  une aide financière complémentaire et indépendante des autres bourses dʼétudes.
+  Le dépôt des dossiers de demande sʼeffectue au début de lʼannée scolaire (date limite
+  le 15 octobre). Pour tous renseignements vous pouvez contacter le service par mail
+  à <a href="mailto:e.souy@mairiedechampagne.fr">e.souy@mairiedechampagne.fr</a> ou
+  par téléphone au <a href="tel:+33472520620">04 72 52 06 20</a>.<br/>'
 prefix: le
 conditions_generales:
   - type: communes
@@ -19,10 +25,12 @@ profils:
           - terminale
 conditions:
   - Résider sur Champagne au Mont dʼOr depuis au moins un an.
-  - Poursuivre des études sur le secteur de Lyon ou hors de lʼagglomération lyonnaise.
-  - Sʼengager en contrepartie de lʼoctroi de lʼaide à une participation citoyenne de 4 heures lors de manifestations organisées par la mairie.
+  - Poursuivre des études sur le secteur de Lyon ou hors de lʼagglomération
+    lyonnaise.
+  - Sʼengager en contrepartie de lʼoctroi de lʼaide à une participation citoyenne
+    de 4 heures lors de manifestations organisées par la mairie.
 link: https://www.mairiedechampagne.fr/proche-de-moi/etre-accompagne/actions-sociales/revenu-minimum-etudiant/
-form: https://www.mairiedechampagne.fr/wp-content/uploads/2025/07/dossier_candidature_RME.pdf
+form: https://www.mairiedechampagne.fr/wp-content/uploads/2025/10/dossier_candidature_RME_2026.pdf
 type: float
 unit: €
 periodicite: annuelle

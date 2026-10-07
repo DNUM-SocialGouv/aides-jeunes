@@ -1,9 +1,11 @@
 label: "Bourse communale pour le permis de conduire : permis citoyen"
 institution: ville-angers
-description:
-  La ville d'Angers propose une aide financière au permis B pour les jeunes Angevin·e·s ne disposant pas de ressources suffisantes et qui s'inscrivent dans une démarche de formation ou
-  d’emploi. L'aide est conditionnée à un apport personnel d’au moins 20% du montant total du permis. L’instruction des demandes se fait au Centre
-  Communale d'Action Sociale de la ville.
+description: La ville d'Angers propose une aide financière au permis B pour les
+  jeunes Angevin·e·s ne disposant pas de ressources suffisantes et qui
+  s'inscrivent dans une démarche de formation ou d’emploi. L'aide est
+  conditionnée à un apport personnel d’au moins 20% du montant total du permis.
+  L’instruction des demandes se fait au Centre Communale d'Action Sociale de la
+  ville.
 prefix: la
 conditions_generales:
   - type: communes
@@ -34,10 +36,11 @@ profils:
 conditions:
   - Résider à Angers depuis au moins une année de manière continue.
   - Etre engagé·e dans un parcours d’insertion professionnelle.
-  - Etre inscrit·e dans une auto-école partenaire du CCAS et participer à une journée obligatoire de sécurité routière.
+  - Etre inscrit·e dans une auto-école partenaire du CCAS et participer à une
+    journée obligatoire de sécurité routière.
 voluntary_conditions:
-  - Vous engager à réaliser au moins 20 heures de bénévolat dans une association ou
-    une collectivité.
+  - Vous engager à réaliser au moins 20 heures de bénévolat dans une association
+    ou une collectivité.
 interestFlag: _interetPermisDeConduire
 type: float
 unit: €
@@ -45,4 +48,4 @@ periodicite: autre
 legend: maximum
 montant: 1000
 link: https://www.angers.fr/vivre-a-angers/ccas/se-deplacer/beneficier-du-permis-citoyen/index.html
-instructions: https://www.angers.fr/fileadmin/user_upload/plaquette_permis_citoyen.pdf
+instructions: https://www.angers.fr/fileadmin/user_upload/plaquette_permis_citoyen_web.pdf

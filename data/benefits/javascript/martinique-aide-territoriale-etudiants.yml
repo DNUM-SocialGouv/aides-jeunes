@@ -1,17 +1,17 @@
 label: Aide territoriale aux étudiants et étudiantes
 institution: martinique
-description:
-  La Collectivité Territoriale de Martinique soutient les étudiants et étudiantes
-  dont les revenus sont modestes dans la poursuite de leur études jusqu'au niveau master en Martinique,
-  en Guadeloupe et en France héxagonale. Le montant de l'allocation annuelle dépend des ressources
-  financières du foyer de rattachement de l'étudiant.
+description: La Collectivité Territoriale de Martinique soutient les étudiants
+  et étudiantes dont les revenus sont modestes dans la poursuite de leur études
+  jusqu'au niveau master en Martinique, en Guadeloupe et en France héxagonale.
+  Le montant de l'allocation annuelle dépend des ressources financières du foyer
+  de rattachement de l'étudiant.
 conditions:
   - Être de nationalité française ou ressortissant de l’un des États membres de
     l’Union Européenne.
-  - Avoir moins de 30 ans, à moins d'avoir des enfants à charge (limite d'âge reculée
-    d'un an par enfant à charge) ou d'être étudiant en situation de handicap (aucune
-    limite d'âge). Pour les personnes âgées de plus de 30 ans, les demandes sont examinées
-    la Commission d'Aide aux Etudiants.
+  - Avoir moins de 30 ans, à moins d'avoir des enfants à charge (limite d'âge
+    reculée d'un an par enfant à charge) ou d'être étudiant en situation de
+    handicap (aucune limite d'âge). Pour les personnes âgées de plus de 30 ans,
+    les demandes sont examinées la Commission d'Aide aux Etudiants.
   - Être domicilié fiscalement en Martinique (soi-même ou ses parents).
   - Être inscrit dans une formation ne bénéficiant pas d'aides de la Collectivité.
 prefix: l’
@@ -26,11 +26,12 @@ conditions_generales:
 profils:
   - type: enseignement_superieur
     conditions: []
-link: https://www.spot.mq/zoom-sur/lancement-de-la-campagne-2024-2025-26-juillet-2024
-instructions: https://www.spot.mq/trouver-un-dispositif/aide-territoriale-aux-etudiants-ate
-teleservice: https://ct-martinique-production.mgcloud.fr/account-management/ctmartinique-demandeurs/ux/#/login
+link: https://ct-martinique-production.mgcloud.fr/document-collect/ctmartinique/root/public/usagers/ATE%20-%20FICHE%20INFORMATIVE.pdf
+instructions: https://ct-martinique-production.mgcloud.fr/document-collect/ctmartinique/root/public/usagers/ATE%20-%20FICHE%20INFORMATIVE.pdf
+teleservice: https://mesaides.collectivitedemartinique.mq/account-management/ctmartinique-demandeurs/ux/#/login
+is_teleservice_need_register: true
 type: float
 unit: €
-montant: 2500
+montant: 1400
 legend: maximum
 periodicite: annuelle

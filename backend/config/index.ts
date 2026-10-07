@@ -29,7 +29,7 @@ const config: Configuration = {
     errorPath: "/accompagnement?error",
   },
   aideJeuneExperimentationURL: isProduction
-    ? "https://betagouv.github.io/aides-jeunes-experimentations"
+    ? "https://dnum-socialgouv.github.io/aides-jeunes-experimentations"
     : "http://127.0.0.1:3000",
   contactEmail: process.env.EMAIL_CONTACT || "aides-jeunes@beta.gouv.fr",
   contextName,
@@ -49,6 +49,13 @@ const config: Configuration = {
   },
   openfiscaURL:
     process.env.OPENFISCA_INTERNAL_ROOT_URL || "http://127.0.0.1:2000",
+  // Doit rester inférieur au `timeout` gunicorn d'OpenFisca (openfisca/config.py) :
+  // abandonner côté client ne libère pas le worker, c'est gunicorn qui le recycle.
+  openfiscaTimeout: Number(process.env.OPENFISCA_TIMEOUT_MS) || 25000,
+  // Le tracé d'une variable sur un axe empile 141 situations dans une seule
+  // requête : mesuré à 12 s sur un poste de développement, il dépasse les 25 s
+  // sur une machine de CI. Même contrainte vis-à-vis de gunicorn.
+  openfiscaBulkTimeout: Number(process.env.OPENFISCA_BULK_TIMEOUT_MS) || 60000,
   openfiscaAxeURL: isProduction
     ? "https://betagouv.github.io/mes-aides-changent"
     : "http://127.0.0.1:3000",
@@ -74,7 +81,7 @@ const config: Configuration = {
     },
   },
   github: {
-    repository_url: "https://github.com/betagouv/aides-jeunes",
+    repository_url: "https://github.com/DNUM-SocialGouv/aides-jeunes",
   },
   matomo: {
     id: Number(process.env.MATOMO_ID) || 66,
@@ -85,10 +92,8 @@ const config: Configuration = {
       process.env.NODE_ENV === "production"
         ? [
             "jeremy.pastouret@beta.gouv.fr",
-            "julie.marshall@sg.social.gouv.fr",
             "simon.hamery@beta.gouv.fr",
-            "thomas.guillet@beta.gouv.fr",
-            "yasmine.berrada@beta.gouv.fr",
+            "juliette.dixmier@beta.gouv.fr",
           ]
         : ["user@yopmail.com"],
     client_id:

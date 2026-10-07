@@ -19,12 +19,14 @@ profils: []
 conditions:
   - Être allocataire ou rattaché au dossier allocataire de vos parents.
   - Être sans emploi fixe rémunéré.
-  - 'Renvoyer le formulaire de demande dûment complété par email à <a href="mailto:transmettreundocument.caf84@info-caf.fr">transmettreundocument.caf84@info-caf.fr</a> ou par voie postale à lʼadresse suivante : Caf de Vaucluse - SIDP-BAFA - 218 boulevard Pierre BOULLE - 84049 AVIGNON Cedex 9.'
+  - 'Renvoyer le formulaire de demande dûment complété par email à <a href="mailto:transmettreundocument.caf84@info-caf.fr">transmettreundocument.caf84@info-caf.fr</a>
+    ou par voie postale à lʼadresse suivante : Caf de Vaucluse - SIDP-BAFA - 218 boulevard
+    Pierre BOULLE - 84049 AVIGNON Cedex 9.'
 interestFlag: _interetBafa
 type: float
 unit: €
 periodicite: ponctuelle
 montant: 200
 link: https://caf.fr/allocataires/caf-de-vaucluse/offre-de-service/vie-professionnelle/le-bafa
-form: https://caf.fr/sites/default/files/medias/841/VIE%20PROFESSIONNELLE/BAFA/2024_Dossier_AFI_Bafa_Bafd.pdf
-instructions: https://caf.fr/sites/default/files/medias/841/VIE%20PROFESSIONNELLE/BAFA/2024_Plaquette_AFI_BAFA_BAFD.pdf
+form: https://www.caf.fr/sites/default/files/medias/841/VIE%20PROFESSIONNELLE/BAFA/2024_Dossier_AFI_Bafa_Bafd.pdf
+instructions: https://www.caf.fr/sites/default/files/medias/841/VIE%20PROFESSIONNELLE/BAFA/2024_Dossier_AFI_Bafa_Bafd.pdf

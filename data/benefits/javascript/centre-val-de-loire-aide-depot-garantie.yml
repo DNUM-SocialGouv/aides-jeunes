@@ -1,6 +1,9 @@
 label: avance remboursable au dépôt de garantie pour son premier logement
 institution: region_centre_val_de_loire
-description: Vous êtes étudiant, étudiante, jeune actif ou active. Vous êtes à la recherche d’un logement en Centre-Val de Loire ? La Région peut vous octroyer une avance remboursable au dépôt de garantie qui permet de financer la caution demandée par le propriétaire.
+description: Vous êtes étudiant, étudiante, jeune actif ou active. Vous êtes à
+  la recherche d’un logement en Centre-Val de Loire ? La Région peut vous
+  octroyer une avance remboursable au dépôt de garantie qui permet de financer
+  la caution demandée par le propriétaire.
 prefix: l’
 conditions_generales:
   - type: age
@@ -25,7 +28,8 @@ profils:
 conditions:
   - Vous installer dans votre premier logement.
   - Constituer un dossier avec les pièces justificatives demandées.
-  - Adresser le dossier 3 mois maximum après la signature du bail à l'adresse indiquée.
+  - Adresser le dossier 3 mois maximum après la signature du bail à l'adresse
+    indiquée.
 type: float
 unit: €
 periodicite: autre
@@ -33,3 +37,4 @@ legend: maximum
 montant: 300
 link: https://www.yeps.fr/offre/region-avance-remboursable-regionale-au-depot-de-garantie-pour-son-premier-logement/
 instructions: https://www.yeps.fr/offre/region-avance-remboursable-regionale-au-depot-de-garantie-pour-son-premier-logement/
+private: true

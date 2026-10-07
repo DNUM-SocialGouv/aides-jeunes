@@ -1,23 +1,32 @@
 label: rémunération des stagiaires de la formation professionnelle
 institution: region_provence_alpes_cote_azur
-description: La Région propose une rémunération à destination des stagiaires de
-  la formation professionnelle préparant une formation sanitaire de niveau V.
+description: La Région Sud peut vous verser une rémunération de stage, ainsi qu’une prise en charge de vos frais de transport et/ou d’hébergement selon votre situation dans le cadre d'une formation professionnelle.
 prefix: la
 conditions_generales:
   - type: regions
     values:
       - "93"
-  - type: formation_sanitaire_social
+  - type: age
+    operator: ">="
+    value: 16
 profils:
   - type: chomeur
     conditions: []
 conditions:
-  - Être inscrit ou inscrite à France travail ou auprès d’une mission locale.
-  - Ne pas être en continuité de parcours scolaire.
-interestFlag: _interetAidesSanitaireSocial
+  - Être en recherche d’emploi ou relever d’un public spécifique (bénéficiaire du RSA, de l’ASS, de l’ATA,
+    de l’AAH, personne en situation de handicap, personne placée sous main de justice…).
+  - Suivre une formation agréée par l’État ou la Région (formation sanitaire et
+    sociale, école de la 2ᵉ chance, enseignement supérieur, service militaire
+    volontaire…).
+  - Avoir fait valider son projet professionnel par un conseiller ou une
+    conseillère en évolution professionnelle (mission locale, France Travail,
+    Cap emploi, APEC, CIBC…) dans le cadre d’un Projet Personnalisé d’Accès à
+    l’Emploi (PPAE).
+  - Ne pas être indemnisé par France Travail.
 type: bool
 unit: €
 periodicite: autre
 link: https://entreprises.maregionsud.fr/aides-et-appels-a-projet/detail/remuneration-des-stagiaires-de-la-formation-professionnelle
 teleservice: https://aidesformation.maregionsud.fr/SignIn?ReturnUrl=%2Fprofile%2F
 instructions: https://entreprises.maregionsud.fr/aides-et-appels-a-projet/detail/remuneration-des-stagiaires-de-la-formation-professionnelle
+is_teleservice_need_register: true

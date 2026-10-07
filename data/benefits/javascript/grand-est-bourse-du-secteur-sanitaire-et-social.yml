@@ -1,9 +1,8 @@
 label: bourse du secteur sanitaire et social
 institution: grand_est
-description:
-  La Région Grand Est peut octroyer des bourses d’études sur critères sociaux
-  aux personnes inscrites comme étudiantes dans les formations du secteur sanitaire
-  et social agréées et financées par la Région Grand Est.
+description: La Région Grand Est peut octroyer des bourses d’études sur critères
+  sociaux aux personnes inscrites comme étudiantes dans les formations du
+  secteur sanitaire et social agréées et financées par la Région Grand Est.
 prefix: la
 conditions_generales:
   - type: regions
@@ -15,12 +14,12 @@ profils:
 conditions:
   - Vérifier que vous correspondez aux <a target="_blank" rel="noopener" title
     ="Voir les critères de ressources - Nouvelle fenêtre"
-    href="https://boursesanitaireetsociale.grandest.fr/BSS-WEB/jsp/nouveauContexte.action?codeAction=M42-ACCUEIL">
+    href="https://boursesanitaireetsociale.grandest.fr/">
     critères de ressources définis par la Région</a>.
 interestFlag: _interetAidesSanitaireSocial
 type: bool
 unit: €
 periodicite: autre
 link: https://www.grandest.fr/vos-aides-regionales/bourse-secteur-sanitaire-social/
-teleservice: https://boursesanitaireetsociale.grandest.fr/BSS-WEB/jsp/nouveauContexte.action?codeAction=M42-ACCUEIL
+teleservice: https://messervices.grandest.fr/aides/#/crge/connecte/F_TEL0300/depot/simple
 instructions: https://www.grandest.fr/vos-aides-regionales/bourse-secteur-sanitaire-social/

@@ -1,9 +1,9 @@
 label: aide au permis de conduire des apprentis et apprenties
 institution: guadeloupe
-description:
-  La Région Guadeloupe fournit une aide financière aux apprentis ou apprenties
-  souhaitant passer le permis de conduire, en complément de <a target="_blank"
-  rel="noopener" title ="Voir l'aide de l'Etat - Nouvelle fenêtre"
+description: La Région Guadeloupe fournit une aide financière aux apprentis ou
+  apprenties souhaitant passer le permis de conduire, en complément de <a
+  target="_blank" rel="noopener" title ="Voir l'aide de l'Etat - Nouvelle
+  fenêtre"
   href="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/apprentissage/apprentis-aide-permis">l'aide
   de l'Etat</a>.
 conditions:
@@ -23,3 +23,4 @@ unit: €
 periodicite: ponctuelle
 montant: 300
 interestFlag: _interetPermisDeConduire
+private: true

@@ -1,23 +1,19 @@
 label: Prêt d'études remboursable sans intérêt (PER)
 institution: martinique
-description:
-  Le Prêt d'études remboursable sans intérêt (PER) est accordé par la Collectivité Territoriale
-  de Martinique, en fonction des ressources du foyer, à des étudiants et étudiantes inscrits
-  dans un cursus post Bac jusqu'au Master.
+description: Le Prêt d'études remboursable sans intérêt (PER) est accordé par la
+  Collectivité Territoriale de Martinique, en fonction des ressources du foyer,
+  à des étudiants et étudiantes inscrits dans un cursus post Bac jusqu'au
+  Master.
 conditions:
   - Être de nationalité française ou ressortissant de l’un des États membres de
     l’Union Européenne.
-  - Avoir moins de 30 ans, à moins d'avoir des enfants à charge (limite d'âge reculée
-    d'un an par enfant à charge) ou d'être étudiant en situation de handicap (aucune
-    limite d'âge).
+  - Avoir moins de 30 ans, à moins d'avoir des enfants à charge (limite d'âge
+    reculée d'un an par enfant à charge) ou d'être étudiant en situation de
+    handicap (aucune limite d'âge).
   - Procéder au remboursement du prêt accordé au plus tard à compter de l'année
     suivant l'obtention du diplôme préparé ou la fin des études.
   - Avoir remboursé intégralement la dette au plus tard six ans après la date de
     début du paiement de la créance.
-  - Télécharger <a
-    target="_blank" title="Formulaire de cautionnement solidaire - Nouvelle fenêtre" rel="noopener"
-    href="https://www.spot.mq/sites/default/files/Documents/SPOT_FORMULAIRE%20CAUTIONNEMENT.pdf">le formulaire de cautionnement solidaire (PDF - 697ko).
-    </a>.
 prefix: le
 conditions_generales:
   - type: regions
@@ -30,9 +26,9 @@ conditions_generales:
 profils:
   - type: enseignement_superieur
     conditions: []
-link: https://www.spot.mq/zoom-sur/lancement-de-la-campagne-2024-2025-26-juillet-2024
-instructions: https://www.spot.mq/trouver-un-dispositif/pret-detudes-remboursable-sans-interet-per
-teleservice: https://ct-martinique-production.mgcloud.fr/account-management/ctmartinique-demandeurs/ux/#/login
+link: https://ct-martinique-production.mgcloud.fr/document-collect/ctmartinique/root/public/usagers/PER%20-%20FICHE%20INFORMATIVE.pdf
+instructions: https://ct-martinique-production.mgcloud.fr/document-collect/ctmartinique/root/public/usagers/PER%20-%20FICHE%20INFORMATIVE.pdf
+teleservice: https://mesaides.collectivitedemartinique.mq/aides/#/ctmartinique/connecte/F_PER_2026/depot/simple
 type: float
 unit: €
 montant: 3500

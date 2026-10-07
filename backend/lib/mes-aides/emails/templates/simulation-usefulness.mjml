@@ -23,12 +23,14 @@
   </mj-column>
 </mj-section>
 <mj-section>
-  <mj-text align="center" font-size="20px">
-    Votre simulation a-t-elle été utile ?
-  </mj-text>
+  <mj-column>
+    <mj-text align="center" font-size="20px">
+      Votre simulation a-t-elle été utile ?
+    </mj-text>
+  </mj-column>
 </mj-section>
 <mj-section>
-  <mj-column align="center">
+  <mj-column>
     <mj-button
       width="130px"
       background-color="{{&style.ctaBackgroundColor}}"

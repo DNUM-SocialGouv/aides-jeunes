@@ -205,4 +205,4 @@ jobs:
       - name: Send CD failed message
         shell: bash
         run: |
-          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": ":icon-danger: [équipe-tech] La mise en production a rencontré un problème sur la branche main ([lien](https://github.com/betagouv/aides-jeunes/actions/workflows/cd.yml?query=branch%3Amain+is%3Afailure))"}' ${{ secrets.MATTERMOST_ALERTING_URL }}
+          curl -i -X POST -H 'Content-Type: application/json' -d '{"text": ":icon-danger: [équipe-tech] La mise en production a rencontré un problème sur la branche main ([lien](https://github.com/DNUM-SocialGouv/aides-jeunes/actions/workflows/cd.yml?query=branch%3Amain+is%3Afailure))"}' ${{ secrets.MATTERMOST_ALERTING_URL }}

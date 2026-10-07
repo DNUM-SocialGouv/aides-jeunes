@@ -2,7 +2,7 @@ locale: fr
 backend:
   name: git-gateway-large
   branch: main
-  repo: https://github.com/betagouv/aides-jeunes.git
+  repo: https://github.com/DNUM-SocialGouv/aides-jeunes.git
   commit_messages:
     create: Crée {{slug}}
     update: Met à jour {{slug}}

@@ -32,7 +32,7 @@
     </div>
     <small v-if="showDetails">
       Informations techniques :
-      <pre v-html="errorText" />
+      <pre>{{ errorText }}</pre>
     </small>
   </div>
 </template>
@@ -70,8 +70,9 @@ export default {
         : JSON.stringify(value, null, 2)
     },
     isTimeoutError() {
+      // `errorText` est une chaîne primitive : `instanceof String` y est faux.
       return (
-        this.errorText instanceof String && this.errorText.match(/time.?out/i)
+        typeof this.errorText === "string" && /time.?out/i.test(this.errorText)
       )
     },
     resultats() {

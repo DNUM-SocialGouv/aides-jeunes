@@ -78,12 +78,23 @@ SimulationSchema.virtual("cookieName").get(function () {
 })
 
 SimulationSchema.method("isAccessible", function (keychain) {
-  return (
+  if (
     [
       SimulationStatus.Demo,
       SimulationStatus.Investigation,
       SimulationStatus.Test,
-    ].includes(this.status) ||
+    ].includes(this.status)
+  ) {
+    return true
+  }
+
+  // Sans token, aucune clé ne peut correspondre : comparer `undefined` à
+  // `undefined` ouvrirait l'accès à toute requête n'en présentant aucun.
+  if (!this.token) {
+    return false
+  }
+
+  return (
     keychain?.[this.cookieName] === this.token ||
     keychain?.token === this.token ||
     keychain?.authorization === `Bearer ${this.token}`
@@ -93,13 +104,8 @@ SimulationSchema.pre("save", async function (next) {
   if (!this.isNew) {
     return next()
   }
-  try {
-    const simulation = this
-    simulation.token = await utils.generateToken()
-    next()
-  } catch {
-    next()
-  }
+  this.token = await utils.generateToken()
+  next()
 })
 
 SimulationSchema.method("getSituation", function () {

@@ -1,6 +1,7 @@
 import { defineStore } from "pinia"
 import dayjs from "dayjs"
 import { version } from "@lib/simulation.js"
+import { parametersList } from "@lib/openfisca-parameters.js"
 import { datesGenerator } from "@lib/dates.js"
 import { generateAllSteps } from "@lib/state/generator.js"
 import { getAnswer, isStepAnswered, storeAnswer } from "@lib/answers.js"
@@ -10,6 +11,7 @@ import axios from "axios"
 import { generateSituation } from "@lib/situations.js"
 import ABTestingService from "@/plugins/ab-testing-service.js"
 import storageService from "@/lib/storage-service.js"
+import { useThemeStore } from "@/stores/theme.js"
 import {
   Calculs,
   PersistedStore,
@@ -67,7 +69,12 @@ function defaultStore(): Store {
     title: null,
     modalState: null,
     saveSituationError: null,
-    openFiscaParameters: {},
+    // Les paramètres partent des valeurs de repli — celles-là mêmes que le
+    // serveur sert quand OpenFisca ne répond pas — et sont remplacés dès que la
+    // requête aboutit. Un dictionnaire vide n'est pas une absence sans
+    // conséquence : les options d'une question calculée à partir d'un paramètre
+    // vaudraient NaN, et cette valeur s'enregistrerait comme réponse.
+    openFiscaParameters: { ...parametersList },
     recapEmailState: undefined,
     recapPhoneState: undefined,
     external_id: undefined,
@@ -214,6 +221,7 @@ export const useStore = defineStore("store", {
             `/api/simulation/${
               simulationId || this.simulationId
             }/${representation}`,
+            { headers: this.authHeaders },
           )
           .then((response) => response.data)
       }
@@ -230,6 +238,13 @@ export const useStore = defineStore("store", {
     },
     getSimulationToken(): string | undefined {
       return this.simulation.simulationToken
+    },
+    // Le cookie d'accès est un cookie tiers quand le simulateur est intégré en
+    // iframe : Safari le bloque sans exception. Le jeton porté par l'en-tête
+    // reste, lui, disponible dans tous les contextes.
+    authHeaders(): Record<string, string> | undefined {
+      const token = this.getSimulationToken
+      return token ? { Authorization: `Bearer ${token}` } : undefined
     },
     getFCUserInfoEmailValue() {
       const userinfo = this.simulation.answers.all.find(
@@ -418,6 +433,21 @@ export const useStore = defineStore("store", {
         simulation.modifiedFrom = this.simulationId
       }
 
+      //custom interest school
+      if (useThemeStore().theme === "univ-paris-cite") {
+        const flagAnswer: Answer = {
+          entityName: "individu",
+          id: "demandeur",
+          fieldName: "_interetUnivParisCite",
+          value: true,
+        }
+        simulation.answers = {
+          ...simulation.answers,
+          all: storeAnswer(simulation.answers.all, flagAnswer),
+          current: storeAnswer(simulation.answers.current, flagAnswer),
+        }
+      }
+
       simulation.abtesting = ABTestingService.getValues()
       simulation.finishedAt = new Date()
       return axios
@@ -430,7 +460,13 @@ export const useStore = defineStore("store", {
     },
     reset(simulation: Simulation) {
       this.access.fetching = false
-      this.simulation = simulation
+      // Le serveur nomme le jeton `token`, le store `simulationToken` : sans
+      // cette reprise, toute simulation rechargée repart sans jeton d'accès.
+      this.simulation = {
+        ...simulation,
+        simulationToken:
+          simulation.token ?? this.simulation.simulationToken ?? undefined,
+      }
       this.dates = datesGenerator(simulation.dateDeValeur || new Date())
       this.calculs.dirty = false
     },
@@ -543,7 +579,11 @@ export const useStore = defineStore("store", {
       return axios
         .get(`/api/openfisca/parameters/${date.toISOString()}`)
         .then((response) => {
-          this.openFiscaParameters = response.data
+          // Fusion, et non remplacement : un 200 au corps inattendu — page
+          // d'erreur d'un intermédiaire, réponse tronquée — laisserait sinon un
+          // paramètre indéfini, et les options qui s'en déduisent vaudraient
+          // NaN. Le repli est un plancher, pas seulement un état initial.
+          this.openFiscaParameters = { ...parametersList, ...response.data }
         })
         .catch(() => undefined) // Prevent unhandled promise rejection noise in Sentry on network hiccups.
     },

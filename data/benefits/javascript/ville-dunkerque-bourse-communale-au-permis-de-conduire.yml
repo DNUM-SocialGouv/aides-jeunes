@@ -1,10 +1,11 @@
 label: Bourse communale au permis de conduire
 institution: ville_dunkerque
-description:
-  Les villes de Dunkerque, Saint-Pol-sur-Mer et Fort-Mardyck permettent
-  à certains jeunes aux ressources modestes de bénéficier du financement d'une partie de leur permis B,
-  en échange de 50 heures d'engagement bénévole dans une association.
-  Si votre dossier est sélectionné, la bourse est versée à l’auto-école une fois la totalité des heures de bénévolat réalisée.
+description: Les villes de Dunkerque, Saint-Pol-sur-Mer et Fort-Mardyck
+  permettent à certains jeunes aux ressources modestes de bénéficier du
+  financement d'une partie de leur permis B, en échange de 50 heures
+  d'engagement bénévole dans une association. Si votre dossier est sélectionné,
+  la bourse est versée à l’auto-école une fois la totalité des heures de
+  bénévolat réalisée.
 prefix: la
 conditions_generales:
   - type: communes
@@ -24,8 +25,10 @@ conditions_generales:
     period: month
 profils: []
 conditions:
-  - Résider à Dunkerque, Saint-Pol-sur-Mer ou Fort-Mardyck depuis au moins deux ans.
-  - Prendre contact avec l'équipe "Parcours de réussite" de votre ville pour compléter votre dossier de demande de bourse.
+  - Résider à Dunkerque, Saint-Pol-sur-Mer ou Fort-Mardyck depuis au moins deux
+    ans.
+  - Prendre contact avec l'équipe "Parcours de réussite" de votre ville pour
+    compléter votre dossier de demande de bourse.
 interestFlag: _interetPermisDeConduire
 type: float
 unit: €
@@ -33,3 +36,4 @@ periodicite: autre
 montant: 600
 link: https://www.ville-dunkerque.fr/vous/jeunes-12-30-ans/parcours-de-reussite-2
 instructions: https://www.ville-dunkerque.fr/fileadmin/user_upload/Jeunes_a_Dunkerque/Nouveau_fichier_parcours_de_reussite/DOSSIER_Parcours_de_Reussite.pdf
+private: true

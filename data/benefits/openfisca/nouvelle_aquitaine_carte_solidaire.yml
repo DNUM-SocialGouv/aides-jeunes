@@ -9,7 +9,8 @@ type: bool
 unit: null
 periodicite: ponctuelle
 link: https://transports.nouvelle-aquitaine.fr/les-offres/la-carte-solidaire
-teleservice: https://cartesolidaire-nouvelle-aquitaine.cba.fr/
+teleservice: https://cartesolidaire-nouvelle-aquitaine.zecarte.fr/
 instructions: ""
 entity: individus
 openfiscaPeriod: thisMonth
+is_teleservice_need_register: true

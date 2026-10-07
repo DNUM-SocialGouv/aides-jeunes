@@ -1,7 +1,9 @@
-label: stages à lʼétranger pour les lycéens, stagiaires et apprentis (public infra-bac)
+label: stages à lʼétranger pour les lycéens, stagiaires et apprentis (public
+  infra-bac)
 institution: region_nouvelle_aquitaine
 description: La Région finance une partie de votre stage à lʼétranger d'une
-  durée de 2 à 4 semaines. Cette aide est cumulable avec le dispositif Erasmus +.
+  durée de 2 à 4 semaines. Cette aide est cumulable avec le dispositif Erasmus
+  +.
 prefix: les
 conditions_generales:
   - type: regions
@@ -17,7 +19,11 @@ profils:
     conditions: []
   - type: stagiaire
     conditions: []
-conditions: []
+conditions:
+  - Ne pas effectuer le stage dans le pays d'origine en cas de nationalité étrangère.
+  - Disposer dʼun contrat de location en cas de nationalité française avec double nationalité ou si lʼentreprise de stage est à moins de 100 km du domicile.
+  - Effectuer le stage à lʼétranger (hors DOM/TOM) sur une durée minimum de 2 semaines consécutives.
+  - Ne pas bénéficier dʼune autre aide régionale ou dʼun financement OPCO pour le même stage.
 interestFlag: _interetEtudesEtranger
 type: float
 unit: €

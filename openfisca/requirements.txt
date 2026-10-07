@@ -1,8 +1,8 @@
 gunicorn>=21.2.0
 pytest==8.4.2
-Openfisca-France==175.1.1
+Openfisca-France==176.0.8
 Openfisca-Core[web-api]==44.7.0
-OpenFisca-France-Local[excel-reader]==6.17.10
-Openfisca-Paris==5.5.14
+OpenFisca-France-Local[excel-reader]==6.17.11
+Openfisca-Paris==5.5.15
 typing_extensions==4.14.1
 numpy >=1.24.2, <2.0.0

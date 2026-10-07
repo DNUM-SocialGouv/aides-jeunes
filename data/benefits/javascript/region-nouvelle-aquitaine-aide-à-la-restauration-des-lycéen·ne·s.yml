@@ -1,8 +1,8 @@
 label: aide à la restauration des lycéens et lycéennes
 institution: region_nouvelle_aquitaine
-description: La Région propose un tarif réduit pour la restauration des
-  lycéens et lycéennes demi-pensionnaires ou internes inscrits ou inscrites dans un lycée public ou
-  EREA.
+description: La Région propose un tarif réduit pour la restauration des lycéens
+  et lycéennes demi-pensionnaires ou internes inscrits ou inscrites dans un
+  lycée public ou EREA.
 prefix: l’
 conditions_generales:
   - type: regions
@@ -18,3 +18,4 @@ unit: €
 periodicite: annuelle
 link: https://les-aides.nouvelle-aquitaine.fr/jeunesse/aide-la-restauration-pour-les-lyceens
 instructions: https://les-aides.nouvelle-aquitaine.fr/jeunesse/aide-la-restauration-pour-les-lyceens
+private: true

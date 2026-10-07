@@ -2,7 +2,8 @@ label: erasmus+ Stage - Étudiants
 institution: region_nouvelle_aquitaine
 description: La Région finance en partie la réalisation d'un stage professionnel
   à l'étranger d'une durée de 2 à 12 mois pour les étudiants. Un Bonus Inclusion
-  d'un montant de 250 €/mois est prévu pour les étudiants ayant moins d’opportunités.
+  d'un montant de 250 €/mois est prévu pour les étudiants ayant moins
+  d’opportunités.
 prefix: l’aide
 conditions_generales:
   - type: regions
@@ -15,8 +16,8 @@ conditions:
   - Étudier dans un établissement faisant partie du Consortium régional (<a
     target="_blank" title="Liste des établissements - Nouvelle fenêtre"
     rel="noopener"
-    href="https://les-aides.nouvelle-aquitaine.fr/jeunesse/erasmus-stage-enseignement-superieur">voir
-    liste</a>).
+    href="https://les-aides.nouvelle-aquitaine.fr/jeunesse/erasmus-stage-enseignement-superieur-0">voir
+    liste - section 'Les établissements du Consortium régional'</a>).
   - Faire valider son dossier par l'établissement avant la date de début du
     séjour.
 interestFlag: _interetEtudesEtranger
@@ -24,7 +25,7 @@ type: float
 unit: €
 periodicite: mensuelle
 legend: maximum
-montant: 420
-link: https://les-aides.nouvelle-aquitaine.fr/jeunesse/erasmus-stage-enseignement-superieur
-teleservice: https://rnaconnect.nouvelle-aquitaine.pro/realms/external/protocol/openid-connect/auth?response_type=code&client_id=mes-demarches.nouvelle-aquitaine.fr&redirect_uri=https%3A%2F%2Fmes-demarches.nouvelle-aquitaine.fr%2FcraPortailFO%2Fsso%2Flogin?codeDispositif%3DMI_VOLET5_APP_25_26&state=80625f45-96b9-4b6c-a110-c15a1601e56f&login=true&scope=openid
+montant: 470
+link: https://les-aides.nouvelle-aquitaine.fr/jeunesse/erasmus-stage-enseignement-superieur-0
+teleservice: https://mes-demarches.nouvelle-aquitaine.fr/craPortailFO/externe/creationDossier.do?codeDispositif=MI_VOLET5_APP_26_27
 is_teleservice_need_register: true

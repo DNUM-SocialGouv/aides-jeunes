@@ -1,8 +1,8 @@
 label: stages Monde - Jeunes titulaires d'un diplôme et en recherche d'emploi
 institution: region_bourgogne_franche_comte
 description: Cette aide vous permet de financer une expérience professionnelle à
-  l’étranger sous la forme d'une bourse, et d'obtenir un accompagnement dans votre
-  démarche.
+  l’étranger sous la forme d'une bourse, et d'obtenir un accompagnement dans
+  votre démarche.
 conditions:
   - Être inscrit ou inscrite à France travail avant le début du stage.
 conditions_generales:
@@ -25,5 +25,5 @@ type: float
 unit: €
 periodicite: mensuelle
 legend: ""
-montant: 763
+montant: 790
 interestFlag: _interetEtudesEtranger

@@ -1,6 +1,8 @@
 label: stages à l'étranger (post-bac)
 institution: region_nouvelle_aquitaine
-description: La Région Nouvelle-Aquitaine finance une partie de votre stage à l'étranger d'une durée minimale de 2 semaines et d'une durée maximale de 26 semaines.
+description: La Région Nouvelle-Aquitaine finance une partie de votre stage à
+  l'étranger d'une durée minimale de 2 semaines et d'une durée maximale de 26
+  semaines.
 prefix: les
 conditions_generales:
   - type: regions
@@ -18,7 +20,8 @@ profils:
     conditions: []
 conditions:
   - Ne pas bénéficier, pour le même stage, d’une autre aide à la mobilité de la
-    Région Nouvelle-Aquitaine, ou d'une aide à la mobilité internationale (AMI), ou d'une aide Erasmus+.
+    Région Nouvelle-Aquitaine, ou d'une aide à la mobilité internationale (AMI),
+    ou d'une aide Erasmus+.
   - Ne pas bénéficier d’une indemnisation mensuelle de stage supérieure à 700 €.
   - Ne pas dépasser le plafond de revenus fixé à 50 000 €.
 interestFlag: _interetEtudesEtranger
@@ -30,3 +33,4 @@ montant: 440
 link: https://les-aides.nouvelle-aquitaine.fr/jeunesse/stages-letranger-post-bac-annee-academique-2025-2026
 is_teleservice_need_register: true
 teleservice: https://rnaconnect.nouvelle-aquitaine.pro/realms/external/protocol/openid-connect/auth?response_type=code&client_id=mes-demarches.nouvelle-aquitaine.fr&redirect_uri=https%3A%2F%2Fmes-demarches.nouvelle-aquitaine.fr%2FcraPortailFO%2Fsso%2Flogin?codeDispositif%3DMI_VOLET2_25&state=1ae97feb-4ce2-489f-9724-57bf1b4e3102&login=true&scope=openid
+private: true

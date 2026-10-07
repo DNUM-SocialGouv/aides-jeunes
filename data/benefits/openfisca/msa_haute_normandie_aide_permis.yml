@@ -11,7 +11,9 @@ interestFlag: _interetPermisDeConduire
 type: float
 unit: €
 periodicite: ponctuelle
-link: https://hautenormandie.msa.fr/lfp/documents/98860/1080430/Formulaire+aide+au+permis+de+conduire.pdf
+link: https://hautenormandie.msa.fr/lfp/famille/offre-msa
+teleservice: https://auth.msa.fr/realms/extranautes-msa/protocol/openid-connect/auth?scope=openid+email+profile&response_type=code&redirect_uri=https%3A%2F%2Fmonespaceprive.msa.fr%2Flfp%2Fc%2Fportal%2Flogin%2Fopenidconnect&state=JuXOi05EbejY02r-8zh_jvuqw29Y2J8Os0WgFlTrVsk&nonce=MVcldImKC_m781SsokkLhf6AlkjMgdu2-oSV169InT0&client_id=client-monespaceprive-lfr
+is_teleservice_need_register: true
 form: https://hautenormandie.msa.fr/lfy/documents/98860/1080430/Formulaire+aide+au+permis+de+conduire.pdf
 floorAt: 1
 entity: individus

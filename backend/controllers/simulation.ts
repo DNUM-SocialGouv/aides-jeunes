@@ -156,7 +156,11 @@ function results(req: Request, res, next) {
 function openfiscaTrace(req: Request, res, next) {
   return openfisca.trace(req.situation, function (err, result) {
     if (err)
-      return next(Object.assign(err.response.data, { _id: req.simulationId }))
+      return next(
+        Object.assign(err?.response?.data || err, {
+          _id: req.simulationId,
+        }),
+      )
 
     res.send(Object.assign(result, { _id: req.simulationId }))
   })

@@ -31,5 +31,5 @@ type: bool
 unit: €
 periodicite: autre
 link: https://freevelov.grandlyon.com/
-teleservice: https://reservations-freevelov.grandlyon.com/connexion
-instructions: https://freevelov.grandlyon.com/je-minscris/
+teleservice: https://reservations-freevelov.grandlyon.com/
+instructions: https://reservations-freevelov.grandlyon.com/

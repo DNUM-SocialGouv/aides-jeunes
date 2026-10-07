@@ -1,0 +1,26 @@
+label: prêt étudiant à taux zéro
+institution: guadeloupe
+description: La Région vous propose de prendre en charge les intérêts de votre
+  prêt d'un montant entre 4 000€ et 30 000€
+prefix: le
+conditions_generales:
+  - type: age
+    operator: ">="
+    value: 18
+  - type: age
+    operator: <=
+    value: 29
+  - type: regions
+    values:
+      - "01"
+profils:
+  - type: enseignement_superieur
+    conditions: []
+conditions:
+  - Il faut s’adresser directement aux établissements bancaires conventionnés, en charge de la constitution du dossier de prêt (la liste est disponible sur le site de la Région).
+  - Si vous avez plus de 25 ans, ne pas avoir interrompu vos études.
+type: bool
+unit: €
+periodicite: ponctuelle
+link: https://aides.regionguadeloupe.fr/Pret-etudiants-a-taux-zero
+instructions: https://aides.regionguadeloupe.fr/Pret-etudiants-a-taux-zero

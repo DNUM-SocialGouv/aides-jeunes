@@ -27,8 +27,9 @@
     <p
       ><small>
         Informations techniques :
-        <pre v-html="error" /></small
-    ></p>
+        <pre>{{ error }}</pre>
+      </small></p
+    >
   </div>
 </template>
 

@@ -1,12 +1,14 @@
 label: aides aux formations BAFA et BAFD
 institution: caf_meurthe_et_moselle
 description: Les aides aux formations BAFA et BAFD sont mises à disposition par
-  la CAF de Meurthe-et-Moselle pour aider les jeunes à financer une partie de leurs stages,
-  en complément de l'aide nationale apportée par la CAF. Seuls les stagiaires qui suivent
-  une formation complète, du stage de base au stage d'approfondissement, reçoivent une aide.
+  la CAF de Meurthe-et-Moselle pour aider les jeunes à financer une partie de
+  leurs stages, en complément de l'aide nationale apportée par la CAF. Seuls les
+  stagiaires qui suivent une formation complète, du stage de base au stage
+  d'approfondissement, reçoivent une aide.
 conditions:
   - Être allocataire ou rattaché au dossier allocataire de vos parents.
-  - Se rapprocher de l'un des organismes de formation listés par la Caf de Meurthe-et-Moselle.
+  - Se rapprocher de l'un des organismes de formation listés par la Caf de
+    Meurthe-et-Moselle.
 conditions_generales:
   - type: age
     operator: ">="
@@ -24,4 +26,3 @@ prefix: les
 type: bool
 periodicite: ponctuelle
 interestFlag: _interetBafa
-private: true

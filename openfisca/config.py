@@ -2,7 +2,15 @@ import os
 
 port = os.getenv('OPENFISCA_PORT', '2000')
 bind = os.getenv('OPENFISCA_BIND_HOST', '127.0.0.1:' + port)
-timeout = 120
+# Chien de garde : au-delà, le worker est tué et recyclé plutôt que de rester
+# immobilisé — avec un pool de workers sync, chaque worker bloqué retire une
+# place de concurrence à tout le cluster.
+#
+# Le seuil couvre le plus long appel légitime, et non le plus courant : le tracé
+# d'une variable sur un axe empile 141 situations dans une seule requête. Il
+# doit donc rester supérieur à OPENFISCA_BULK_TIMEOUT_MS côté Node, sans quoi
+# c'est gunicorn qui interromprait un calcul que le client attend encore.
+timeout = int(os.getenv('OPENFISCA_TIMEOUT') or 90)
 workers = os.getenv('OPENFISCA_WORKERS', 8)
 
 profiler = False

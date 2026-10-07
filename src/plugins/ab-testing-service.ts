@@ -31,7 +31,7 @@ function getEnvironment() {
   // Exemple de test AB :
   // /1 Copier / Remplir / Décommenter ce bloc
   // /2 Ajouter une variante pour l'Intégration Continue si nécessaire : ABTestingService.setVariant("nom_du_test", "nom_de_la_version_A")
-  //   - ici : https://github.com/betagouv/aides-jeunes/blob/59e581d61fd285a68b3ccb637f29ab3c7f9972ac/src/router.ts#L280
+  //   - ici : https://github.com/DNUM-SocialGouv/aides-jeunes/blob/59e581d61fd285a68b3ccb637f29ab3c7f9972ac/src/router.ts#L280
   // /3 L'utiliser dans le code : ABTestingService.getValues().nom_du_test
   // Le bloc :
   // ABTestingEnvironment.name_of_the_test = ABTestingEnvironment.name_of_the_test || {}

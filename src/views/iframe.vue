@@ -1,6 +1,16 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from "vue"
+import { computed, getCurrentInstance, onMounted, ref, watch } from "vue"
 import { Theme } from "@lib/enums/themes"
+
+// Thèmes à ne pas exposer publiquement dans le listing d'intégration
+const excludedThemes: string[] = [Theme.UnivParisCite]
+
+const $theme = getCurrentInstance()?.appContext.config.globalProperties.$theme
+const availableThemes = computed(() =>
+  ($theme?.options ?? []).filter(
+    (option) => !excludedThemes.includes(option.label),
+  ),
+)
 
 const selectedTheme = ref(Theme.Default)
 const options = ref(["data-from-home", "data-with-logo"])
@@ -46,7 +56,7 @@ watch(selectedTheme, () => {
     <p>
       Le script de son intégration est accessible
       <a
-        href="https://github.com/betagouv/aides-jeunes/blob/main/iframes/iframe-integration.js"
+        href="https://github.com/DNUM-SocialGouv/aides-jeunes/blob/main/iframes/iframe-integration.ts"
         target="_blank"
         >sur le dépôt hébergeant notre code </a
       >.
@@ -102,7 +112,7 @@ watch(selectedTheme, () => {
         </legend>
         <div class="fr-row">
           <div
-            v-for="(option, index) in $theme.options"
+            v-for="(option, index) in availableThemes"
             :key="index"
             class="fr-radio-group fr-radio-rich fr-mb-2w fr-mt-1w"
           >

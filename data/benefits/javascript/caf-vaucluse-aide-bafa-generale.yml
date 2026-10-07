@@ -1,12 +1,14 @@
 label: aide au BAFA pour une session de formation générale
 institution: caf_vaucluse
 description: L'aide à la formation du BAFA est une aide locale mise à
-  disposition par la CAF du Vaucluse pour vous aider à financer votre session générale en
-  complément de l'aide nationale apportée par la CAF.
+  disposition par la CAF du Vaucluse pour vous aider à financer votre session
+  générale en complément de l'aide nationale apportée par la CAF.
 conditions:
   - Être allocataire ou rattaché au dossier allocataire de vos parents.
   - Être sans emploi fixe rémunéré.
-  - 'Renvoyer le formulaire de demande dûment complété par email à <a href="transmettreundocument.caf84@info-caf.fr">transmettreundocument.caf84@info-caf.fr</a> ou par voie postale à lʼadresse suivante : Caf de Vaucluse - SIDP-BAFA - 218 boulevard Pierre BOULLE - 84049 AVIGNON Cedex 9.'
+  - 'Renvoyer le formulaire de demande dûment complété par email à <a href="transmettreundocument.caf84@info-caf.fr">transmettreundocument.caf84@info-caf.fr</a>
+    ou par voie postale à lʼadresse suivante : Caf de Vaucluse - SIDP-BAFA - 218 boulevard
+    Pierre BOULLE - 84049 AVIGNON Cedex 9.'
 conditions_generales:
   - type: age
     operator: ">="
@@ -19,7 +21,7 @@ conditions_generales:
       - "84"
 profils: []
 link: https://caf.fr/allocataires/caf-de-vaucluse/offre-de-service/vie-professionnelle/le-bafa
-instructions: https://caf.fr/sites/default/files/medias/841/VIE%20PROFESSIONNELLE/BAFA/2024_Plaquette_AFI_BAFA_BAFD.pdf
+instructions: https://caf.fr/sites/default/files/medias/841/VIE%20PROFESSIONNELLE/BAFA/2024_Dossier_AFI_Bafa_Bafd.pdf
 form: https://caf.fr/sites/default/files/medias/841/VIE%20PROFESSIONNELLE/BAFA/2024_Dossier_AFI_Bafa_Bafd.pdf
 prefix: l’
 type: float

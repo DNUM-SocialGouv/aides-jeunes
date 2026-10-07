@@ -35,6 +35,7 @@ function getAnonymizedAnswer(answer, simulation) {
           case "_interetAidesSanitaireSocial":
           case "_interetBafa":
           case "_interetEtudesEtranger":
+          case "_interetUnivParisCite":
           case "_interetPermisDeConduire":
           case "_interetsAidesVelo":
           case "activite":

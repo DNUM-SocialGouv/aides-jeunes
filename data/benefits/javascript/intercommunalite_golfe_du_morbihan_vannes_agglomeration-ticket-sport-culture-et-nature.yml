@@ -1,6 +1,9 @@
 label: Ticket Sport Culture et Nature
 institution: ville-de-vannes
-description: La Ville de Vannes organise l’opération « Ticket Sport Culture Nature » pendant les vacances scolaires pour vos enfants de 7 à 16 ans. Il s’agit de stages culturels ou sportifs proposés à la journée, à la demi-journée ou à la semaine et encadrés par des Éducateurs Municipaux.
+description: La Ville de Vannes organise l’opération « Ticket Sport Culture
+  Nature » pendant les vacances scolaires pour vos enfants de 7 à 16 ans. Il
+  s’agit de stages culturels ou sportifs proposés à la journée, à la
+  demi-journée ou à la semaine et encadrés par des Éducateurs Municipaux.
 prefix: le
 conditions_generales:
   - type: communes
@@ -13,13 +16,16 @@ conditions_generales:
 profils:
   - type: parent
 conditions:
-  - Consulter sur le site de la ville, la liste et le calendrier des activités proposées ainsi que les dates d’inscription (attention, celles-ci sont assez courtes).
-  - Vérifier votre tarif, compris entre 2 € et 10 € pour une demi-journée en fonction de votre quotient familial, sur le simulateur de la ville de Vannes.
-  - Créer votre compte sur Vannes & vous.
+  - Vérifier le montant éligible, compris entre 2 et 11,54€ pour une demi-journée en fonction de votre quotient familial sur  <a target="_blank" title="le site de la ville de Vannes - Nouvelle fenêtre" rel="noopener"
+    href="https://www.mairie-vannes.fr/ticket-sport-culture-et-nature">le site de la ville de Vannes</a>.
+  - Créer son compte sur le <a target="_blank" title="créer son compte sur Vannes et Vous -
+    Nouvelle fenêtre" rel="noopener"
+    href="https://www.espace-citoyens.net/vannesetvous/espace-citoyens/CompteCitoyen/Creation">Vannes et vous</a>.
 type: float
 unit: €
 periodicite: ponctuelle
-legend: à 10 € par demi-journée
+is_teleservice_need_register: true
+legend: à 11,54 € par demi-journée
 montant: 2
 link: https://www.mairie-vannes.fr/ticket-sport-culture-et-nature
-teleservice: https://www.espace-citoyens.net/vannesetvous/espace-citoyens/
+teleservice: https://www.espace-citoyens.net/vannesetvous/espace-citoyens/CompteCitoyen/Creation

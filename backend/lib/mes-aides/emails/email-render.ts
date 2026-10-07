@@ -78,8 +78,8 @@ function renderAsHtml(emailType: EmailType, dataTemplate) {
   }
   return mustache
     .render(emailTemplate, dataTemplate)
-    .then(function (templateString) {
-      const output = mjml(templateString)
+    .then(async function (templateString) {
+      const output = await mjml(templateString)
       return {
         html: output.html,
       }

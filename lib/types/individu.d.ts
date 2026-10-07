@@ -21,6 +21,7 @@ export interface Individu {
   handicap?: boolean
   taux_incapacite?: number
   _interetsAidesVelo?: Velo[]
+  _interetUnivParisCite?: boolean
 }
 
 export interface IndividuGenerator {

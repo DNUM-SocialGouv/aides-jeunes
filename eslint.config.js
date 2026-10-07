@@ -4,6 +4,7 @@ import globals from "globals"
 
 import { fixupConfigRules, fixupPluginRules } from "@eslint/compat"
 
+import cypress from "eslint-plugin-cypress"
 import prettier from "eslint-plugin-prettier"
 import vue from "eslint-plugin-vue"
 import typescriptEslint from "@typescript-eslint/eslint-plugin"
@@ -23,6 +24,18 @@ const compat = new FlatCompat({
 })
 
 export default defineConfig([
+  ...fixupConfigRules(
+    compat.extends(
+      "eslint:recommended",
+      "plugin:vue/vue3-essential",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:vue/vue3-recommended",
+      "plugin:prettier-vue/recommended",
+      "prettier",
+      "plugin:import/recommended",
+    ),
+  ),
+  cypress.configs.recommended,
   {
     languageOptions: {
       globals: {
@@ -38,19 +51,6 @@ export default defineConfig([
         parser: "@typescript-eslint/parser",
       },
     },
-
-    extends: fixupConfigRules(
-      compat.extends(
-        "eslint:recommended",
-        "plugin:vue/vue3-essential",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:cypress/recommended",
-        "plugin:vue/vue3-recommended",
-        "plugin:prettier-vue/recommended",
-        "prettier",
-        "plugin:import/recommended",
-      ),
-    ),
 
     plugins: {
       prettier,

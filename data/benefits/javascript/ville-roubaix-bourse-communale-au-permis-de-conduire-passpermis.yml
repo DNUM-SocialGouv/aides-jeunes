@@ -1,9 +1,10 @@
 label: "Bourse communale au permis de conduire : Pass’Permis"
 institution: ville-de-roubaix
 description:
-  "Cette aide permet aux  jeunes roubaisien·es qui s’inscrivent dans une démarche d’insertion professionnelle
-  de bénéficier du financement d'une partie de leur permis B, en échange de 35 heures de travail bénévole
-  dans un service de la Ville. La prochaine session d'inscription aura lieu en septembre 2024."
+  "Cette aide permet aux  jeunes roubaisien·es qui s’inscrivent dans une
+  démarche d’insertion professionnelle de bénéficier du financement d'une partie de
+  leur permis B, en échange de 35 heures de travail bénévole dans un service de la
+  Ville. La prochaine session d'inscription aura lieu en septembre 2024."
 prefix: la
 conditions_generales:
   - type: communes
@@ -17,17 +18,19 @@ conditions_generales:
     value: 25
 profils: []
 conditions:
-  - Etre inscrit à la Mission Locale si vous n’êtes pas étudiant·e.
-  - Avoir un projet professionnel en cours de réalisation ou être dans une démarche d'insertion professionnelle.
-  - Avoir déjà effectué la JAPD (Journée d'Appel de Préparation à la Défense).
-  - Etre prêt à participer à un atelier d’éloquence afin de préparer l’oral à la
-    commission d’attribution de la bourse.
+  - Être en recherche d’emploi, en formation ou engagé dans un parcours
+    d’insertion professionnelle.
+  - "Avoir besoin du permis B (ex : indispensable pour une prise de poste rapide)."
+  - Ne pas être inscrit dans une autre auto‑école, ni avoir commencé une formation
+    au permis.
+  - Ne pas bénéficier d’une autre aide pour le permis.
+  - Avoir effectué sa Journée d’appel à la défense.
 voluntary_conditions:
-  - Réaliser 35 heures d'action bénévole dans un service de la Ville de Roubaix.
+  - Réaliser entre 35 et 50 heures d'action bénévole auprès d’une association, d’un service municipal ou d’un organisme partenaire
 interestFlag: _interetPermisDeConduire
 type: float
 unit: €
 periodicite: ponctuelle
-montant: 800
+montant: 1200
 link: https://www.ville-roubaix.fr/services-infos-pratiques/emploi-formation-professionnelle/passpermis/
 teleservice: https://services.ville-roubaix.fr/demarches/jsp/puaccueil.jsp

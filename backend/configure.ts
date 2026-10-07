@@ -14,6 +14,15 @@ configMongoose(mongoose, config)
 
 export default function (app: express.Application) {
   process.env.PORT = process.env.PORT || "8080"
+  // Interface d'écoute, boucle locale par défaut : nginx proxifie sur 127.0.0.1
+  // et reste le seul client légitime. Lié à toutes les interfaces, le port est
+  // joignable depuis Internet et court-circuite le vhost — les plafonds
+  // `limit_req`/`limit_conn` qui protègent le pool OpenFisca, et surtout la
+  // réécriture de `X-Forwarded-For` : atteint en direct, le client devient le
+  // premier saut, le `trust proxy` = 1 posé plus bas prend son en-tête au mot, et
+  // les `rateLimit()` clés sur `req.ip` se contournent en changeant de valeur.
+  // Un déploiement qui doit écouter ailleurs — un conteneur — pose HOST.
+  process.env.HOST = process.env.HOST || "127.0.0.1"
   process.env.MES_AIDES_ROOT_URL =
     process.env.MES_AIDES_ROOT_URL || `http://localhost:${process.env.PORT}`
 

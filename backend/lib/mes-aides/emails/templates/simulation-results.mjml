@@ -23,58 +23,59 @@
 </mj-section>
 
 {{#droits}}
-<mj-wrapper padding="16px 0px 0px 0px">
+<mj-section padding="8px 0px 0px 0px">
+  <mj-column>
+    <mj-spacer height="8px" />
+  </mj-column>
+</mj-section>
+<mj-wrapper background-color="#FFFFFF" padding="16px 24px">
   <mj-section padding="0px">
-    <mj-column width="556px" background-color="#FFFFFF" padding="16px">
-      <mj-section padding="0px">
-        <mj-group padding="0px">
-          <mj-column width="20%" vertical-align="middle">
-            <mj-image
-              alt="{{institution.label}}"
-              width="60px"
-              align="left"
-              padding="0px"
-              src="{{&baseURL}}{{&imgSrc}}"
-            />
-          </mj-column>
-          <mj-column vertical-align="middle" width="60%">
-            <mj-text align="left" padding="0px 16px">
-              <strong>{{ benefitLabel }}</strong>
-            </mj-text>
-          </mj-column>
-          <mj-column vertical-align="middle" width="20%">
-            <mj-text align="right" padding="0px">
-              <strong>{{ montant }}</strong>
-            </mj-text>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-      <mj-section padding="0px">
-        <mj-column width="100%" vertical-align="middle" padding="0px">
-          <mj-divider
-            border-width="1px"
-            border-style="solid"
-            border-color="#E7E7E7"
-            padding="16px 0px"
-          />
-        </mj-column>
-      </mj-section>
-      <mj-section padding="0">
-        <mj-column width="100%">
-          <mj-text padding="0px">{{&description}}</mj-text>
-        </mj-column>
-        <mj-column width="100%" padding="0">
-          <mj-button
-            align="left"
-            background-color="{{&style.ctaBackgroundColor}}"
-            color="white"
-            href="{{&ctaLink}}"
-            padding="16px 0px 0px 0px"
-          >
-            {{ ctaLabel }}
-          </mj-button>
-        </mj-column>
-      </mj-section>
+    <mj-group>
+      <mj-column width="20%" vertical-align="middle">
+        <mj-image
+          alt="{{institution.label}}"
+          width="60px"
+          align="left"
+          padding="0px"
+          src="{{&baseURL}}{{&imgSrc}}"
+        />
+      </mj-column>
+      <mj-column vertical-align="middle" width="60%">
+        <mj-text align="left" padding="0px 16px">
+          <strong>{{ benefitLabel }}</strong>
+        </mj-text>
+      </mj-column>
+      <mj-column vertical-align="middle" width="20%">
+        <mj-text align="right" padding="0px">
+          <strong>{{ montant }}</strong>
+        </mj-text>
+      </mj-column>
+    </mj-group>
+  </mj-section>
+  <mj-section padding="0px">
+    <mj-column width="100%" vertical-align="middle" padding="0px">
+      <mj-divider
+        border-width="1px"
+        border-style="solid"
+        border-color="#E7E7E7"
+        padding="16px 0px"
+      />
+    </mj-column>
+  </mj-section>
+  <mj-section padding="0">
+    <mj-column width="100%">
+      <mj-text padding="0px">{{&description}}</mj-text>
+    </mj-column>
+    <mj-column width="100%" padding="0">
+      <mj-button
+        align="left"
+        background-color="{{&style.ctaBackgroundColor}}"
+        color="white"
+        href="{{&ctaLink}}"
+        padding="16px 0px 0px 0px"
+      >
+        {{ ctaLabel }}
+      </mj-button>
     </mj-column>
   </mj-section>
 </mj-wrapper>

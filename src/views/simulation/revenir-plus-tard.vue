@@ -19,7 +19,7 @@ const postRecapFollowup = async () => {
   const payload = {
     surveyOptin: false,
   }
-  return await axios.post(uri, payload)
+  return await axios.post(uri, payload, { headers: store.authHeaders })
 }
 
 const saveSimulationAndShowLink = async () => {

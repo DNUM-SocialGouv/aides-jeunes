@@ -2,7 +2,7 @@ label: Covoiturage Solidaire pour l'emploi - Éhop
 institution: ehop
 description: L'aide Éhop vous permet de trouver facilement un covoiturage pour
   vous rendre sur votre lieu de travail. Le service de mise en relation est
-  gratuit et le prix du covoiturage est limité à 8 centimes par kilomètre.
+  gratuit et le prix du covoiturage est limité à 10 centimes par kilomètre.
 prefix: le
 conditions_generales:
   - type: regions
@@ -26,4 +26,3 @@ unit: €
 periodicite: autre
 link: https://ehop.bzh/covoiturer/ehop-solidaires
 teleservice: https://m.ouestgo.fr/#/solidary-transport/home/request
-private: true

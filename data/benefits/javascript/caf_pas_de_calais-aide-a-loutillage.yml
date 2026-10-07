@@ -35,8 +35,8 @@ profils:
       - type: age
         operator: <
         value: 20
-link: https://www.caf.fr/allocataires/caf-du-pas-de-calais/actualites-departementales/apprentissage-avez-vous-demande-la-prime-l-outillage
-instructions: https://www.caf.fr/allocataires/caf-du-pas-de-calais/actualites-departementales/apprentissage-avez-vous-demande-la-prime-l-outillage
+link: https://www.caf.fr/allocataires/caf-du-pas-de-calais/offre-de-service/vie-professionnelle/je-suis-etudiante/aide-l-outillage
+instructions: https://www.caf.fr/allocataires/caf-du-pas-de-calais/offre-de-service/vie-professionnelle/je-suis-etudiante/aide-l-outillage
 prefix: l’
 type: float
 unit: €

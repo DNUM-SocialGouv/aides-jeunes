@@ -1,6 +1,8 @@
 label: aide au financement du BAFA et BAFD
 institution: ville_villefranche_sur_saone
-description: La Ville de Villefranche finance à hauteur de 50% le Brevet d’Aptitude aux Fonctions d’Animateur (BAFA) et au Brevet d’Aptitude aux Fonctions de Directeurs (BAFD).
+description: La Ville de Villefranche finance à hauteur de 50% le Brevet
+  d’Aptitude aux Fonctions d’Animateur (BAFA) et au Brevet d’Aptitude aux
+  Fonctions de Directeurs (BAFD).
 prefix: l’
 conditions_generales:
   - type: attached_to_institution
@@ -9,7 +11,7 @@ conditions_generales:
     value: 16
 profils: []
 conditions:
-  - "Remplir un dossier à récupérer au Pôle Ressources Jeunesse Numérique du Service Jeunesse - <address>230 rue de la quarantaine - Ligne 4 / arrêt quarantaine</address> ou envoyer un mail à <a href='mailto:prjn@villefranche.net'>prjn@villefranche.net</a>."
+  - Récupérer le dossier d'inscription au Pôle Ressources Jeunesse Numérique du Service Jeunesse - <address>230 rue de la quarantaine - Ligne 4 / arrêt quarantaine</address>.
 interestFlag: _interetBafa
 type: bool
 unit: €

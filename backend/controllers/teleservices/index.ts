@@ -230,14 +230,16 @@ function verifyRequest(req, res, next) {
  * This function returns a key/value object representing the requested situation to prefill a specific teleservice.
  * At the moment, the key/value pairs are hardcoded but it mimics the expected behavior.
  */
-function exportRepresentation(req, res) {
+function exportRepresentation(req, res, next) {
   return Promise.resolve(
     createClass(req.teleservice, req.simulation, req.payload.query).toExternal(
       req,
     ),
-  ).then(function (value) {
-    return res.json(value)
-  })
+  )
+    .then(function (value) {
+      return res.json(value)
+    })
+    .catch(next)
 }
 
 const teleservicesExports = {

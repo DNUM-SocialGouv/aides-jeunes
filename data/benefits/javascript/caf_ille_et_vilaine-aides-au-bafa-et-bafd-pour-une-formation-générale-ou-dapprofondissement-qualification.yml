@@ -1,11 +1,11 @@
 label: Aides au BAFA ou BAFD
 institution: caf_ille_et_vilaine
-description:
-  Le brevet d’aptitude aux fonctions d’animateur (BAFA) et le brevet d’aptitude
-  aux fonctions de directeur (BAFD) sont des diplômes qui permettent d’encadrer
-  des enfants et des adolescents en accueil collectif de mineurs. La Caf d'Ille-et-Vilaine
-  vous aide à financer ces formations, sous conditions de ressources. Cette aide est cumulable
-  avec celle de la CNAF et son montant dépend de votre quotient familial.
+description: Le brevet d’aptitude aux fonctions d’animateur (BAFA) et le brevet
+  d’aptitude aux fonctions de directeur (BAFD) sont des diplômes qui permettent
+  d’encadrer des enfants et des adolescents en accueil collectif de mineurs. La
+  Caf d'Ille-et-Vilaine vous aide à financer ces formations, sous conditions de
+  ressources. Cette aide est cumulable avec celle de la CNAF et son montant
+  dépend de votre quotient familial.
 prefix: les
 conditions_generales:
   - type: age
@@ -23,4 +23,4 @@ interestFlag: _interetBafa
 type: bool
 periodicite: autre
 link: https://caf.fr/allocataires/caf-d-ille-et-vilaine/offre-de-service/vie-professionnelle/je-passe-le-bafa-ou-le-bafd
-form: https://caf.fr/sites/default/files/medias/351/Offre-de-service/vie-professionnelle/aide-au-bafa-bafd/Formulaire%20BAFA-2025_mod%C3%A8le.pdf
+form: https://caf.fr/sites/default/files/medias/351/Offre-de-service/vie-professionnelle/aide-au-bafa-bafd/Imprime_1138102.pdf

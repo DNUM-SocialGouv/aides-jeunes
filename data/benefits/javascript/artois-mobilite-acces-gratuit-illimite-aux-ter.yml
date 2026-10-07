@@ -1,9 +1,8 @@
-label: pass pass pour les demandeurs d'emploi
+label: Accès gratuit et illimité aux Ter
 institution: artois-mobilites
 description: Ce titre vous donne accès en illimité aux transports en commun du
   <a target="_blank" rel="noopener" title="Nouvelle fenêtre"
-  href="https://www.tadao.fr/affichage.php?id=683">réseau Tadao (bus et
-  TER)</a>.
+  href="https://www.tadao.fr/affichage.php?id=683">réseau Tadao (bus, Allobus, Proxibus, Chronopro et TER)</a> pour vos déplacements quotidiens.
 prefix: le
 conditions_generales:
   - type: communes
@@ -158,13 +157,10 @@ conditions_generales:
       - "62885"
       - "62895"
       - "62900"
-profils:
-  - type: chomeur
-    conditions: []
-type: float
+conditions:
+  - Remplir le <a target="_blank" rel="noopener" title="Formualire - Nouvelle fenêtre" href="https://demande-titre-ter.tadao.fr/">formulaire</a>.
+link: https://www.tadao.fr/fr/JY5-demande-acces-TER.html
+instructions: https://demande-titre-ter.tadao.fr/
+type: bool
 unit: €
-periodicite: mensuelle
-legend: à la place de 28 €
-montant: 5
-link: https://www.tadao.fr/713-Demandeur-d-emploi.html
-instructions: https://www.tadao.fr/713-Demandeur-d-emploi.html
+periodicite: autre

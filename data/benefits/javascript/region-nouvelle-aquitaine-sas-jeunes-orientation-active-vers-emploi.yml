@@ -17,10 +17,11 @@ profils:
   - type: chomeur
     conditions: []
 conditions:
-  - Être accompagné ou accompagnée par une Mission Locale du Limousin et effectuer votre
-    demande auprès d'eux.
+  - Être accompagné ou accompagnée par une Mission Locale du Limousin et effectuer
+    votre demande auprès d'eux.
 type: bool
 unit: €
 periodicite: ponctuelle
 link: https://les-aides.nouvelle-aquitaine.fr/economie-et-emploi/sas-jeunes-orientation-active-vers-lemploi
 instructions: https://les-aides.nouvelle-aquitaine.fr/economie-et-emploi/sas-jeunes-orientation-active-vers-lemploi
+private: true

@@ -28,3 +28,4 @@ periodicite: autre
 legend: maximum
 montant: 800
 interestFlag: _interetPermisDeConduire
+private: true

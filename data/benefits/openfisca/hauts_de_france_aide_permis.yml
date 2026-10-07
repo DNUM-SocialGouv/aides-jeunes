@@ -3,7 +3,7 @@ institution: hauts_de_france
 description: La région Hauts-de-France prend en charge 90% du prix du permis
   pour aider ses habitants de 18-30 ans à passer leur permis de conduire.
 conditions:
-  - être agé de 18 à 30 ans.
+  - Avoir entre 16 et 25 ans révolus à la date de dépôt de la demande d'aide ou sans limite d'âge pour les familles monoparentales.
   - "être dans l'une des situations suivantes : en apprentissage, stagiaire, inscrit à France travail, inscrit à la Mission locale en PACEA ou en CEJ, lycéen en Terminale d'un Bac Professionnel, en dernière année de CAP, élève d'une Ecole de Production."
 link: https://guide-aides.hautsdefrance.fr/dispositif931
 teleservice: https://aides.hautsdefrance.fr/sub/tiers/aides/details/?sigle=PERM2.0
@@ -15,4 +15,3 @@ entity: individus
 openfiscaPeriod: thisMonth
 legend: "maximum"
 periodicite: ponctuelle
-private: true
