@@ -6,7 +6,7 @@ description:
   ou de location des livres scolaires et équipements professionnels et de sécurité."
 conditions:
   - Veiller à utiliser le montant des aides accordées chez les commerçants ou les
-    associations partenaires de la Région avant le 30 avril qui suit la rentrée
+    associations partenaires de la Région avant le 15 novembre qui suit la rentrée
     scolaire.
 conditions_generales:
   - type: regions
@@ -16,7 +16,6 @@ profils:
   - type: lyceen
     conditions: []
 link: https://guide-aides.hautsdefrance.fr/spip.php?page=dispositif&id_dispositif=594
-teleservice: https://www.cartegeneration.hautsdefrance.fr/Views/Accueil.aspx
 instructions: https://guide-aides.hautsdefrance.fr/spip.php?page=dispositif&id_dispositif=594
 prefix: la
 type: float
