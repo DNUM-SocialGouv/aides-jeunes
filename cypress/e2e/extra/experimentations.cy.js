@@ -5,7 +5,7 @@ context("Test du site d'expérimentations", () => {
   it("Ensures a full redirection and a functional external computation", () => {
     const ghAction = Cypress.env("RUN") === "GH_ACTION"
     const url = ghAction
-      ? "https://betagouv.github.io/aides-jeunes-experimentations/"
+      ? "https://dnum-socialgouv.github.io/aides-jeunes-experimentations/"
       : "http://localhost:3000"
     const text = ghAction ? "en ligne" : "local"
 

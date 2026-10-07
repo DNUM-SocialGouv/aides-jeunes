@@ -29,7 +29,7 @@ const config: Configuration = {
     errorPath: "/accompagnement?error",
   },
   aideJeuneExperimentationURL: isProduction
-    ? "https://betagouv.github.io/aides-jeunes-experimentations"
+    ? "https://dnum-socialgouv.github.io/aides-jeunes-experimentations"
     : "http://127.0.0.1:3000",
   contactEmail: process.env.EMAIL_CONTACT || "aides-jeunes@beta.gouv.fr",
   contextName,
@@ -81,7 +81,7 @@ const config: Configuration = {
     },
   },
   github: {
-    repository_url: "https://github.com/betagouv/aides-jeunes",
+    repository_url: "https://github.com/DNUM-SocialGouv/aides-jeunes",
   },
   matomo: {
     id: Number(process.env.MATOMO_ID) || 66,

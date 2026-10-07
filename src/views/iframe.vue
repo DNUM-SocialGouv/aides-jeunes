@@ -56,7 +56,7 @@ watch(selectedTheme, () => {
     <p>
       Le script de son intégration est accessible
       <a
-        href="https://github.com/betagouv/aides-jeunes/blob/main/iframes/iframe-integration.js"
+        href="https://github.com/DNUM-SocialGouv/aides-jeunes/blob/main/iframes/iframe-integration.ts"
         target="_blank"
         >sur le dépôt hébergeant notre code </a
       >.

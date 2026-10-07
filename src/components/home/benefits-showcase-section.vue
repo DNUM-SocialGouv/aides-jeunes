@@ -7,7 +7,7 @@
       <div class="fr-grid-row fr-grid-row--gutters">
         <div class="fr-col-12 fr-col-md-6">
           <img
-            src="https://betagouv.github.io/aides-jeunes-files/public/resultats_simulation.gif"
+            src="https://dnum-socialgouv.github.io/aides-jeunes-files/public/resultats_simulation.gif"
             alt="Capture d'écran de la page de résultats"
             class="fr-responsive-img fr-mb-2w"
           />

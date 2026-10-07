@@ -31,7 +31,7 @@ interface Args {
   verbose: boolean
 }
 
-const OWNER = "betagouv"
+const OWNER = "DNUM-SocialGouv"
 const REPO = "aides-jeunes"
 
 function parseArgs(): Args {

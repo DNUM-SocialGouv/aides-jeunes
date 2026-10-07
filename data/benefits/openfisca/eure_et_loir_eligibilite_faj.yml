@@ -8,7 +8,7 @@ conditions:
   - "Être suivi par la Mission Locale ou le Service d’Action Sociale du Conseil Départemental."
   - "Contacter le conseiller de la Mission Locale ou du service de lʼAction Sociale afin dʼeffectuer la demande auprés de lʼEspace Insertion."
 link: https://mesdemarches.eurelien.fr/insertion-professionnelle/jai-moins-de-26-ans/je-souhaite-beneficier-du-faj/
-instructions: https://betagouv.github.io/aides-jeunes-files/public/aide28/faj.pdf
+instructions: https://dnum-socialgouv.github.io/aides-jeunes-files/public/aide28/faj.pdf
 prefix: le
 type: bool
 entity: individus
