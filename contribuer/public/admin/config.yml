@@ -441,6 +441,8 @@ fields:
         value: _interetEtudesEtranger
       - label: Oui, l'afficher en cas d'intérêt pour faire une formation dans le sanitaire et social.
         value: _interetAidesSanitaireSocial
+      - label: Oui, l'afficher en cas d'intérêt pour l'accompagnement à Université Paris Cité.
+        value: _interetUnivParisCite
   field_openfisca_linked_entity: &field_openfisca_linked_entity
     label: Entité de rattachement de la variable dans OpenFisca
     name: entity
