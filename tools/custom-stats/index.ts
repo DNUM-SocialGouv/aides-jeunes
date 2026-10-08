@@ -6,12 +6,14 @@
 // { label, run } et l'ajouter à la liste STATS.
 import select from "@inquirer/select"
 
+import benefitsByLevel from "./benefits-by-level.js"
+
 interface Stat {
   label: string
   run: () => Promise<void>
 }
 
-const STATS: Stat[] = []
+const STATS: Stat[] = [benefitsByLevel]
 
 async function main() {
   const stat = await select({
