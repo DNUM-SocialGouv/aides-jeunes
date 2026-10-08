@@ -97,6 +97,7 @@ import { Commune } from "@lib/types/commune"
 import StartSimulationCta from "@/components/start-simulation-cta.vue"
 import { getBenefitLegend } from "@lib/benefits/details.js"
 import { OpenfiscaParameters } from "@lib/types/parameters.d.js"
+import { institutionTypesLabels as types } from "@lib/institution-types.js"
 
 interface Props {
   postalCode: string
@@ -106,18 +107,6 @@ interface Props {
 const props = defineProps<Props>()
 
 const selectedCommune = ref<Commune | null>(null)
-
-const types = {
-  europeen: "Aides européennes",
-  national: "Aides nationales",
-  region: "Aides régionales",
-  departement: "Aides départementales",
-  epci: "EPCI (Métropole, inter-communauté, etc.)",
-  caf: "CAF Locales",
-  msa: "MSA Locales",
-  commune: "Aides communales",
-  autre: "Autres aides",
-}
 
 const institutionsGroups = computed(() => {
   if (!selectedCommune.value) {
