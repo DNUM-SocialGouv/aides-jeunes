@@ -1,4 +1,4 @@
-// Statistiques ponctuelles (Matomo...) demandées par les partenaires
+// Statistiques ponctuelles (Matomo, MongoDB...) demandées par les partenaires
 //
 // Usage : npm run tools:custom-stats
 //
@@ -9,6 +9,7 @@ import select from "@inquirer/select"
 import benefitsByLevel from "./benefits-by-level.js"
 import montpellierAppointmentClicks from "./montpellier-appointment-clicks.js"
 import vannesIframe from "./vannes-iframe.js"
+import vannesSimulations from "./vannes-simulations.js"
 
 interface Stat {
   label: string
@@ -19,6 +20,7 @@ const STATS: Stat[] = [
   benefitsByLevel,
   montpellierAppointmentClicks,
   vannesIframe,
+  vannesSimulations,
 ]
 
 async function main() {
