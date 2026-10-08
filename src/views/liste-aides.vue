@@ -139,6 +139,7 @@ import institutionsBenefits from "generator:institutions"
 import CommuneMethods from "@/lib/commune.js"
 import { Commune } from "@lib/types/commune.d.js"
 import { capitalize, normalizeString } from "@lib/utils.js"
+import { institutionTypesLabels as types } from "@lib/institution-types.js"
 import HomeSimulationGroupButtons from "@/components/buttons/home-simulation-group-buttons.vue"
 
 const props = defineProps<{ showNavigationButtons?: boolean }>()
@@ -149,18 +150,6 @@ const zipCode = ref<string | null>(null)
 const selectedCommune = ref<Commune | null>(null)
 const searchTerms = ref<string | null>(null)
 const benefitsCount = ref(process.env.VITE_BENEFIT_COUNT)
-const types = {
-  europeen: "Aides européeennes",
-  national: "Aides nationales",
-  region: "Aides régionales",
-  departement: "Aides départementales",
-  epci: "EPCI (Métropole, inter-communauté, etc.)",
-  caf: "CAF Locales",
-  msa: "MSA Locales",
-  commune: "Aides communales",
-  autre: "Autres aides",
-}
-
 onMounted(() => {
   const keywordParam = route.query.keyword?.toString()
   if (keywordParam) {
