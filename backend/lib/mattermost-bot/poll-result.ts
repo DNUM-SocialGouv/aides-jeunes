@@ -10,7 +10,7 @@ function parseCurrentDate() {
   })} à ${isoDateTime.toLocaleTimeString("fr-FR")}`
 }
 
-function postPollResult(simulation, answers) {
+async function postPollResult(simulation, answers) {
   if (answers.length == 0 || !simulation?.benefits) {
     return
   }
@@ -50,7 +50,7 @@ function postPollResult(simulation, answers) {
     )
   }
 
-  mattermost.post(result.join("\n"))
+  await mattermost.post(result.join("\n"))
 }
 
 export default {

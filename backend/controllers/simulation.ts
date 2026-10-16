@@ -25,17 +25,22 @@ async function simulation(
   next,
   simulationOrSimulationId: Simulation | Simulation["_id"] | string,
 ) {
-  if (
-    simulationOrSimulationId &&
-    typeof simulationOrSimulationId === "object" &&
-    "_id" in simulationOrSimulationId
-  ) {
-    const simulation = simulationOrSimulationId as Simulation
-    setSimulationOnRequest(req, simulation)
-    return next()
-  }
-
+  // Trois des appelants — `attachPayloadSituation`, `followup` et la route
+  // /support — invoquent cette fonction sans attendre la promesse. Tout ce
+  // qu'elle fait doit donc être couvert : hors du `try`, un jet de `apply()` ou
+  // de `generateSituation()` devient un rejet que personne ne reçoit, et la
+  // requête reste pendante. La charge est ici contrôlée par l'appelant, le
+  // payload du jeton n'étant vérifié qu'après.
   try {
+    if (
+      simulationOrSimulationId &&
+      typeof simulationOrSimulationId === "object" &&
+      "_id" in simulationOrSimulationId
+    ) {
+      setSimulationOnRequest(req, simulationOrSimulationId as Simulation)
+      return next()
+    }
+
     const simulation = await Simulations.findById(simulationOrSimulationId)
 
     if (!simulation) {
@@ -229,19 +234,19 @@ function enrichBenefitsList(benefits) {
 }
 
 async function getLatestFollowup(req: Request, res) {
-  const followup = (await Followups.findOne(
-    {
-      simulation: req.simulation?._id,
-    },
-    null,
-    { sort: { createdAt: -1 } },
-  )) as Followup
-
-  if (!followup) {
-    return res.status(404).send({ error: "No followup found" })
-  }
-
   try {
+    const followup = (await Followups.findOne(
+      {
+        simulation: req.simulation?._id,
+      },
+      null,
+      { sort: { createdAt: -1 } },
+    )) as Followup
+
+    if (!followup) {
+      return res.status(404).send({ error: "No followup found" })
+    }
+
     followup.benefits = enrichBenefitsList(followup.benefits)
 
     return res.send(followup)
