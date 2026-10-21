@@ -14,7 +14,7 @@
     "baseUrl": ".",
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "types": [],
     "paths": {
