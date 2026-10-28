@@ -96,6 +96,7 @@ const config: Configuration = {
             "juliette.dixmier@beta.gouv.fr",
             "eypentest9@eycyberlab.fr",
             "eypentest1@eycyberlab.fr",
+            "eypentest2@eycyberlab.fr",
             "assia.rachedi@sg.social.gouv.fr",
           ]
         : ["user@yopmail.com"],
