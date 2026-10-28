@@ -46,7 +46,6 @@
   ],
   "ts-node": {
     "esm": true,
-    "transpileOnly": true,
     "experimentalSpecifierResolution": "node"
   }
 }

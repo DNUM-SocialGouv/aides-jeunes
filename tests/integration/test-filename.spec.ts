@@ -8,7 +8,7 @@ interface FileProperties {
   extension: string
 }
 
-const projectRoot = path.resolve(__dirname, "../..")
+const projectRoot = path.resolve(import.meta.dirname, "../..")
 
 describe("Test filenames rules", function () {
   const files: FileProperties[] = []

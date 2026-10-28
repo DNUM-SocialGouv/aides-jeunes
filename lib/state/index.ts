@@ -1,5 +1,5 @@
 import Chapters from "../chapters.js"
-import { Chapter } from "@lib/types/chapters.d"
+import { Chapter } from "@lib/types/chapters.d.js"
 import { StepStrict } from "@lib/types/steps.d.js"
 import { Route } from "@lib/types/route.d.js"
 import { ChapterState } from "../enums/chapter.js"

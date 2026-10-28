@@ -91,7 +91,7 @@ export default defineConfig(async ({ mode }) => {
     },
     build: {
       manifest: true,
-      rollupOptions: {
+      rolldownOptions: {
         plugins: [],
         output: {
           assetFileNames: (assetInfo) => {
@@ -109,9 +109,6 @@ export default defineConfig(async ({ mode }) => {
             return `assets/${buildId}/js/[name]-[hash].js`
           },
         },
-      },
-      commonjsOptions: {
-        exclude: ["lib"],
       },
       emptyOutDir: false,
       sourcemap: true,

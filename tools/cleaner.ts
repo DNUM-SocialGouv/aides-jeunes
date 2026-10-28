@@ -4,11 +4,11 @@ import config from "../backend/config/index.js"
 import mongooseConfig from "../backend/config/mongoose.js"
 import Simulations from "../backend/models/simulation.js"
 import { SimulationStatus } from "../lib/enums/simulation.js"
-import Followups from "../backend/models/followup"
+import Followups from "../backend/models/followup.js"
 import {
   anonymizeSimulation,
   anonymizeFollowup,
-} from "../lib/cleaner-functions"
+} from "../lib/cleaner-functions.js"
 
 async function main() {
   const aMonthAgo = Date.now() - 31 * 24 * 60 * 60 * 1000

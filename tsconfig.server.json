@@ -4,7 +4,7 @@
   },
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "nodenext",
     "strict": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -14,7 +14,7 @@
     "baseUrl": ".",
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "moduleResolution": "bundler",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "types": [],
     "paths": {

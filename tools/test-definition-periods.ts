@@ -1,5 +1,5 @@
-import Common from "../backend/lib/openfisca/mapping/common"
-import OpenfiscaGetter from "../backend/lib/openfisca/getter"
+import Common from "../backend/lib/openfisca/mapping/common.js"
+import OpenfiscaGetter from "../backend/lib/openfisca/getter.js"
 import assert from "assert"
 
 const openfiscaPeriodToDefinitionPeriod = {
