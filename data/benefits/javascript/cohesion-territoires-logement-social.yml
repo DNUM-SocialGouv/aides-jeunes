@@ -1,21 +1,27 @@
 label: demande de logement social
 institution: etat
-description: Le logement social est destiné aux personnes
-  et aux familles dont les ressources ne dépassent pas un revenu maximum.
-  Ce montant maximum dépend du nombre de personnes à loger et de la localisation
-  du logement (Île-de-France, province, outre-mer). Aucun frais de dossier n’est
-  réclamé lors de la demande ni lors de la signature du bail.
-  Il n’est pas obligatoire de résider dans une commune pour y déposer un dossier.
+description: Le logement social est destiné aux personnes et aux familles dont
+  les ressources ne dépassent pas un revenu maximum. Ce montant maximum dépend
+  du nombre de personnes à loger et de la localisation du logement
+  (Île-de-France, province, outre-mer). Aucun frais de dossier n’est réclamé
+  lors de la demande ni lors de la signature du bail. Il n’est pas obligatoire
+  de résider dans une commune pour y déposer un dossier.
 prefix: la
 conditions_generales:
   - type: difficultes_acces_ou_frais_logement
     value: true
 profils: []
 conditions:
-  - Effectuer votre demande de logement social en ligne ou en remplissant le formulaire papier à déposer au guichet.
-  - Consulter <a target="_blank" title="Trouver un guichet - Nouvelle fenêtre" rel="noopener" href="https://www.demande-logement-social.gouv.fr/guichetsParCommune.afficher">la liste des guichets</a> dans lesquels vous pourrez être aidé pour effectuer votre demande de logement social.
+  - Effectuer votre demande de logement social en ligne ou en remplissant le
+    formulaire papier à déposer au guichet.
+  - Consulter <a target="_blank" title="Trouver un guichet - Nouvelle fenêtre"
+    rel="noopener"
+    href="https://www.demande-logement-social.gouv.fr/guichetsParCommune.afficher">la
+    liste des guichets</a> dans lesquels vous pourrez être aidé pour effectuer
+    votre demande de logement social.
 type: bool
 periodicite: autre
 link: https://www.service-public.gouv.fr/particuliers/vosdroits/F10007
 form: https://www.service-public.fr/particuliers/vosdroits/R149
 teleservice: https://www.demande-logement-social.gouv.fr/
+private: true
