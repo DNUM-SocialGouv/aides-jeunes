@@ -4,6 +4,7 @@ import DroitEstime from "./droit-estime.vue"
 import WarningMessage from "@/components/warning-message.vue"
 import { capitalize, isBoolean } from "@lib/utils.js"
 import { StandardBenefit } from "@data/types/benefits"
+import { APPOINTMENT_LABEL } from "@lib/enums/cta.js"
 
 const props = defineProps({
   benefit: Object,
@@ -67,7 +68,11 @@ const askBenefitLabelButton = (benefit) => {
               class="fr-btn fr-my-0"
               data-testid="aide-cta"
             >
-              Demander cette aide
+              {{
+                props.benefit.is_appointment
+                  ? APPOINTMENT_LABEL
+                  : "Demander cette aide"
+              }}
             </router-link>
           </li>
         </ul>
