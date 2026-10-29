@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "serve": "nodemon --exec 'node --loader ts-node/esm backend/dev.ts'",
-    "build": "concurrently 'npm run build:server' && concurrently 'npm run build:iframes' 'npm run build:front' && npm run copy:templates",
+    "build": "concurrently 'npm run build:server' 'npm run build:iframes' && npm run build:front && npm run copy:templates",
     "clean:dist-server": "rm -fR dist-server",
     "copy:templates": "mkdir -p dist-server/backend/lib/mes-aides/emails/templates && cp -r backend/lib/mes-aides/emails/templates/* dist-server/backend/lib/mes-aides/emails/templates",
     "build:iframes": "NODE_OPTIONS='--loader ts-node/esm' webpack --config iframes/iframes.config.ts",
