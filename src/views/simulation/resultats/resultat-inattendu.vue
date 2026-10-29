@@ -1,6 +1,11 @@
 <template>
   <form>
-    <h2>Le montant indiqué pour {{ longLabel }} vous semble inexact&nbsp;?</h2>
+    <h2 v-if="droit.type === 'bool'">
+      Le résultat indiqué pour {{ longLabel }} vous semble inexact&nbsp;?
+    </h2>
+    <h2 v-else>
+      Le montant indiqué pour {{ longLabel }} vous semble inexact&nbsp;?
+    </h2>
 
     <component
       :is="resultatsInattendus[droit.id]"

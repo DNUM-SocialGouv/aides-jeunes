@@ -32,7 +32,7 @@
         :analytic-action="eventTypeShowUnexpected"
         :to="{ name: 'resultatInattendu', params: { id: droit.id } }"
       >
-        Montant inattendu ?
+        {{ unexpectedLinkLabel }}
       </AnalyticRouterLink>
     </div>
   </div>
@@ -80,6 +80,11 @@ export default {
     },
     isBenefitTypeString() {
       return this.droitEstime.type === "string"
+    },
+    unexpectedLinkLabel() {
+      return this.droit.type === "bool"
+        ? "Résultat inattendu ?"
+        : "Montant inattendu ?"
     },
     showUnexpectedLink() {
       return (
