@@ -39,6 +39,9 @@
       .
     </p>
 
+    <!-- Carte interactive des aides et simulations par département -->
+    <StatsMap />
+
     <iframe
       id="iframe"
       title="Statistiques d'impact du simulateur d'aides 1jeune1solution"
@@ -52,6 +55,8 @@
 
 <script setup lang="ts">
 import iframeResize from "@iframe-resizer/parent/index.cjs"
+import StatsMap from "@/components/stats-map.vue"
+
 const iframeLoaded = () => {
   iframeResize({ log: false, license: "GPLv3" }, "#iframe")
 }

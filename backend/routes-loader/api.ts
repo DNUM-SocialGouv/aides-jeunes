@@ -15,6 +15,7 @@ import webhookRoutes from "../routes/webhook.js"
 import moncompteproRoutes from "../routes/moncomptepro.js"
 import lieuxRoutes from "../routes/lieux.js"
 import contributionsRoutes from "../routes/contributions.js"
+import statsRoutes from "../routes/stats.js"
 
 const api = express()
 
@@ -33,6 +34,7 @@ teleservicesRoutes(api)
 webhookRoutes(api)
 lieuxRoutes(api)
 contributionsRoutes(api)
+statsRoutes(api)
 
 api.all("*", function (req, res) {
   res.sendStatus(404)
