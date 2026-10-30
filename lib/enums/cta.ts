@@ -5,6 +5,7 @@ export enum CTALabel {
   NeedRegister = "is_teleservice_need_register",
   TeleservicePrefill = "teleservicePrefill",
   Link = "link",
+  Appointment = "appointment",
 }
 
 export const APPOINTMENT_LABEL = "Prendre RDV"

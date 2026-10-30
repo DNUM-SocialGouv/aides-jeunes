@@ -30,7 +30,7 @@ const labels = {
     short: "Voir les instructions détaillées",
     long: "Voir les instructions détaillées pour",
   },
-  appointment: {
+  [CTALabel.Appointment]: {
     short: APPOINTMENT_LABEL,
     long: `${APPOINTMENT_LABEL} pour`,
   },
@@ -50,7 +50,7 @@ const props = defineProps({
 
 const labelKey = computed(() =>
   props.benefit.is_appointment && props.type === CTALabel.Teleservice
-    ? "appointment"
+    ? CTALabel.Appointment
     : props.type,
 )
 

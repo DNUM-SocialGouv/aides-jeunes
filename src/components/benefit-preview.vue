@@ -11,6 +11,11 @@ const props = defineProps({
 })
 
 const askBenefitLabelButton = (benefit) => {
+  if (benefit.is_appointment) {
+    return `${APPOINTMENT_LABEL} pour ${benefit.prefix}${
+      benefit.prefix == "l’" ? "" : " "
+    }${benefit.label}`
+  }
   return `Demander ${benefit.prefix}${benefit.prefix == "l’" ? "" : " "}${
     benefit.label
   }`
