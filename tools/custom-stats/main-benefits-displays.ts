@@ -110,16 +110,13 @@ async function run() {
       rate: ((100 * sum("showDetails")) / sum("show")).toFixed(1),
     }
   })
-  let surveys = {}
+  let surveys: Record<string, Record<string, number>> = {}
   await withSshTunnel(async () => {
     surveys = await countSurveyAnswers()
   })
   const respondents = Object.keys(BENEFITS).map((id) =>
-    Object.values(surveys[id] || {}).reduce(
-      (sum: number, count: number) => sum + count,
-      0,
-    ),
-  ) as number[]
+    Object.values(surveys[id] || {}).reduce((sum, count) => sum + count, 0),
+  )
 
   const row = (label: string, values: string[]) =>
     `| ${label} | ${values.join(" | ")} |`
