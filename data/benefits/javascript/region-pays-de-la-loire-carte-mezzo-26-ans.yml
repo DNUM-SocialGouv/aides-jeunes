@@ -1,7 +1,7 @@
 label: carte Mezzo - 26 ans
 institution: region_pays_de_la_loire
-description: La carte Mezzo pour les personnes de moins de 26 ans vous offre
-  une réducation de -50% sur tous vos billets TER en région Pays de la Loire.
+description: La carte Mezzo pour les personnes de moins de 26 ans vous offre une
+  réducation de -50% sur tous vos billets TER en région Pays de la Loire.
 prefix: la
 conditions_generales:
   - type: age
@@ -12,9 +12,11 @@ conditions_generales:
       - "52"
 profils: []
 conditions:
-  - Vous procurer la carte Mezzo pour un montant annuel de 20€ (la carte est amortie en deux allers-retours).
+  - Vous procurer la carte Mezzo pour un montant annuel de 20€ (la carte est
+    amortie en deux allers-retours).
 type: bool
 unit: €
 periodicite: autre
 link: https://www.ter.sncf.com/pays-de-la-loire/tarifs-cartes/cartes-de-reduction/carte-mezzo-moins-de-26-ans
 instructions: https://www.ter.sncf.com/pays-de-la-loire/tarifs-cartes/cartes-de-reduction/carte-mezzo-moins-de-26-ans
+private: true
