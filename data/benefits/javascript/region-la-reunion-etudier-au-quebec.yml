@@ -1,8 +1,7 @@
 label: étudier au Québec
 institution: region_la_reunion
-description:
-  La Région propose une aide financière aux étudiants et étudiantes souhaitant
-  partir étudier au Québec.
+description: La Région propose une aide financière aux étudiants et étudiantes
+  souhaitant partir étudier au Québec.
 prefix: l’aide
 conditions_generales:
   - type: regions
@@ -32,3 +31,4 @@ periodicite: ponctuelle
 link: https://regionreunion.com/aides-services/article/etudier-et-vivre-au-quebec-t-interesse
 form: https://regionreunion.com/IMG/pdf/ams_qc_2024_2027.pdf
 instructions: https://regionreunion.com/IMG/pdf/depliant-etudier-vivre-quebec-cohorte2024.pdf
+private: true
