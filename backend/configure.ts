@@ -5,10 +5,13 @@ import mongoose from "mongoose"
 import configMongoose from "./config/mongoose.js"
 import { loadRoutes } from "./routes-loader/index.js"
 import config from "./config/index.js"
+import { registerProcessErrorHandlers } from "./lib/process-error-handlers.js"
 
 // Enable Sentry in production
 // https://docs.sentry.io/development/sdk-dev/overview/#usage-for-end-users
 Sentry.init(config.sentry)
+
+registerProcessErrorHandlers()
 
 configMongoose(mongoose, config)
 

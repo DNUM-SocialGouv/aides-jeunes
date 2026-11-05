@@ -6,6 +6,7 @@ import { persist } from "../controllers/followups.js"
 import simulationController from "../controllers/simulation.js"
 import simulationDemo from "../controllers/simulation-demo.js"
 import teleservices from "../controllers/teleservices/index.js"
+import { asyncHandler } from "../lib/async-handler.js"
 
 export default function (api: Express) {
   api.options("/simulation", cors())
@@ -71,7 +72,11 @@ export default function (api: Express) {
     teleservices.exportRepresentation,
   )
 
-  api.get("/simulation/demo", cors({ origin: "*" }), simulationDemo.get)
+  api.get(
+    "/simulation/demo",
+    cors({ origin: "*" }),
+    asyncHandler(simulationDemo.get),
+  )
 
   const specificSimulationRoutes = express.Router({ mergeParams: true })
   api.use("/simulation/", specificSimulationRoutes)

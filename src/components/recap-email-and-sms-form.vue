@@ -7,6 +7,7 @@ import { useRouter } from "vue-router"
 import * as Sentry from "@sentry/vue"
 import StatisticsMixin from "@/mixins/statistics.js"
 import { EventCategory, EventAction } from "@lib/enums/event.js"
+import { ErrorType } from "@lib/enums/error.js"
 
 const router = useRouter()
 const store = useStore()
@@ -38,6 +39,14 @@ const inputPhonePattern = computed(() => {
 
 const showSms = process.env.VITE_SHOW_SMS_TAB
 
+// Un numéro refusé par le fournisseur est une saisie à corriger, affichée à
+// l'usager : la signaler à Sentry noierait les vraies pannes. Le serveur répond
+// 422 et conserve le libellé du fournisseur dans le corps.
+const isRejectedDestination = (error: any) =>
+  (error?.response?.data?.toString() || "").includes(
+    ErrorType.InvalidDestinationAddress,
+  )
+
 const sendRecap = async () => {
   const optin = surveyOptin.value
   try {
@@ -60,11 +69,10 @@ const sendRecap = async () => {
       emailInputErrorMessage.value = true
     }
   } catch (error: any) {
-    const errorMessage = error?.response?.data?.toString() || ""
-    if (!errorMessage.includes("Invalid destination address")) {
-      Sentry.captureException(error)
-    } else {
+    if (isRejectedDestination(error)) {
       store.setFormRecapPhoneState("invalid-address")
+    } else {
+      Sentry.captureException(error)
     }
   }
 }
@@ -124,7 +132,9 @@ const sendRecapByEmailAndSms = async (surveyOptin) => {
     store.setModalState(undefined)
     await postFollowup(surveyOptin, emailValue.value, phoneValue.value)
   } catch (error) {
-    Sentry.captureException(error)
+    if (!isRejectedDestination(error)) {
+      Sentry.captureException(error)
+    }
     store.setFormRecapState("error")
     throw error
   }
@@ -144,7 +154,9 @@ const sendRecapBySms = async (surveyOptin) => {
     store.setModalState(undefined)
     await postFollowup(surveyOptin, undefined, phoneValue.value)
   } catch (error) {
-    Sentry.captureException(error)
+    if (!isRejectedDestination(error)) {
+      Sentry.captureException(error)
+    }
     store.setFormRecapPhoneState("error")
     throw error
   }
