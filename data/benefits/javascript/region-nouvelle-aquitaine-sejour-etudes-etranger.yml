@@ -1,14 +1,17 @@
-# veille-snapshot 2026-10-28 : page modifiée (dates) — à vérifier
 label: Séjour d'étude à l'étranger
 institution: region_nouvelle_aquitaine
 description:
   La Région Nouvelle-Aquitaine finance en partie la réalisation d'un séjour d'études à
-  l'étranger d'une durée minimale de 8 semaines et d'une durée maximale de 26 semaines.
+  l'étranger d'une durée minimale de 8 semaines consécutives, dans la limite de 26 semaines
+  par année universitaire.
 prefix: les
 conditions_generales:
   - type: regions
     values:
       - "75"
+  - type: age
+    operator: <
+    value: 31
 profils:
   - type: enseignement_superieur
     conditions: []
@@ -18,13 +21,16 @@ profils:
     conditions: []
 conditions:
   - Être inscrit ou inscrite dans un établissement d’enseignement ou de formation de la Région Nouvelle-Aquitaine et réaliser un séjour
-    d'études à l’étranger dans le cadre de votre cursus en formation initiale ou continue.
+    d'études à l’étranger dans le cadre d'un cursus en formation initiale ou continue.
+  - Ne pas cumuler pour le même séjour une autre aide de la Région Nouvelle-Aquitaine, une aide à la mobilité internationale (AMI) ou une aide Erasmus+.
+  - Ne pas bénéficier pour ce séjour d'une participation d'un opérateur de compétences (OPCO) supérieure ou égale à 700 € par mois.
+  - Déposer une demande avant le début du séjour d'études.
 interestFlag: _interetEtudesEtranger
 type: float
 unit: €
 periodicite: mensuelle
 legend: maximum
 montant: 440
-link: https://les-aides.nouvelle-aquitaine.fr/jeunesse/sejours-detudes-letranger-post-bac-annee-academique-2025-2026
+link: https://les-aides.nouvelle-aquitaine.fr/jeunesse/sejours-detudes-letranger-post-bac
 is_teleservice_need_register: true
-teleservice: https://rnaconnect.nouvelle-aquitaine.pro/realms/external/protocol/openid-connect/auth?response_type=code&client_id=mes-demarches.nouvelle-aquitaine.fr&redirect_uri=https%3A%2F%2Fmes-demarches.nouvelle-aquitaine.fr%2FcraPortailFO%2Fsso%2Flogin?codeDispositif%3DMI_VOLET3_25&state=67ca7cb5-42d6-4172-9c3f-a56ae5995925&login=true&scope=openid
+teleservice: https://mes-demarches.nouvelle-aquitaine.fr/craPortailFO/externe/creationDossier.do?codeDispositif=MI_VOLET3_25
