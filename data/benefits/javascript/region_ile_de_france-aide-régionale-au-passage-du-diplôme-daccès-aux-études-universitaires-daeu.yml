@@ -17,7 +17,7 @@ profils:
     conditions: []
 link: https://www.iledefrance.fr/aide-regionale-pour-le-diplome-dacces-aux-etudes-universitaires-daeu
 teleservice: https://mesdemarches.iledefrance.fr/account-management/cridfprd-demandeurs/ux/#/login?redirectTo=https:%2F%2Fmesdemarches.iledefrance.fr%2Faides%2F%23%2Fcridfprd%2Fconnecte%2Fdashboard%2Faccueil&jwtKey=jwt-cridfprd-portail-depot-demande-aides&footer=https:%2F%2Fmesdemarches.iledefrance.fr%2Faides%2F%23%2Fcridfprd%2Fmentions-legales,Mentions%20l%C3%A9gales%20et%20RGPD,_self
-instructions: ""
+instructions: https://mesdemarches.iledefrance.fr/document-collect/cridfprd/root/public?objectId=99457872-90ab-477e-906f-f4d6b97c5d26;1.0
 prefix: l’
 type: float
 unit: €
