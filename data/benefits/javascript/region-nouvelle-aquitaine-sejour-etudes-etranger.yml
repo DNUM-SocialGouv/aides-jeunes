@@ -17,7 +17,7 @@ profils:
   - type: stagiaire
     conditions: []
 conditions:
-  - Être inscrit dans un établissement d’enseignement ou de formation de la Région Nouvelle-Aquitaine et réaliser un séjour
+  - Être inscrit ou inscrite dans un établissement d’enseignement ou de formation de la Région Nouvelle-Aquitaine et réaliser un séjour
     d'études à l’étranger dans le cadre de votre cursus en formation initiale ou continue.
 interestFlag: _interetEtudesEtranger
 type: float
