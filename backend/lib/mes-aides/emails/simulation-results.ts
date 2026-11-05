@@ -1,5 +1,6 @@
 import { assign, map } from "lodash-es"
 import { capitalize } from "../../../../lib/utils.js"
+import { APPOINTMENT_LABEL } from "../../../../lib/enums/cta.js"
 
 import {
   formatDroitEstime,
@@ -36,7 +37,9 @@ export function formatBenefits(benefits, parameters) {
     let ctaLabel = ""
     if (droit.teleservice) {
       ctaLink = droit.teleservice
-      ctaLabel = "Faire une demande en ligne"
+      ctaLabel = droit.is_appointment
+        ? APPOINTMENT_LABEL
+        : "Faire une demande en ligne"
     } else if (droit.form) {
       ctaLink = droit.form
       ctaLabel = "Accéder au formulaire papier"

@@ -371,6 +371,12 @@ fields:
     widget: boolean
     required: false
     required_group: cta
+  field_is_appointment: &field_is_appointment
+    label: S'agit-il d'une prise de rendez-vous ?
+    hint: Le bouton de l'aide sur la page de résultats affichera « Prendre RDV » au lieu de « Demander cette aide ».
+    name: is_appointment
+    widget: boolean
+    required: false
   field_definite_article: &field_definite_article
     label: Article défini
     name: prefix
@@ -925,6 +931,7 @@ collections:
       - *field_link_information
       - *field_link_teleservice
       - *field_is_teleservice_need_register
+      - *field_is_appointment
       - *field_link_form
       - *field_link_instructions
       - *field_amount_reliability
