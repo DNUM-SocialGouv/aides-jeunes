@@ -98,8 +98,8 @@ export default {
       if (path === "/simulation/recapitulatif") {
         return "Récapitulatif"
       }
-      if (path.includes("simulation/resultat/inattendu/")) {
-        return "Montant inattendu"
+      if (path.includes("simulation/resultats/inattendu/")) {
+        return "Résultat inattendu"
       }
       if (path === "/simulation/resultats/recapitulatif_email") {
         return this.emailModalTitle
