@@ -74,7 +74,7 @@ export default () => {
     name: "xml sitemap generator",
     closeBundle: () => {
       fs.writeFileSync(
-        path.join(__dirname, `../dist/sitemap.xml`),
+        path.join(import.meta.dirname, `../dist/sitemap.xml`),
         formatXMLEntries(pages),
       )
     },

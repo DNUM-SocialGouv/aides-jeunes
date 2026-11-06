@@ -1,5 +1,5 @@
 import { generateSituation } from "../lib/situations.js"
-import { calculate } from "../backend/lib/openfisca"
+import { calculate } from "../backend/lib/openfisca/index.js"
 import { computeAides } from "../lib/benefits/compute.js"
 import benefits from "../data/all.js"
 import("../backend/lib/mongo-connector.js")

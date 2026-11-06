@@ -85,9 +85,13 @@ export default defineConfig(async ({ mode }) => {
       port: 8080,
       strictPort: true,
     },
+    // Le DSFR embarque des hacks IE (`@media (min-width: 0\0)`) que lightningcss rejette
+    css: {
+      lightningcss: { errorRecovery: true },
+    },
     build: {
       manifest: true,
-      rollupOptions: {
+      rolldownOptions: {
         plugins: [],
         output: {
           assetFileNames: (assetInfo) => {
@@ -105,9 +109,6 @@ export default defineConfig(async ({ mode }) => {
             return `assets/${buildId}/js/[name]-[hash].js`
           },
         },
-      },
-      commonjsOptions: {
-        exclude: ["lib"],
       },
       emptyOutDir: false,
       sourcemap: true,

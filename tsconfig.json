@@ -5,7 +5,7 @@
     "strict": true,
     "isolatedModules": true,
     "outDir": "dist",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "noImplicitAny": false,
     "noImplicitThis": false,

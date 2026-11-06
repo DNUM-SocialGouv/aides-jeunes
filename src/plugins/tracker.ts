@@ -20,7 +20,11 @@ function waitForPaq(timeout = 10000): Promise<void> {
     const startTime = Date.now()
 
     const intervalId = setInterval(() => {
-      if (window._paq) {
+      // L'environnement peut disparaître avant la fin du polling (ex. teardown jsdom)
+      if (typeof window === "undefined") {
+        clearInterval(intervalId)
+        reject("Window unavailable.")
+      } else if (window._paq) {
         clearInterval(intervalId)
         resolve()
       } else if (Date.now() - startTime > timeout) {

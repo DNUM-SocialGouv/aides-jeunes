@@ -27,7 +27,7 @@ jobs:
       - run: npm ci
         if: steps.restore-dependencies.outputs.cache-hit != 'true'
       - name: Cypress run for experimental website
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         env:
           CYPRESS_RUN: GH_ACTION
         with:

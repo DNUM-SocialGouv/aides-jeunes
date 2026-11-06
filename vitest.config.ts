@@ -17,10 +17,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@root": path.resolve(__dirname, "./"),
-      "@backend": path.resolve(__dirname, "./backend"),
-      "@lib": path.resolve(__dirname, "./lib"),
+      "@": path.resolve(import.meta.dirname, "./src"),
+      "@root": path.resolve(import.meta.dirname, "./"),
+      "@backend": path.resolve(import.meta.dirname, "./backend"),
+      "@lib": path.resolve(import.meta.dirname, "./lib"),
     },
   },
 })

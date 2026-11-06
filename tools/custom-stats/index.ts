@@ -11,7 +11,10 @@ import montpellierAppointmentClicks from "./montpellier-appointment-clicks.js"
 import vannesIframe from "./vannes-iframe.js"
 import vannesSimulations from "./vannes-simulations.js"
 import vannesBenefitsDisplays from "./vannes-benefits-displays.js"
+import { cityBenefitsClicks } from "./city-benefits-clicks.js"
 import mainBenefitsDisplays from "./main-benefits-displays.js"
+import topBenefits from "./top-benefits.js"
+import averageAge from "./average-age.js"
 
 interface Stat {
   label: string
@@ -20,11 +23,15 @@ interface Stat {
 
 const STATS: Stat[] = [
   benefitsByLevel,
-  montpellierAppointmentClicks,
   vannesIframe,
   vannesSimulations,
   vannesBenefitsDisplays,
+  cityBenefitsClicks("Vannes", "ville-de-vannes"),
+  cityBenefitsClicks("Montpellier", "ville_montpellier"),
+  montpellierAppointmentClicks,
   mainBenefitsDisplays,
+  topBenefits,
+  averageAge,
 ]
 
 async function main() {

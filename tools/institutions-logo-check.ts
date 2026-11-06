@@ -1,4 +1,4 @@
-import data from "../data/all"
+import data from "../data/all.js"
 import express from "express"
 import { __express } from "ejs"
 
