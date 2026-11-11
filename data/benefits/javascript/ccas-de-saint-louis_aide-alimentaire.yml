@@ -1,0 +1,25 @@
+label: aide alimentaire
+institution: ccas-de-saint-louis
+prefix: l’
+description: >-
+  Le Centre communal d’action sociale (CCAS) de Saint-Louis propose une aide
+  alimentaire ponctuelle aux habitants qui rencontrent des difficultés
+  financières urgentes pour se nourrir. Elle peut prendre la forme de chèques
+  d’accompagnement personnalisé (CAP), utilisables pour acheter des produits
+  autorisés dans les commerces partenaires.
+conditions_generales:
+  - type: communes
+    values:
+      - "97414"
+conditions:
+  - Résider à Saint-Louis depuis au moins 3 mois.
+  - Avoir des ressources inférieures au plafond fixé par le CCAS selon la
+    composition du foyer.
+  - Prendre contact avec le CCAS au <a href="tel:+262262444500">02 62 44 45
+    00</a> pour rencontrer un travailleur social.
+  - Fournir une pièce d’identité, un justificatif de domicile récent et les
+    justificatifs de toutes les ressources du foyer.
+type: bool
+periodicite: ponctuelle
+link: https://acrobat.adobe.com/id/urn:aaid:sc:DEU1:ece2d267-2edb-4bcb-8b24-a933be2a82a0
+instructions: https://acrobat.adobe.com/id/urn:aaid:sc:DEU1:ece2d267-2edb-4bcb-8b24-a933be2a82a0
