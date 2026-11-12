@@ -4,7 +4,6 @@ import DroitEstime from "./droit-estime.vue"
 import WarningMessage from "@/components/warning-message.vue"
 import { capitalize, isBoolean } from "@lib/utils.js"
 import { StandardBenefit } from "@data/types/benefits"
-import { APPOINTMENT_LABEL } from "@lib/enums/cta.js"
 
 const props = defineProps({
   benefit: Object,
@@ -12,7 +11,7 @@ const props = defineProps({
 
 const askBenefitLabelButton = (benefit) => {
   if (benefit.is_appointment) {
-    return `${APPOINTMENT_LABEL} pour ${benefit.prefix}${
+    return `En savoir plus sur ${benefit.prefix}${
       benefit.prefix == "l’" ? "" : " "
     }${benefit.label}`
   }
@@ -75,7 +74,7 @@ const askBenefitLabelButton = (benefit) => {
             >
               {{
                 props.benefit.is_appointment
-                  ? APPOINTMENT_LABEL
+                  ? "En savoir plus"
                   : "Demander cette aide"
               }}
             </router-link>

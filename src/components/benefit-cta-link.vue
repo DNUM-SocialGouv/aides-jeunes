@@ -30,10 +30,6 @@ const labels = {
     short: "Voir les instructions détaillées",
     long: "Voir les instructions détaillées pour",
   },
-  [CTALabel.Appointment]: {
-    short: APPOINTMENT_LABEL,
-    long: `${APPOINTMENT_LABEL} pour`,
-  },
   link: {
     short: "Plus d'informations",
     long: "Plus d'informations pour",
@@ -48,18 +44,21 @@ const props = defineProps({
   customLabel: String,
 })
 
-const labelKey = computed(() =>
+const appointmentLabels = {
+  short: APPOINTMENT_LABEL,
+  long: `${APPOINTMENT_LABEL} pour`,
+}
+
+const currentLabels = computed(() =>
   props.benefit.is_appointment && props.type === CTALabel.Teleservice
-    ? CTALabel.Appointment
-    : props.type,
+    ? appointmentLabels
+    : props.type
+      ? labels[props.type]
+      : null,
 )
 
 const label = computed(() =>
-  props.customLabel
-    ? props.customLabel
-    : labelKey.value
-      ? labels[labelKey.value].short
-      : null,
+  props.customLabel ? props.customLabel : currentLabels.value?.short || null,
 )
 
 const longLabel = computed(() => {
@@ -67,7 +66,7 @@ const longLabel = computed(() => {
     const prefix = props.benefit.prefix || ""
     const label = props.benefit.label || ""
     const endsWithQuote = prefix.endsWith("’")
-    return `${labels[labelKey.value].long} ${prefix}${
+    return `${currentLabels.value.long} ${prefix}${
       endsWithQuote ? "" : " "
     }${label} - Nouvelle fenêtre`
   }
