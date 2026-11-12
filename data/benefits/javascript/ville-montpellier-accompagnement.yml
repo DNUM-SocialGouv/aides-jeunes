@@ -8,6 +8,7 @@ conditions_generales:
       - "34172"
 type: bool
 periodicite: autre
+is_appointment: true
 teleservice: https://rdv.anct.gouv.fr/org/259/ccas-montpellier
 link: https://rdv.anct.gouv.fr/org/259/ccas-montpellier
 top: -1

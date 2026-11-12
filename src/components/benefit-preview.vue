@@ -10,6 +10,11 @@ const props = defineProps({
 })
 
 const askBenefitLabelButton = (benefit) => {
+  if (benefit.is_appointment) {
+    return `En savoir plus sur ${benefit.prefix}${
+      benefit.prefix == "l’" ? "" : " "
+    }${benefit.label}`
+  }
   return `Demander ${benefit.prefix}${benefit.prefix == "l’" ? "" : " "}${
     benefit.label
   }`
@@ -67,7 +72,11 @@ const askBenefitLabelButton = (benefit) => {
               class="fr-btn fr-my-0"
               data-testid="aide-cta"
             >
-              Demander cette aide
+              {{
+                props.benefit.is_appointment
+                  ? "En savoir plus"
+                  : "Demander cette aide"
+              }}
             </router-link>
           </li>
         </ul>

@@ -4,7 +4,7 @@ import storageService from "@/lib/storage-service.js"
 import { PropType, computed } from "vue"
 import { useRouter } from "vue-router"
 import { StandardBenefit } from "@data/types/benefits.d.js"
-import { CTALabel } from "@lib/enums/cta.js"
+import { APPOINTMENT_LABEL, CTALabel } from "@lib/enums/cta.js"
 import { EventCategory } from "@lib/enums/event"
 import { useBenefits } from "@/composables/use-benefits.js"
 
@@ -44,12 +44,21 @@ const props = defineProps({
   customLabel: String,
 })
 
-const label = computed(() =>
-  props.customLabel
-    ? props.customLabel
+const appointmentLabels = {
+  short: APPOINTMENT_LABEL,
+  long: `${APPOINTMENT_LABEL} pour`,
+}
+
+const currentLabels = computed(() =>
+  props.benefit.is_appointment && props.type === CTALabel.Teleservice
+    ? appointmentLabels
     : props.type
-      ? labels[props.type].short
+      ? labels[props.type]
       : null,
+)
+
+const label = computed(() =>
+  props.customLabel ? props.customLabel : currentLabels.value?.short || null,
 )
 
 const longLabel = computed(() => {
@@ -57,7 +66,7 @@ const longLabel = computed(() => {
     const prefix = props.benefit.prefix || ""
     const label = props.benefit.label || ""
     const endsWithQuote = prefix.endsWith("’")
-    return `${labels[props.type].long} ${prefix}${
+    return `${currentLabels.value.long} ${prefix}${
       endsWithQuote ? "" : " "
     }${label} - Nouvelle fenêtre`
   }

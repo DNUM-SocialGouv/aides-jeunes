@@ -151,6 +151,12 @@ describe("benefit descriptions", function () {
             expect(benefit.link).toMatch(/^https?:\/\//)
           })
 
+          if (benefit.is_appointment) {
+            it("should have a teleservice when is_appointment is set", function () {
+              expect(benefit.teleservice).toMatch(/^https?:\/\//)
+            })
+          }
+
           if (benefit.conditions && benefit.conditions.length > 0) {
             describe("conditions", function () {
               benefit.conditions.forEach((condition) => {
