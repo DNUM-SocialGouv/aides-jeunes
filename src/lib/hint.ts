@@ -52,7 +52,12 @@ forEachProperties((_, propertyName, property) => {
 })
 
 const Hint = {
-  get(attribute: string, variation?: string): string {
+  get(attribute: string, variation?: string): string | undefined {
+    // `attribute` vient de l'URL : sans ce garde, « constructor » atteint
+    // Object, qui renvoie tel quel le tableau de segments rendu en v-html.
+    if (!Object.prototype.hasOwnProperty.call(texts, attribute)) {
+      return undefined
+    }
     return typeof texts[attribute] === "string"
       ? texts[attribute]
       : texts[attribute]?.(variation)
