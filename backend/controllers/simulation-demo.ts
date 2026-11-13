@@ -37,10 +37,14 @@ async function fetchArtifactZip() {
   return data
 }
 
-async function get(req, res) {
-  const zipBlob = await fetchArtifactZip()
-  res.attachment("payload.zip")
-  res.send(zipBlob)
+async function get(req, res, next) {
+  try {
+    const zipBlob = await fetchArtifactZip()
+    res.attachment("payload.zip")
+    res.send(zipBlob)
+  } catch (error) {
+    next(error)
+  }
 }
 
 export default {

@@ -4,7 +4,15 @@ import {
   FranceConnectCookie,
 } from "../lib/france-connect-service.js"
 
-export async function login(request, response) {
+export async function login(request, response, next) {
+  try {
+    await redirectToLogin(response)
+  } catch (error) {
+    next(error)
+  }
+}
+
+async function redirectToLogin(response) {
   const stateToken = await utils.generateToken()
   const nonceToken = await utils.generateToken()
 
@@ -63,7 +71,15 @@ export async function fetchUserInfo(request, response) {
   }
 }
 
-export async function logout(request, response) {
+export async function logout(request, response, next) {
+  try {
+    await redirectToLogout(request, response)
+  } catch (error) {
+    next(error)
+  }
+}
+
+async function redirectToLogout(request, response) {
   const idToken = request.cookies[FranceConnectCookie.FcIdTokenHint]
   response.clearCookie(FranceConnectCookie.FcIdTokenHint)
 

@@ -39,14 +39,21 @@ const getMcpClient = async (): Promise<client.Configuration> => {
   return await client.discovery(new URL(provider), client_id, client_secret)
 }
 
-const login = async (req, res) => {
-  const mcpIssuer = await getMcpClient()
-  const parameters: Record<string, string> = {
-    redirect_uri,
-    scope,
+const login = async (req, res, next?) => {
+  try {
+    const mcpIssuer = await getMcpClient()
+    const parameters: Record<string, string> = {
+      redirect_uri,
+      scope,
+    }
+    const redirectUrl: URL = client.buildAuthorizationUrl(mcpIssuer, parameters)
+    return res.redirect(redirectUrl.href)
+  } catch (error) {
+    // Express 4 ne rattrape pas les rejets : un fournisseur injoignable
+    // ferait tomber le processus.
+    if (next) return next(error)
+    throw error
   }
-  const redirectUrl: URL = client.buildAuthorizationUrl(mcpIssuer, parameters)
-  return res.redirect(redirectUrl.href)
 }
 
 const retrieveMcpAccessToken = async (req) => {
@@ -105,7 +112,7 @@ const access = async (req, res, next) => {
       }
     }
 
-    return login(req, res)
+    return await login(req, res)
   } catch (error) {
     Sentry.captureException(error)
     clearCookie(res)
