@@ -338,7 +338,9 @@ jobs:
           nohup gunicorn api --chdir openfisca/ --config openfisca/config.py --preload --log-level debug --log-file=- &
           deactivate
       - name: Copy cypress env file
-        run: cp .env.e2e .env
+        run: |
+          cp .env.e2e .env
+          echo "SESSION_SECRET=$(openssl rand -hex 32)" >> .env
       - name: Cypress run
         uses: cypress-io/github-action@v7
         with:
