@@ -22,7 +22,7 @@ export async function callback(request, response, next) {
     response.clearCookie(FranceConnectCookie.FcState)
     const queryStateToken = request.query.state
 
-    if (queryStateToken !== cookieStateToken) {
+    if (!cookieStateToken || queryStateToken !== cookieStateToken) {
       throw new Error("state is not correct")
     }
 
@@ -41,8 +41,9 @@ export async function callback(request, response, next) {
 
     next()
   } catch (error) {
-    console.error(error)
-    response.status(503).json({ error })
+    // L'erreur axios embarque la requête sortante : on n'en journalise que le message.
+    console.error("FranceConnect :", (error as Error)?.message)
+    response.status(503).json({ error: "Erreur FranceConnect" })
   }
 }
 
@@ -58,8 +59,9 @@ export async function fetchUserInfo(request, response) {
 
     response.json({ simulation })
   } catch (error) {
-    console.error(error)
-    response.status(503).json({ error })
+    // L'erreur axios embarque la requête sortante : on n'en journalise que le message.
+    console.error("FranceConnect :", (error as Error)?.message)
+    response.status(503).json({ error: "Erreur FranceConnect" })
   }
 }
 
@@ -79,7 +81,7 @@ export function logoutCallback(request, response) {
   response.clearCookie(FranceConnectCookie.FcLogoutState)
   const queryStateToken = request.query.state
 
-  if (queryStateToken !== cookieStateToken) {
+  if (!cookieStateToken || queryStateToken !== cookieStateToken) {
     return response.redirect("/?message=Déconnection FC KO!")
   }
 
