@@ -1,8 +1,9 @@
-# veille-snapshot 2026-10-28 : page modifiée (dates) — à vérifier
 label: chèque permis de conduire pour les jeunes en insertion professionnelle
 institution: region_ile_de_france
 description: Grâce à cette aide au permis de conduire, la Région finance tout ou
-  partie du permis B pour les jeunes franciliens en insertion.
+  partie du permis B pour les jeunes franciliens en insertion. Les nouvelles demandes
+  sont fermées depuis le 22 mai 2026. L'aide sera à nouveau disponible début 2027,
+  sous une nouvelle forme.
 conditions:
   - "Vous devez être dans l’un des cas suivants : être stagiaire de la formation
     professionnelle dans une formation financée par la Région ; ou
@@ -10,6 +11,7 @@ conditions:
     vers l’emploi et l’autonomie (PACEA) avec un projet professionnel nécessitant
     l’obtention du permis ; ou être signataire d’un contrat d'engagement jeune (CEJ) ;
     ou être en recherche d’emploi résidant dans un quartier politique de la ville ou en zone rurale."
+  - Faire votre demande via l'application mobile LABAZ de la Région.
 conditions_generales:
   - type: regions
     values:
