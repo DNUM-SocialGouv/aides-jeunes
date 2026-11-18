@@ -1,7 +1,2 @@
 scopeconfig:
   - scope: node
-fileignoreconfig:
-  - filename: .github/workflows/ci.yml
-    checksum: 35e3d99935dbdb8a87f974ce9b4f6df2254fcbceab1a830be9cce3e84a22a00f
-  - filename: backend/config/index.ts
-    checksum: 1fb427bcd9a848c24d347abe64a8b5f671b96e16752e76ea79ea15584615d96d
