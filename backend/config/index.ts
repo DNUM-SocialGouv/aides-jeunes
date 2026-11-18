@@ -130,7 +130,9 @@ const config: Configuration = {
     profilesSampleRate: 1.0,
     debug: "development" === process.env.NODE_ENV,
   },
-  sessionSecret: process.env.SESSION_SECRET || "fghjdfjkdf785a-jreu",
+  // Validé au chargement du contrôleur moncomptepro, pas ici : le build
+  // (vite.config.ts) lit cette config en production sans le secret.
+  sessionSecret: process.env.SESSION_SECRET || "",
   mattermost_post_url: process.env.MATTERMOST_POST_URL || "",
   teleserviceAccessTokens: {
     PNDS: process.env.PNDS_TOKEN || "token",
