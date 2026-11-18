@@ -14,7 +14,7 @@ env:
   PYTHON_VERSION: 3.11.4
   EQUINOXE_SSH_HOST: equinoxe.mes-aides.1jeune1solution.beta.gouv.fr
   EQUINOXE_SSH_USER: debian
-  ECLIPSE_SSH_HOST: monitor.eclipse.mes-aides.incubateur.net
+  ECLIPSE_SSH_HOST: eclipse.mes-aides.incubateur.net
   ECLIPSE_SSH_USER: debian
 
 jobs:
@@ -178,7 +178,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p ~/.ssh/
-          echo "${{ secrets.SOLSTICE_PRODUCTION_DEPLOY_KEY }}" > ~/.ssh/deployment.key
+          echo "${{ secrets.ECLIPSE_PRODUCTION_DEPLOY_KEY }}" > ~/.ssh/deployment.key
           chmod 600 ~/.ssh/deployment.key
           ssh -o StrictHostKeyChecking=no ${{ env.ECLIPSE_SSH_USER }}@${{ env.ECLIPSE_SSH_HOST }} -i ~/.ssh/deployment.key
 
@@ -192,7 +192,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p ~/.ssh/
-          echo "${{ secrets.SOLSTICE_PREPRODUCTION_DEPLOY_KEY }}" > ~/.ssh/deployment.key
+          echo "${{ secrets.ECLIPSE_PREPRODUCTION_DEPLOY_KEY }}" > ~/.ssh/deployment.key
           chmod 600 ~/.ssh/deployment.key
           ssh -o StrictHostKeyChecking=no ${{ env.ECLIPSE_SSH_USER }}@${{ env.ECLIPSE_SSH_HOST }} -i ~/.ssh/deployment.key
 
