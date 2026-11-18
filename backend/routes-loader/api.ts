@@ -3,7 +3,6 @@ import express from "express"
 import dataRoutes from "../routes/data.js"
 import emailsRoutes from "../routes/emails.js"
 import followupsRoutes from "../routes/followups.js"
-import franceConnectRoutes from "../routes/france-connect.js"
 import openfiscaRoutes from "../routes/openfisca.js"
 import outilsRoutes from "../routes/outils.js"
 import proxyRoutes from "../routes/proxy.js"
@@ -21,7 +20,6 @@ const api = express()
 dataRoutes(api)
 emailsRoutes(api)
 followupsRoutes(api)
-franceConnectRoutes(api)
 moncompteproRoutes(api)
 legacySmsRoutes(api)
 openfiscaRoutes(api)

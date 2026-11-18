@@ -25,7 +25,6 @@ const {
   matomo,
   netlifyContributionURL,
   statistics,
-  franceConnect,
   sentry,
   smsService,
 } = config
@@ -70,8 +69,6 @@ export default defineConfig(async ({ mode }) => {
     VITE_1J1S_URL: "https://www.1jeune1solution.gouv.fr",
     VITE_TITLE: `Évaluez vos droits aux aides avec le simulateur de ${contextName}`,
     VITE_DESCRIPTION: `7 minutes suffisent pour évaluer vos droits à ${benefitCount} aides avec le simulateur de ${contextName}.`,
-    // For now FranceConnect require an additional query params to be enabled
-    VITE_FRANCE_CONNECT_ENABLED: Boolean(franceConnect.clientId),
     VITE_SHOW_SMS_TAB: smsService.show,
     VITE_SMS_DIALLING_CODES: smsService.internationalDiallingCodes,
     VITE_ROBOTS:

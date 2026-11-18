@@ -19,51 +19,6 @@
       <WarningMessage v-if="store.message.text" data-testid="warning-message">
         <div v-html="store.message.text" />
       </WarningMessage>
-      <div
-        v-if="franceConnectConnected"
-        class="fr-alert fr-alert--info fr-my-1w"
-      >
-        <a
-          href="/api/france-connect/logout"
-          aria-label="FranceConnect"
-          role="link"
-        >
-          Se déconnecter de FranceConnect
-        </a>
-      </div>
-      <div
-        v-if="franceConnectError"
-        class="fr-alert fr-alert--warning fr-my-1w"
-      >
-        <p>Connection FranceConnect : Une erreur est survenue !</p>
-      </div>
-      <div
-        v-else-if="displayFranceConnect"
-        class="fr-alert fr-alert--info fr-my-1w"
-      >
-        <div class="fr-connect-group">
-          <a
-            href="/api/france-connect/login"
-            aria-label="FranceConnect"
-            role="link"
-          >
-            <button class="fr-connect">
-              <span class="fr-connect__login">S’identifier avec</span>
-              <span class="fr-connect__brand">FranceConnect</span>
-            </button>
-          </a>
-          <p>
-            <a
-              href="https://franceconnect.gouv.fr/"
-              target="_blank"
-              rel="noopener"
-              title="Qu’est-ce que FranceConnect ? - nouvelle fenêtre"
-              >Qu’est-ce que FranceConnect ?</a
-            >
-          </p>
-        </div>
-      </div>
-
       <div>
         <router-view :key="$route.path" />
       </div>
@@ -104,26 +59,6 @@ export default {
     },
     debug() {
       return this.store.getDebug
-    },
-    isOnFirstSimulationPage() {
-      return (
-        this.store.getAllSteps[0].path === this.$route.path &&
-        this.store.simulation.answers.all.length === 0
-      )
-    },
-    displayFranceConnect() {
-      return (
-        this.$route.query["france-connect-enabled"] === "true" &&
-        process.env.VITE_FRANCE_CONNECT_ENABLED &&
-        this.isOnFirstSimulationPage &&
-        !this.franceConnectConnected
-      )
-    },
-    franceConnectError() {
-      return this.$route.query.error == "france_connect_error"
-    },
-    franceConnectConnected() {
-      return this.$cookies.get("fc_id_token_hint")
     },
   },
   methods: {
