@@ -1,4 +1,3 @@
-# veille-snapshot 2026-10-28 : page modifiée (dates) — à vérifier
 label: Aide au financement d'un stage en Europe pour les lycéens agricoles
 institution: region_centre_val_de_loire
 description: "La Région Centre-Val de Loire et le programme européen ERASMUS +
@@ -18,8 +17,8 @@ profils:
     conditions: []
   - type: lyceen
     conditions: []
-link: https://www.centre-valdeloire.fr/le-guide-des-aides-de-la-region-centre-val-de-loire/lyceen-ne-agricole-partez-pour-un-stage-en
-instructions: https://www.centre-valdeloire.fr/le-guide-des-aides-de-la-region-centre-val-de-loire/lyceen-ne-agricole-partez-pour-un-stage-en
+link: https://www.centre-valdeloire.fr/le-guide-des-aides-de-la-region-centre-val-de-loire/euro-metiers-lyceens-agricoles
+instructions: https://www.centre-valdeloire.fr/le-guide-des-aides-de-la-region-centre-val-de-loire/euro-metiers-lyceens-agricoles
 prefix: l’
 type: float
 unit: €
