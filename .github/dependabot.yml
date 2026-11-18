@@ -1,9 +1,11 @@
 version: 2
 updates:
+  # Racine : seules les mises à jour de @betagouv/aides-velo sont suivies
+  # (allow s'applique aussi aux alertes de sécurité).
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     rebase-strategy: "disabled"
     versioning-strategy: increase
     open-pull-requests-limit: 1
@@ -11,8 +13,24 @@ updates:
       - dependencies
     allow:
       - dependency-name: "@betagouv/aides-velo"
+
+  # /contribuer : pas de mises à jour de version (limit 0), mais toutes
+  # les alertes de sécurité regroupées dans une seule PR.
+  - package-ecosystem: "npm"
+    directory: "/contribuer"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 0
+    labels:
+      - dependencies
+    groups:
+      contribuer-security:
+        applies-to: security-updates
+        patterns: ["*"]
+
+  # Les paquets OpenFisca évoluent ensemble : une seule PR.
   - package-ecosystem: "pip"
-    directory: "./openfisca"
+    directory: "/openfisca"
     schedule:
       interval: "weekly"
     rebase-strategy: "disabled"
@@ -25,3 +43,14 @@ updates:
       - dependency-name: "Openfisca-France"
       - dependency-name: "Openfisca-Paris"
       - dependency-name: "OpenFisca-France-Local[excel-reader]"
+    groups:
+      openfisca:
+        patterns: ["*"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      github-actions:
+        patterns: ["*"]
