@@ -18,7 +18,21 @@ const {
   scope,
 } = config.moncomptepro
 
-const { sessionSecret } = config
+// Signe le jeton d'accès à l'accompagnement : une valeur connue permettrait
+// d'en forger un. En production, le serveur refuse de démarrer plutôt que de
+// retomber sur une valeur par défaut.
+const SESSION_SECRET_MIN_LENGTH = 32
+function getSessionSecret(): string {
+  const secret = config.sessionSecret
+  if (secret.length >= SESSION_SECRET_MIN_LENGTH) return secret
+  if (config.env === "production") {
+    throw new Error(
+      `SESSION_SECRET doit être défini en production (${SESSION_SECRET_MIN_LENGTH} caractères minimum)`,
+    )
+  }
+  return secret || "secret-de-developpement-uniquement"
+}
+const sessionSecret = getSessionSecret()
 const baseUrl = config.baseURL
 
 const getMcpClient = async (): Promise<client.Configuration> => {
