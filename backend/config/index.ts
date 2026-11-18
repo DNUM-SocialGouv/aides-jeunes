@@ -17,21 +17,6 @@ const isProduction = process.env.NODE_ENV == "production"
 
 const contextName = process.env.CONTEXT_NAME || "1jeune1solution"
 
-// Signe le jeton d'accès à l'accompagnement : une valeur connue permettrait
-// d'en forger un. En production, on refuse de démarrer plutôt que de retomber
-// sur une valeur par défaut.
-const SESSION_SECRET_MIN_LENGTH = 32
-function getSessionSecret(): string {
-  const secret = process.env.SESSION_SECRET || ""
-  if (secret.length >= SESSION_SECRET_MIN_LENGTH) return secret
-  if (isProduction) {
-    throw new Error(
-      `SESSION_SECRET doit être défini en production (${SESSION_SECRET_MIN_LENGTH} caractères minimum)`,
-    )
-  }
-  return secret || "secret-de-developpement-uniquement"
-}
-
 const config: Configuration = {
   env: process.env.NODE_ENV || "development",
   baseURL:
@@ -145,7 +130,9 @@ const config: Configuration = {
     profilesSampleRate: 1.0,
     debug: "development" === process.env.NODE_ENV,
   },
-  sessionSecret: getSessionSecret(),
+  // Validé au chargement du contrôleur moncomptepro, pas ici : le build
+  // (vite.config.ts) lit cette config en production sans le secret.
+  sessionSecret: process.env.SESSION_SECRET || "",
   mattermost_post_url: process.env.MATTERMOST_POST_URL || "",
   teleserviceAccessTokens: {
     PNDS: process.env.PNDS_TOKEN || "token",
