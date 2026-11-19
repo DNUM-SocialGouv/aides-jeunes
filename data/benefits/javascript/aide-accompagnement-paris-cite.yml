@@ -4,6 +4,7 @@ description: Vous avez besoin d’aide pour comprendre les aides ci-dessous et e
 prefix: le
 type: bool
 periodicite: autre
+is_appointment: true
 teleservice: https://www.smartagenda.fr/pro/uparis/rendez-vous/?affrdv=true&groupement=5
 link: https://www.smartagenda.fr/pro/uparis/rendez-vous/?affrdv=true&groupement=5
 top: -1
