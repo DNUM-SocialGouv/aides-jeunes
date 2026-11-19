@@ -17,8 +17,8 @@ profils:
     conditions: []
   - type: lyceen
     conditions: []
-link: https://www.centre-valdeloire.fr/le-guide-des-aides-de-la-region-centre-val-de-loire/lyceen-ne-agricole-partez-pour-un-stage-en
-instructions: https://www.centre-valdeloire.fr/le-guide-des-aides-de-la-region-centre-val-de-loire/lyceen-ne-agricole-partez-pour-un-stage-en
+link: https://www.centre-valdeloire.fr/le-guide-des-aides-de-la-region-centre-val-de-loire/euro-metiers-lyceens-agricoles
+instructions: https://www.centre-valdeloire.fr/le-guide-des-aides-de-la-region-centre-val-de-loire/euro-metiers-lyceens-agricoles
 prefix: l’
 type: float
 unit: €
