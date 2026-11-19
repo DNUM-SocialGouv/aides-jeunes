@@ -12,11 +12,16 @@ import dayjs from "dayjs"
 
 export async function sendSimulationResultsEmail(
   followup: Followup,
+  situationResults?: any,
 ): Promise<Followup> {
   if (!followup.email) {
     throw new Error(ErrorType.MissingFollowupEmail)
   }
-  const render: any = await emailRender(EmailType.SimulationResults, followup)
+  const render: any = await emailRender(
+    EmailType.SimulationResults,
+    followup,
+    situationResults,
+  )
   const sendEmailSmtpResponse = await sendEmailSmtp({
     to: followup.email,
     subject: render.subject,

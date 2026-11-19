@@ -51,13 +51,15 @@ export async function persist(req: Request, res: Response) {
 
   try {
     if (email || phone) {
+      const situationResults = await simulation.compute()
       const followup = await FollowupFactory.createWithResults(
         simulation,
         surveyOptin,
         email,
         phone,
+        situationResults,
       )
-      if (email) await sendSimulationResultsEmail(followup)
+      if (email) await sendSimulationResultsEmail(followup, situationResults)
       if (phone) await sendSimulationResultsSms(followup)
       return res.send({ result: "OK" })
     }
