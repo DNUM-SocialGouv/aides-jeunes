@@ -99,7 +99,6 @@
     "vite": "^8.3.5",
     "vite-plugin-html": "^3.2.2",
     "vue": "^3.5.13",
-    "vue-cookies": "^1.8.4",
     "vue-matomo": "^4.2.0",
     "vue-router": "^4.4.5",
     "webpack-cli": "^4.10.0"

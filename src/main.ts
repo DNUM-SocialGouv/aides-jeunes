@@ -11,7 +11,6 @@ import ThemeService from "./plugins/theme-service.js"
 
 import * as Sentry from "@sentry/vue"
 import VueMatomo from "vue-matomo"
-import VueCookies from "vue-cookies"
 
 import "@/styles/aides-jeunes.css"
 
@@ -57,7 +56,6 @@ if (process.env?.VITE_SENTRY_FRONTEND_DSN) {
 app.use(Resizer)
 app.use(StateService)
 app.use(ThemeService)
-app.use(VueCookies)
 
 if (navigator.cookieEnabled && process.env?.VITE_MATOMO_URL) {
   app.use(VueMatomo, {

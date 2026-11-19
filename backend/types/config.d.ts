@@ -9,13 +9,6 @@ export interface Configuration {
     errorPath: string
   }
   aideJeuneExperimentationURL: string
-  franceConnect: {
-    root?: string
-    clientId?: string
-    clientSecret?: string
-    mesriEndpoint?: string
-    scopes: string
-  }
   openfiscaURL: string
   openfiscaTimeout: number
   openfiscaBulkTimeout: number
