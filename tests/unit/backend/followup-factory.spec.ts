@@ -59,6 +59,22 @@ describe("FollowupFactory", () => {
       expect(mockCompute).toHaveBeenCalledTimes(1)
     })
 
+    it("should not call compute when results are provided", async () => {
+      await FollowupFactory.createWithResults(
+        mockSimulation,
+        mockSurveyOptin,
+        mockEmail,
+        undefined,
+        { droitsEligibles: [{ id: "1", montant: 100, unit: "month" }] },
+      )
+      expect(mockCompute).not.toHaveBeenCalled()
+      expect(mockFollowupCreate).toHaveBeenCalledWith(
+        expect.objectContaining({
+          benefits: [{ id: "1", amount: 100, unit: "month" }],
+        }),
+      )
+    })
+
     it("should call generateToken twice", async () => {
       // Note: generateToken is called twice because it is also called in the
       // simulation pre-save hook.

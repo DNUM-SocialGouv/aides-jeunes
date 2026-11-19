@@ -34,8 +34,9 @@ export const FollowupFactory = {
     surveyOptin: boolean,
     email?: string,
     phone?: string,
+    situationResults?: any,
   ): Promise<Followup> => {
-    const situationResults = await simulation.compute()
+    situationResults ??= await simulation.compute()
     const benefits = situationResults.droitsEligibles.map((benefit) => ({
       id: benefit.id,
       amount: benefit.montant,
