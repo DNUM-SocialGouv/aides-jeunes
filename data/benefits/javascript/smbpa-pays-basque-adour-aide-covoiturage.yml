@@ -1,6 +1,12 @@
-label: incitation au covoiturage du Syndicat des mobilités de la Communauté Pays Basque
+label: incitation au covoiturage du Syndicat des mobilités de la Communauté Pays
+  Basque
 institution: syndicat_mobilites_pays_basque_adour_smbpa
-description: "Le Syndicat des mobilités de la Communauté Pays Basque subventionne tous vos trajets réservés depuis l'une des applications de covoiturage. Vous êtes conductrice ou conducteur ? Recevez entre 2 € et 3 € par trajet et par passager selon la distance parcourue, dans la limite de 150 € par mois. Vous êtes passagère ou passager ? Bénéficiez de 2 trajets gratuits par jour."
+description:
+  "Le Syndicat des mobilités de la Communauté Pays Basque subventionne
+  tous vos trajets réservés depuis l'une des applications de covoiturage. Vous êtes
+  conductrice ou conducteur ? Recevez entre 2 € et 3 € par trajet et par passager
+  selon la distance parcourue, dans la limite de 150 € par mois. Vous êtes passagère
+  ou passager ? Bénéficiez de 2 trajets gratuits par jour."
 prefix: l’
 conditions_generales:
   - type: communes
@@ -171,11 +177,16 @@ conditions_generales:
     value: 18
 profils: []
 conditions:
-  - "Télécharger l'une des applications partenaires : Blablacar Daily, Karos, Klaxit ou Mobicoop."
+  - "Télécharger l'une des applications partenaires : Blablacar Daily, Karos, Klaxit
+    ou Mobicoop."
   - Effectuer un trajet dont la distance est comprise entre 5 et 80 kilomètres.
-  - Réaliser votre trajet au départ et/ou à l’arrivée de l'une des 158 communes du Pays Basque ainsi que Tarnos, Ondres et Saint-Martin-de-Seignanx dans le sud des Landes.
-  - Effectuer un maximum de 6 trajets par jour si vous êtes conducteur et un maximum de 2 trajets par jour si vous êtes passager.
+  - Réaliser votre trajet au départ et/ou à l’arrivée de l'une des 158 communes du
+    Pays Basque ainsi que Tarnos, Ondres et Saint-Martin-de-Seignanx dans le sud
+    des Landes.
+  - Effectuer un maximum de 6 trajets par jour si vous êtes conducteur et un
+    maximum de 2 trajets par jour si vous êtes passager.
 type: bool
 periodicite: autre
 link: https://www.communaute-paysbasque.fr/a-la-une-2/actualites/actualite/covoiturage-au-pays-basque-les-conducteurs-indemnises
 instructions: https://www.communaute-paysbasque.fr/a-la-une-2/actualites/actualite/covoiturage-au-pays-basque-les-conducteurs-indemnises
+private: true
