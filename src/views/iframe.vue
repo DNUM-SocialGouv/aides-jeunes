@@ -101,8 +101,25 @@ watch(selectedTheme, () => {
               >Afficher les logos institutionnels</label
             >
           </div>
+          <div class="fr-checkbox-group">
+            <input
+              id="data-eager"
+              v-model="options"
+              type="checkbox"
+              value="data-eager"
+            />
+            <label for="data-eager" class="fr-label"
+              >Charger le simulateur dès l'ouverture de la page</label
+            >
+          </div>
         </div>
       </fieldset>
+      <p class="fr-hint-text">
+        Par défaut, le simulateur n'est chargé qu'à l'approche du champ de
+        vision : les visiteurs qui ne descendent pas jusqu'à lui ne le
+        téléchargent pas. Cochez la dernière option si vous préférez qu'il soit
+        chargé dès l'ouverture de la page.
+      </p>
       <fieldset class="fr-fieldset fr-fieldset--inline">
         <legend
           id="radio-group-inline-legend"
