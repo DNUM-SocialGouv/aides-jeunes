@@ -260,10 +260,47 @@ function DemarchesSimplifiees(simulation, query) {
   this.query = query
 }
 
+// Un `AxiosError` porte le `ClientRequest` et l'`IncomingMessage` sous-jacents,
+// qui se référencent l'un l'autre : toute sérialisation JSON du rejet — celle de
+// l'IPC de pm2 comme celle du corps de réponse — lève « circular structure ».
+// L'erreur ne retient donc que ce qui est diagnosticable et sérialisable.
+export class TeleserviceMetadataError extends Error {
+  // Lu par le middleware d'erreur, qui en fait le statut de la réponse.
+  readonly code = 502
+  readonly procedure: string
+  readonly upstreamStatus?: number
+  readonly upstreamUrl: string
+
+  constructor(
+    procedure: string,
+    upstreamUrl: string,
+    upstreamStatus: number | undefined,
+    upstreamMessage: string,
+  ) {
+    super(
+      `Métadonnées du téléservice indisponibles pour la démarche « ${procedure} » : ` +
+        `GET ${upstreamUrl} a répondu ${upstreamStatus ?? "aucun statut"} (${upstreamMessage})`,
+    )
+    this.name = "TeleserviceMetadataError"
+    this.procedure = procedure
+    this.upstreamUrl = upstreamUrl
+    this.upstreamStatus = upstreamStatus
+  }
+}
+
 async function getMetaData(procedure) {
   const url = `https://www.demarches-simplifiees.fr/preremplir/${procedure}/schema`
-  const response = await axios.get(url)
-  return response.data
+  try {
+    const response = await axios.get(url)
+    return response.data
+  } catch (error: any) {
+    throw new TeleserviceMetadataError(
+      procedure,
+      url,
+      error?.response?.status,
+      error?.message || String(error),
+    )
+  }
 }
 
 function generateData(simulation, benefit) {

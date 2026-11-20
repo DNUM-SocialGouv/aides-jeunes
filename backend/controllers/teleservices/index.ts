@@ -130,7 +130,10 @@ function fail(res, msg) {
  * - the appropriate URL to third party teleservice.
  */
 function metadataResponseGenerator(teleservice) {
-  return function (req, res) {
+  // Express 4 ignore la promesse renvoyée par un gestionnaire : sans `.catch`,
+  // le rejet de `toInternal()` — indisponibilité du téléservice tiers — devient
+  // un `unhandledRejection` et laisse la requête pendante.
+  return function (req, res, next) {
     const payload = {
       id: req.simulation._id,
       scope: teleservice.name,
@@ -141,22 +144,24 @@ function metadataResponseGenerator(teleservice) {
     const token = jwt.sign(payload, req.simulation.token)
     return Promise.resolve(
       createClass(teleservice, req.simulation, req.query).toInternal(),
-    ).then(function (fields) {
-      return res.json({
-        fields,
-        destination: {
-          label: teleservice.destination.label,
-          url: Mustache.render(teleservice.destination.url, {
-            token,
-            baseURL: `${req.protocol}://${req.get("host")}`,
-            aideJeuneExperimentationURL: config.aideJeuneExperimentationURL,
-            openfiscaAxeURL: config.openfiscaAxeURL,
-            openFiscaURL: config.openfiscaPublicURL,
-            openfiscaTracerURL: config.openfiscaTracerURL,
-          }),
-        },
+    )
+      .then(function (fields) {
+        return res.json({
+          fields,
+          destination: {
+            label: teleservice.destination.label,
+            url: Mustache.render(teleservice.destination.url, {
+              token,
+              baseURL: `${req.protocol}://${req.get("host")}`,
+              aideJeuneExperimentationURL: config.aideJeuneExperimentationURL,
+              openfiscaAxeURL: config.openfiscaAxeURL,
+              openFiscaURL: config.openfiscaPublicURL,
+              openfiscaTracerURL: config.openfiscaTracerURL,
+            }),
+          },
+        })
       })
-    })
+      .catch(next)
   }
 }
 

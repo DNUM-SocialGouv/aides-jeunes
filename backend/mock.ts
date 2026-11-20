@@ -112,7 +112,9 @@ function mock(app: express.Application) {
   })
 
   app.post("/api/followups/surveys/:id/answers", function (req, res) {
-    pollResult.postPollResult({ _id: "mock-id" }, req.body)
+    pollResult
+      .postPollResult({ _id: "mock-id" }, req.body)
+      .catch((error) => console.error("Notification Mattermost", error))
     res.sendStatus(201)
   })
 
