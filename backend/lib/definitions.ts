@@ -73,8 +73,6 @@ const LEGACY_FIELD_NAMES = [
   "duree_possession_titre_sejour",
 ]
 
-// FranceConnect supprimé : conservé pour les anciennes simulations
-const FRANCE_CONNECT_FIELD_NAMES = ["idtoken", "mesri", "userinfo"]
 
 export const ANSWER_FIELD_NAMES = [
   "age", // For anonymized answers
