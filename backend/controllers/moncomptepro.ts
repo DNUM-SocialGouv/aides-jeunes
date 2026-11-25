@@ -3,7 +3,9 @@ import config from "../config/index.js"
 import * as client from "openid-client"
 import * as Sentry from "@sentry/node"
 
-const JWT_EXPIRATION_DELAY = 15552000 // 6 * 30 * 24 * 60 * 60 = 6 months
+// Durée de vie courte (VUL08) : à expiration, l'utilisateur est renvoyé vers
+// ProConnect, qui le reconnecte sans saisie si sa session y est encore active.
+export const JWT_EXPIRATION_DELAY = 8 * 60 * 60 // 8 heures, en secondes
 const MCP_TOKEN = "mcp_token"
 const MCP_CODE_VERIFER = "mcp_vrfer"
 
@@ -34,6 +36,13 @@ function getSessionSecret(): string {
 }
 const sessionSecret = getSessionSecret()
 const baseUrl = config.baseURL
+
+const mcpTokenCookieOptions = {
+  httpOnly: true,
+  secure: config.env === "production",
+  sameSite: "lax" as const,
+  maxAge: JWT_EXPIRATION_DELAY * 1000,
+}
 
 const getMcpClient = async (): Promise<client.Configuration> => {
   return await client.discovery(new URL(provider), client_id, client_secret)
@@ -86,7 +95,7 @@ const access = async (req, res, next) => {
         mcpToken = jwt.sign({ email: userInfo.email }, sessionSecret, {
           expiresIn: JWT_EXPIRATION_DELAY,
         })
-        res.cookie(MCP_TOKEN, mcpToken)
+        res.cookie(MCP_TOKEN, mcpToken, mcpTokenCookieOptions)
       } else {
         clearCookie(res)
         return res.redirect(accompagnement.unauthorizedPath)
@@ -94,7 +103,16 @@ const access = async (req, res, next) => {
     }
 
     if (mcpToken) {
-      const userInfo = jwt.verify(mcpToken, sessionSecret)
+      let userInfo
+      try {
+        userInfo = jwt.verify(mcpToken, sessionSecret)
+      } catch (error) {
+        if (error instanceof jwt.TokenExpiredError) {
+          clearCookie(res)
+          return login(req, res)
+        }
+        throw error
+      }
       const isAuthorized = authorized_email_users.includes(userInfo.email)
 
       if (isAuthorized) {
