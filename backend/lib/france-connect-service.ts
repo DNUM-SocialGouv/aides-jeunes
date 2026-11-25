@@ -8,6 +8,7 @@ export const enum FranceConnectCookie {
   FcNonce = "fc_nonce",
   FcIdTokenHint = "fc_id_token_hint",
   FcLogoutState = "fc_logout_state",
+  FcConnected = "fc_connected",
 }
 
 const FranceConnectConfig = config.franceConnect
