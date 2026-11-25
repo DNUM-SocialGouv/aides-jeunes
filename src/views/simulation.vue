@@ -123,7 +123,7 @@ export default {
       return this.$route.query.error == "france_connect_error"
     },
     franceConnectConnected() {
-      return this.$cookies.get("fc_connected")
+      return this.$cookies.get("fc_id_token_hint")
     },
   },
   methods: {
