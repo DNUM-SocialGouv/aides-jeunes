@@ -373,7 +373,7 @@ fields:
     required_group: cta
   field_is_appointment: &field_is_appointment
     label: S'agit-il d'une prise de rendez-vous ?
-    hint: Le bouton de l'aide sur la page de résultats affichera « Prendre RDV » au lieu de « Demander cette aide ».
+    hint: Nécessite un lien vers un téléservice. Le lien sur la page du dispositif affichera « Prendre RDV » au lieu de « Faire une demande en ligne ».  Les autres liens (instructions et formulaire à imprimer) ne seront pas affichés.  
     name: is_appointment
     widget: boolean
     required: false
