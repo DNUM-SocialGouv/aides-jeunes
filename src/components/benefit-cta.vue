@@ -61,8 +61,22 @@ const ctas = computed(() => {
 </script>
 
 <template>
+  <ul
+    v-if="benefit?.is_appointment && ctaTeleservice"
+    class="fr-btns-group fr-btns-group--inline-md"
+  >
+    <li>
+      <BenefitCtaLink
+        :analytics-name="benefit.id"
+        :benefit="benefit"
+        :link="ctaTeleservice.link"
+        :type="ctaTeleservice.type"
+        class="fr-btn"
+      />
+    </li>
+  </ul>
   <div
-    v-if="ctas.length > 0 && benefit"
+    v-else-if="ctas.length > 0 && benefit"
     class="fr-container fr-py-2w fr-callout"
   >
     <h5 class="fr-h5">Comment l'obtenir ?</h5>

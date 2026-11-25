@@ -6,3 +6,5 @@ export enum CTALabel {
   TeleservicePrefill = "teleservicePrefill",
   Link = "link",
 }
+
+export const APPOINTMENT_LABEL = "Prendre RDV"
