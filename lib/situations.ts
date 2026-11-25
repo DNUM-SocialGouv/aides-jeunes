@@ -37,8 +37,6 @@ const getIndividu = (situation: Situation, id: string) => {
   return individu
 }
 
-// Le prénom est saisi librement puis inséré dans des libellés rendus en HTML
-// (v-html) : sans chevrons, aucune balise ne peut s'y former.
 function sanitizeFirstName(value: unknown): string {
   return typeof value === "string" ? value.replace(/[<>]/g, "") : ""
 }

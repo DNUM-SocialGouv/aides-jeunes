@@ -53,8 +53,7 @@ forEachProperties((_, propertyName, property) => {
 
 const Hint = {
   get(attribute: string, variation?: string): string | undefined {
-    // `attribute` vient de l'URL : sans ce garde, « constructor » atteint
-    // Object, qui renvoie tel quel le tableau de segments rendu en v-html.
+    // `attribute` comes from the URL: block inherited keys like "constructor".
     if (!Object.prototype.hasOwnProperty.call(texts, attribute)) {
       return undefined
     }
