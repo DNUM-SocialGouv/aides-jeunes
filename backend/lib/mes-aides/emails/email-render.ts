@@ -86,7 +86,11 @@ function renderAsHtml(emailType: EmailType, dataTemplate) {
     })
 }
 
-export async function emailRender(emailType: EmailType, followup) {
+export async function emailRender(
+  emailType: EmailType,
+  followup,
+  situationResults?: any,
+) {
   let benefits: any = null
   let parameters: any = null
   let formatedBenefits: any = {}
@@ -101,7 +105,7 @@ export async function emailRender(emailType: EmailType, followup) {
       populated.simulation.dateDeValeur,
     )
 
-    const situationResults = await populated.simulation.compute()
+    situationResults ??= await populated.simulation.compute()
     benefits = situationResults.droitsEligibles
 
     formatedBenefits = formatBenefits(benefits, parameters)
