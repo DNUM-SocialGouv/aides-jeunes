@@ -37,6 +37,10 @@ const getIndividu = (situation: Situation, id: string) => {
   return individu
 }
 
+function sanitizeFirstName(value: unknown): string {
+  return typeof value === "string" ? value.replace(/[<>]/g, "") : ""
+}
+
 export function generateSituation(
   simulation,
   useAll?: any,
@@ -84,13 +88,20 @@ export function generateSituation(
             (enfant) => enfant.id == response.id,
           )
           if (enfant) {
-            enfant[answer.fieldName] = response.value
+            enfant[answer.fieldName] =
+              answer.fieldName === "_firstName"
+                ? sanitizeFirstName(response.value)
+                : response.value
           }
         })
       } else {
         const individu = getIndividu(situation, answer.id)
         if (individu) {
           switch (answer.fieldName) {
+            case "_firstName": {
+              individu._firstName = sanitizeFirstName(answer.value)
+              break
+            }
             case "_bourseCriteresSociauxCommuneDomicileFamilial": {
               individu["_bourseCriteresSociauxCommuneDomicileFamilial"] =
                 answer.value.depcom

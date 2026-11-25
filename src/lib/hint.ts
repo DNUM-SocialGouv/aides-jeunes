@@ -52,7 +52,11 @@ forEachProperties((_, propertyName, property) => {
 })
 
 const Hint = {
-  get(attribute: string, variation?: string): string {
+  get(attribute: string, variation?: string): string | undefined {
+    // `attribute` comes from the URL: block inherited keys like "constructor".
+    if (!Object.prototype.hasOwnProperty.call(texts, attribute)) {
+      return undefined
+    }
     return typeof texts[attribute] === "string"
       ? texts[attribute]
       : texts[attribute]?.(variation)

@@ -3,8 +3,14 @@ import DroitsDetails from "@/components/droits-details.vue"
 import { ref, onMounted } from "vue"
 const benefit = ref()
 
+const allowedOrigins = [
+  new URL(process.env.VITE_NETLIFY_CONTRIBUTION_URL || "http://localhost:3000")
+    .origin,
+  "http://localhost:3000",
+]
+
 function check(event) {
-  if (event.data.source == "decap") {
+  if (allowedOrigins.includes(event.origin) && event.data?.source == "decap") {
     benefit.value = event.data.value
   }
 }
