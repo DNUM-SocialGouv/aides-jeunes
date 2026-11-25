@@ -56,7 +56,6 @@ export const ANSWER_ENTITY_NAMES = [
   "individu",
   "enfants",
   "famille",
-  "franceconnect", // FranceConnect supprimé : conservé pour les anciennes simulations
   "parents",
   "menage",
 ]
