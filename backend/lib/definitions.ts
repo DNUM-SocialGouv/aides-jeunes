@@ -56,7 +56,6 @@ export const ANSWER_ENTITY_NAMES = [
   "individu",
   "enfants",
   "famille",
-  "franceconnect",
   "parents",
   "menage",
 ]
@@ -74,7 +73,6 @@ const LEGACY_FIELD_NAMES = [
   "duree_possession_titre_sejour",
 ]
 
-const FRANCE_CONNECT_FIELD_NAMES = ["idtoken", "mesri", "userinfo"]
 
 export const ANSWER_FIELD_NAMES = [
   "age", // For anonymized answers
@@ -85,7 +83,8 @@ export const ANSWER_FIELD_NAMES = [
   ...ressources.ressourceCategories.map((category) => category.id),
   "ressources",
   ...FRANCE_CONNECT_FIELD_NAMES,
-  ...LEGACY_FIELD_NAMES,
+"ressources",
+...LEGACY_FIELD_NAMES,
   "pivot-data",
 ]
 

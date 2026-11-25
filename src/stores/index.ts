@@ -246,14 +246,6 @@ export const useStore = defineStore("store", {
       const token = this.getSimulationToken
       return token ? { Authorization: `Bearer ${token}` } : undefined
     },
-    getFCUserInfoEmailValue() {
-      const userinfo = this.simulation.answers.all.find(
-        (answer) =>
-          answer.entityName === "franceconnect" &&
-          answer.fieldName === "userinfo",
-      )
-      return userinfo?.value["email"]
-    },
     simulationAnonymized(): boolean {
       return this.simulation.status === SimulationStatus.Anonymized
     },

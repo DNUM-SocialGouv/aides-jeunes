@@ -33,20 +33,6 @@ const config: Configuration = {
     : "http://127.0.0.1:3000",
   contactEmail: process.env.EMAIL_CONTACT || "aides-jeunes@beta.gouv.fr",
   contextName,
-  franceConnect: {
-    root: process.env.FRANCE_CONNECT_ROOT_URL,
-    clientId: process.env.FRANCE_CONNECT_CLIENT_ID,
-    clientSecret: process.env.FRANCE_CONNECT_CLIENT_SECRET,
-    mesriEndpoint: process.env.FRANCE_CONNECT_MESRI_ENDPOINT,
-    scopes: [
-      "birthdate",
-      "email",
-      "mesri_inscription_etudiant",
-      "mesri_inscription_autre",
-      "mesri_admission",
-      "mesri_etablissements",
-    ].join(" "),
-  },
   openfiscaURL:
     process.env.OPENFISCA_INTERNAL_ROOT_URL || "http://127.0.0.1:2000",
   // Doit rester inférieur au `timeout` gunicorn d'OpenFisca (openfisca/config.py) :
