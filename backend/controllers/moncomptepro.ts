@@ -2,10 +2,9 @@ import jwt from "jsonwebtoken"
 import config from "../config/index.js"
 import * as client from "openid-client"
 import * as Sentry from "@sentry/node"
+import type { CookieOptions } from "express"
 
-// Durée de vie courte (VUL08) : à expiration, l'utilisateur est renvoyé vers
-// ProConnect, qui le reconnecte sans saisie si sa session y est encore active.
-export const JWT_EXPIRATION_DELAY = 8 * 60 * 60 // 8 heures, en secondes
+export const JWT_EXPIRATION_DELAY = 8 * 60 * 60
 const MCP_TOKEN = "mcp_token"
 const MCP_CODE_VERIFER = "mcp_vrfer"
 
@@ -37,10 +36,10 @@ function getSessionSecret(): string {
 const sessionSecret = getSessionSecret()
 const baseUrl = config.baseURL
 
-const mcpTokenCookieOptions = {
+const mcpTokenCookieOptions: CookieOptions = {
   httpOnly: true,
   secure: config.env === "production",
-  sameSite: "lax" as const,
+  sameSite: "lax",
   maxAge: JWT_EXPIRATION_DELAY * 1000,
 }
 
