@@ -55,11 +55,10 @@ function attachAccessCookie(req: Request, res, next?) {
     sameSite: config.baseURL.startsWith("https") ? "none" : "lax",
     secure: config.baseURL.startsWith("https"),
   }
-  res.cookie(
-    req.simulation?.cookieName,
-    req.simulation?.token,
-    cookiesParameters,
-  )
+  res.cookie(req.simulation?.cookieName, req.simulation?.token, {
+    ...cookiesParameters,
+    httpOnly: true,
+  })
   res.cookie(
     "lastestSimulation",
     req.simulation?._id?.toString(),
