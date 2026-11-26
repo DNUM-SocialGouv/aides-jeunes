@@ -4,7 +4,7 @@ import * as client from "openid-client"
 import * as Sentry from "@sentry/node"
 import type { CookieOptions } from "express"
 
-const JWT_EXPIRATION_DELAY = 8 * 60 * 60
+const JWT_EXPIRATION_DELAY = 8 * 60 * 60 // 8 hours in seconds
 const MCP_TOKEN = "mcp_token"
 const MCP_CODE_VERIFER = "mcp_vrfer"
 
