@@ -8,7 +8,7 @@
               <div class="fr-header__logo">
                 <a
                   href="/"
-                  title="République Française"
+                  title="Accueil – mes-aides.gouv.fr – République Française"
                   target="_self"
                   class="ds-fr--no-shadow"
                 >

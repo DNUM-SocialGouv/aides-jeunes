@@ -1,6 +1,8 @@
 <template>
   <div>
-    <WarningMessage v-if="error" class="fr-mb-4w">{{ error }}</WarningMessage>
+    <WarningMessage v-if="error" class="fr-mb-4w" role="alert">{{
+      error
+    }}</WarningMessage>
     <div class="aj-action-buttons fr-mt-2w">
       <ul
         class="fr-btns-group fr-btns-group--inline fr-btns-group--inline-reverse fr-btns-group--right"
