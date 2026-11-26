@@ -3,6 +3,8 @@ import { createWebHistory, createRouter } from "vue-router"
 import context from "./context/index.js"
 import Simulations from "@/lib/simulation.js"
 import { getTitleFromRoute } from "@/lib/transition.js"
+import Chapters from "@lib/chapters.js"
+import { ChapterName } from "@lib/enums/chapter.js"
 import { useStore } from "@/stores/index.js"
 import ABTestingService from "@/plugins/ab-testing-service.js"
 
@@ -522,7 +524,15 @@ router.afterEach((to, from) => {
       })
     }
 
-    document.title = getTitleFromRoute(to)
+    const title = getTitleFromRoute(to)
+    const path = to.path.replace(/\/en_savoir_plus$/, "")
+    const step = path.startsWith("/simulation/")
+      ? useStore().getAllSteps.find((step) => step.path === path)
+      : undefined
+    document.title =
+      step?.chapter && step.chapter !== ChapterName.Resultats
+        ? `${Chapters.getLabel(step.chapter)} – ${title}`
+        : title
   })
 })
 
