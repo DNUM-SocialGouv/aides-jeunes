@@ -20,9 +20,9 @@ onMounted(() => {
     <BackButton class="fr-mb-2w" size="small" :fallback="fallback">
       Retour au détail de l'aide
     </BackButton>
-    <h5 class="fr-h5 fr-mt-2w fr-mb-4w">
+    <h2 class="fr-h5 fr-mt-2w fr-mb-4w">
       {{ currentLieu?.nom }}
-    </h5>
+    </h2>
     <p v-show="updating">
       <span
         class="fr-icon--ml fr-icon-refresh-line fr-icon-spin"

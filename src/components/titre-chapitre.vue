@@ -41,6 +41,7 @@
 
 <script lang="ts">
 import Chapters from "@lib/chapters.js"
+import { ChapterName } from "@lib/enums/chapter.js"
 import SendRecapButton from "@/components/buttons/send-recap-button.vue"
 import { useStore } from "@/stores/index.js"
 import { useRouter } from "vue-router"
@@ -106,6 +107,9 @@ export default {
       }
       if (path === "/simulation/revenir-plus-tard") {
         return "Revenir plus tard ?"
+      }
+      if (path.startsWith("/simulation/resultats")) {
+        return Chapters.getLabel(ChapterName.Resultats)
       }
 
       const current = path.replace(/\/en_savoir_plus/, "")
