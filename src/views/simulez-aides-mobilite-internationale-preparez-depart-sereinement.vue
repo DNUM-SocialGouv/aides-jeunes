@@ -20,8 +20,8 @@ const mailAnalytics = {
 <template>
   <article class="fr-article">
     <h1
-      >🧭 Simulez vos aides à la mobilité internationale : préparez votre départ
-      sereinement</h1
+      ><span aria-hidden="true">🧭</span> Simulez vos aides à la mobilité
+      internationale : préparez votre départ sereinement</h1
     >
     <BackButton
       size="small"
@@ -54,7 +54,7 @@ const mailAnalytics = {
                 id="summary-erasmus"
                 class="fr-summary__link"
                 href="simulez-aides-mobilite-internationale-preparez-depart-sereinement#erasmus"
-                >🇪🇺 La bourse Erasmus+</a
+                ><span aria-hidden="true">🇪🇺</span> La bourse Erasmus+</a
               >
             </li>
             <li>
@@ -62,7 +62,8 @@ const mailAnalytics = {
                 id="summary-ami"
                 class="fr-summary__link"
                 href="simulez-aides-mobilite-internationale-preparez-depart-sereinement#ami"
-                >🌏 L'Aide à la Mobilité Internationale (AMI)</a
+                ><span aria-hidden="true">🌏</span> L'Aide à la Mobilité
+                Internationale (AMI)</a
               >
             </li>
           </ol>
@@ -82,7 +83,7 @@ const mailAnalytics = {
       >Quelles sont les principales aides à la mobilité internationale pour les
       étudiants ?</h2
     >
-    <h3 id="erasmus">🇪🇺 La bourse Erasmus+</h3>
+    <h3 id="erasmus"><span aria-hidden="true">🇪🇺</span> La bourse Erasmus+</h3>
     <p
       ><a
         target="_blank"
@@ -208,7 +209,10 @@ const mailAnalytics = {
       proposées par les collectivités locales.</p
     >
 
-    <h3 id="ami">🌏 L'Aide à la Mobilité Internationale (AMI)</h3>
+    <h3 id="ami"
+      ><span aria-hidden="true">🌏</span> L'Aide à la Mobilité Internationale
+      (AMI)</h3
+    >
     <p
       ><strong
         ><a
@@ -333,7 +337,7 @@ const mailAnalytics = {
       >
     </ul>
 
-    <h4>📍 Hauts-de-France</h4>
+    <h4><span aria-hidden="true">📍</span> Hauts-de-France</h4>
     <ul>
       <li
         ><p
@@ -360,7 +364,7 @@ const mailAnalytics = {
       >
     </ul>
 
-    <h4>📍 Île-de-France</h4>
+    <h4><span aria-hidden="true">📍</span> Île-de-France</h4>
     <ul>
       <li
         ><p><strong>Dispositif</strong> : Bourses Mobilité Île-de-France</p></li
@@ -384,7 +388,7 @@ const mailAnalytics = {
       >
     </ul>
 
-    <h4>📍 Auvergne-Rhône-Alpes</h4>
+    <h4><span aria-hidden="true">📍</span> Auvergne-Rhône-Alpes</h4>
     <ul>
       <li
         ><p
@@ -412,7 +416,7 @@ const mailAnalytics = {
       >
     </ul>
 
-    <h4>📍 Provence-Alpes-Côte d'Azur</h4>
+    <h4><span aria-hidden="true">📍</span> Provence-Alpes-Côte d'Azur</h4>
     <ul>
       <li
         ><p
@@ -440,7 +444,7 @@ const mailAnalytics = {
       >
     </ul>
 
-    <h4>📍 Bourgogne-Franche-Comté</h4>
+    <h4><span aria-hidden="true">📍</span> Bourgogne-Franche-Comté</h4>
     <ul>
       <li
         ><p><strong>Dispositif</strong> : Bourse Aquisis</p></li
@@ -464,7 +468,7 @@ const mailAnalytics = {
       >
     </ul>
 
-    <h4>📍 Bretagne</h4>
+    <h4><span aria-hidden="true">📍</span> Bretagne</h4>
     <ul>
       <li
         ><p><strong>Dispositif</strong> : B-Monde Mobilité Individuelle</p></li
@@ -487,7 +491,7 @@ const mailAnalytics = {
         ></li
       >
     </ul>
-    <h4>📍 Centre-Val de Loire</h4>
+    <h4><span aria-hidden="true">📍</span> Centre-Val de Loire</h4>
     <ul>
       <li
         ><p><strong>Dispositif</strong> : Mobi-Centre</p></li
@@ -503,7 +507,7 @@ const mailAnalytics = {
       >
     </ul>
 
-    <h4>📍 Grand Est</h4>
+    <h4><span aria-hidden="true">📍</span> Grand Est</h4>
     <ul>
       <li
         ><p
@@ -531,7 +535,7 @@ const mailAnalytics = {
         ></li
       >
     </ul>
-    <h4>📍 Normandie</h4>
+    <h4><span aria-hidden="true">📍</span> Normandie</h4>
     <ul>
       <li
         ><p><strong>Dispositif</strong> : Pass Monde</p></li
@@ -554,7 +558,7 @@ const mailAnalytics = {
         ></li
       >
     </ul>
-    <h4>📍 Nouvelle-Aquitaine</h4>
+    <h4><span aria-hidden="true">📍</span> Nouvelle-Aquitaine</h4>
     <ul>
       <li
         ><p
@@ -580,7 +584,7 @@ const mailAnalytics = {
         ></li
       >
     </ul>
-    <h4>📍 Pays de la Loire</h4>
+    <h4><span aria-hidden="true">📍</span> Pays de la Loire</h4>
     <ul>
       <li
         ><p><strong>Dispositif</strong> : Envoléo</p></li
@@ -603,7 +607,7 @@ const mailAnalytics = {
         ></li
       >
     </ul>
-    <h4>📍 Guyane</h4>
+    <h4><span aria-hidden="true">📍</span> Guyane</h4>
     <ul>
       <li
         ><p

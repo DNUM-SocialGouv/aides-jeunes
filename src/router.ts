@@ -4,7 +4,14 @@ import context from "./context/index.js"
 import Simulations from "@/lib/simulation.js"
 import { getTitleFromRoute } from "@/lib/transition.js"
 import { useStore } from "@/stores/index.js"
+import { getBenefit } from "@/lib/benefits.js"
+import { capitalize } from "@lib/utils.js"
 import ABTestingService from "@/plugins/ab-testing-service.js"
+
+function withBenefitLabel(params, title: string) {
+  const label = getBenefit(params.benefitId)?.label
+  return label ? `${capitalize(label)} – ${title}` : title
+}
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -184,7 +191,14 @@ const router = createRouter({
               path: ":benefitId",
               component: () =>
                 import("./views/simulation/resultats/resultats-details.vue"),
-              meta: { showBackToResultsButton: true },
+              meta: {
+                showBackToResultsButton: true,
+                headTitle: (params) =>
+                  withBenefitLabel(
+                    params,
+                    `Les résultats de ma simulation sur le simulateur d'aides ${context.name}`,
+                  ),
+              },
             },
             {
               name: "resultatsGroupe",
@@ -271,7 +285,8 @@ const router = createRouter({
       name: "aide",
       component: () => import("./views/aide.vue"),
       meta: {
-        headTitle: `Simulateur d'aides ${context.name}`,
+        headTitle: (params) =>
+          withBenefitLabel(params, `Simulateur d'aides ${context.name}`),
       },
     },
     {

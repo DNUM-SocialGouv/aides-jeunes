@@ -112,7 +112,7 @@
         </div>
       </div>
       <div class="fr-share fr-mt-2w">
-        <h6 class="fr-share__title fr-h6">Partager l'aide</h6>
+        <h3 class="fr-share__title fr-h6">Partager l'aide</h3>
         <ul class="fr-share__group">
           <li>
             <a

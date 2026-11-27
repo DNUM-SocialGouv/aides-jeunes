@@ -20,7 +20,10 @@ const mailAnalytics = {
 
 <template>
   <article class="fr-article">
-    <h1>👩🏻‍🎓 Tout savoir pour bien préparer ma vie étudiante</h1>
+    <h1
+      ><span aria-hidden="true">👩🏻‍🎓</span> Tout savoir pour bien préparer ma vie
+      étudiante</h1
+    >
     <BackButton
       size="small"
       data-testid="benefits-liste-back-button"
@@ -43,7 +46,8 @@ const mailAnalytics = {
             id="summary-etapes-rentrée"
             class="fr-summary__link"
             href="/preparer-rentree-etudiante-logement-budget-aides#etapes-rentrée"
-            >📅 Se repérer dans les grandes étapes avant la rentrée</a
+            ><span aria-hidden="true">📅</span> Se repérer dans les grandes
+            étapes avant la rentrée</a
           >
           <ol>
             <li>
@@ -70,7 +74,8 @@ const mailAnalytics = {
             id="summary-logement"
             class="fr-summary__link"
             href="/preparer-rentree-etudiante-logement-budget-aides#logement"
-            >🔑 Trouver un logement étudiant adapté à ses besoins</a
+            ><span aria-hidden="true">🔑</span> Trouver un logement étudiant
+            adapté à ses besoins</a
           >
           <ol>
             <li>
@@ -87,7 +92,8 @@ const mailAnalytics = {
                 id="summary-bailleurs-sociaux"
                 class="fr-summary__link"
                 href="/preparer-rentree-etudiante-logement-budget-aides#bailleurs-sociaux"
-                >🏢 Les principaux bailleurs sociaux pour étudiants</a
+                ><span aria-hidden="true">🏢</span> Les principaux bailleurs
+                sociaux pour étudiants</a
               >
             </li>
             <li>
@@ -113,7 +119,8 @@ const mailAnalytics = {
             id="summary-budget"
             class="fr-summary__link"
             href="/preparer-rentree-etudiante-logement-budget-aides#budget"
-            >🧮 Faire le point sur son budget étudiant</a
+            ><span aria-hidden="true">🧮</span> Faire le point sur son budget
+            étudiant</a
           >
           <ol>
             <li>
@@ -154,7 +161,8 @@ const mailAnalytics = {
     </nav>
 
     <h2 id="etapes-rentrée"
-      >📅 Se repérer dans les grandes étapes avant la rentrée</h2
+      ><span aria-hidden="true">📅</span> Se repérer dans les grandes étapes
+      avant la rentrée</h2
     >
 
     <h3 id="jalons"
@@ -228,7 +236,10 @@ const mailAnalytics = {
       elles sont planifiées dès l'été.</p
     >
 
-    <h2 id="logement">🔑 Trouver un logement étudiant adapté à ses besoins</h2>
+    <h2 id="logement"
+      ><span aria-hidden="true">🔑</span> Trouver un logement étudiant adapté à
+      ses besoins</h2
+    >
 
     <h3 id="types-logement"
       >Crous, bailleurs sociaux, résidences privées : comment s'y retrouver
@@ -260,7 +271,8 @@ const mailAnalytics = {
     </ul>
 
     <h3 id="bailleurs-sociaux"
-      >🏢 Les principaux bailleurs sociaux pour étudiants</h3
+      ><span aria-hidden="true">🏢</span> Les principaux bailleurs sociaux pour
+      étudiants</h3
     >
     <ol>
       <li>
@@ -404,7 +416,10 @@ const mailAnalytics = {
       </li>
     </ul>
 
-    <h2 id="budget">🧮 Faire le point sur son budget étudiant</h2>
+    <h2 id="budget"
+      ><span aria-hidden="true">🧮</span> Faire le point sur son budget
+      étudiant</h2
+    >
 
     <h3 id="depenses">Les principaux postes de dépense d'un étudiant</h3>
     <p>
@@ -598,7 +613,7 @@ const mailAnalytics = {
       personnalisée de vos droits :</p
     >
     <p>
-      👉
+      <span aria-hidden="true">👉</span>
       <a
         target="_blank"
         rel="noopener noreferrer nofollow"

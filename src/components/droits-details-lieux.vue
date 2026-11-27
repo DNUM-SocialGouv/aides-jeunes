@@ -18,7 +18,7 @@ const lieuxPreview = computed(() => {
     data-testid="nearby-places"
     class="fr-hr fr-py-2w"
   >
-    <h6 class="fr-h6">Comment me faire accompagner près de chez moi ?</h6>
+    <h3 class="fr-h6">Comment me faire accompagner près de chez moi ?</h3>
     <p>
       Vous pouvez vous faire accompagner pour faire votre demande et poser
       toutes vos questions.

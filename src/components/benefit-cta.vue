@@ -79,7 +79,7 @@ const ctas = computed(() => {
     v-else-if="ctas.length > 0 && benefit"
     class="fr-container fr-py-2w fr-callout"
   >
-    <h5 class="fr-h5">Comment l'obtenir ?</h5>
+    <h3 class="fr-h5">Comment l'obtenir ?</h3>
     <div class="fr-grid-row fr-mb-2w fr-grid-row--middle">
       <div
         v-if="ctaTeleservice || ctaTeleservicePrefill || ctaForm"

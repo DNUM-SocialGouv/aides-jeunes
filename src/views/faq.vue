@@ -146,7 +146,9 @@ const mailAnalytics = {
 
 <template>
   <div class="fr-my-6w fr-p-2w">
-    <h1>Foire aux questions</h1>
+    <component :is="props.showBackButton ? 'h1' : 'h2'" class="fr-h1"
+      >Foire aux questions</component
+    >
     <BackButton
       v-show="props.showBackButton"
       size="small"
