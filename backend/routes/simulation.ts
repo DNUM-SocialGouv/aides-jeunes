@@ -1,6 +1,7 @@
 import express, { Express } from "express"
 import cookieParser from "cookie-parser"
 import cors from "cors"
+import { rateLimit } from "express-rate-limit"
 
 import { persist } from "../controllers/followups.js"
 import simulationController from "../controllers/simulation.js"
@@ -51,7 +52,36 @@ export default function (api: Express) {
   )
   route.get("/openfisca-trace", simulationController.openfiscaTrace)
 
-  route.post("/followup", express.json(), persist)
+  const ONE_HOUR_MS = 60 * 60 * 1000
+  const isSendingMessage = (req) => Boolean(req.body?.email || req.body?.phone)
+  const message = {
+    error: "Une erreur est survenue. Veuillez réessayer plus tard.",
+  }
+  const followupPerSimulationLimiter = rateLimit({
+    windowMs: ONE_HOUR_MS,
+    limit: 5,
+    keyGenerator: (req) => req.params.simulationId,
+    skip: (req) => !isSendingMessage(req),
+    standardHeaders: true,
+    legacyHeaders: false,
+    message,
+  })
+  const followupPerIpLimiter = rateLimit({
+    windowMs: ONE_HOUR_MS,
+    limit: 30,
+    skip: (req) => !isSendingMessage(req),
+    standardHeaders: true,
+    legacyHeaders: false,
+    message,
+  })
+
+  route.post(
+    "/followup",
+    express.json(),
+    followupPerSimulationLimiter,
+    followupPerIpLimiter,
+    persist,
+  )
 
   teleservices.names.forEach(function (name) {
     route.get(
